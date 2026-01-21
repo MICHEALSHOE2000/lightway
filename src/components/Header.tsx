@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin } from "lucide-react";
+import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 

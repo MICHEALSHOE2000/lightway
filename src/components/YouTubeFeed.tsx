@@ -4,12 +4,20 @@ import { Button } from "./ui/button";
 
 const videos = [
   {
-    id: "e-qC7Wn5j8k", 
-    title: "Light Way Homes - Real Estate Investment & Development",
+    id: "9uws_QMkQUQ", 
+    title: "The Naples Development - Premium Real Estate",
   },
   {
-    id: "gN7l95_D-M8", 
-    title: "Necessary Approvals To Get Before You Start Building",
+    id: "GvULfaw64hE", 
+    title: "Novara Court Project Showcase",
+  },
+  {
+    id: "lGYYn2j5OPw", 
+    title: "Real Estate Investment Advice in Nigeria",
+  },
+  {
+    id: "Qa9yCvC-T3Y", 
+    title: "Property Value Preservation Strategies",
   },
 ];
 

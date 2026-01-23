@@ -1,4 +1,4 @@
-import { MapPin, ArrowUpRight, Home, Ruler } from "lucide-react";
+import { MapPin, ArrowUpRight, Home, Ruler, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
@@ -11,12 +11,16 @@ const projectDisplayData = [
     price: "From ₦7.5M",
     type: "Land & Townhouse",
     size: "300-500 SQM",
+    paymentPlan: "Up to 24 Months Payment Plan",
+    verification: "Registered Survey / C of O",
   },
   {
     ...projects[1], // Novara Courts
     price: "From ₦5M",
     type: "Residential Land",
     size: "300-600 SQM",
+    paymentPlan: "Flexible Payment Options",
+    verification: "Approved Survey & Title",
   },
 ];
 
@@ -92,14 +96,28 @@ const Projects = () => {
                     </h3>
                     
                     {/* Property details */}
-                    <div className="flex items-center gap-4 text-xs md:text-sm text-muted-foreground mb-4 pb-4 border-b border-border">
-                      <div className="flex items-center gap-1.5">
-                        <Home className="w-4 h-4" />
-                        <span>{project.type}</span>
+                    <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground mb-4 pb-4 border-b border-border">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1.5 font-medium text-foreground/80">
+                          <Home className="w-4 h-4 text-secondary" />
+                          <span>{project.type}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 font-medium text-foreground/80">
+                          <Ruler className="w-4 h-4 text-secondary" />
+                          <span>{project.size}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <Ruler className="w-4 h-4" />
-                        <span>{project.size}</span>
+                      <div className="flex flex-col gap-1.5 mt-1 border-t border-border/50 pt-2">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />
+                          <span className="text-xs font-semibold text-foreground/70 uppercase tracking-tight">{project.verification}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-3.5 h-3.5 rounded-full bg-secondary/10 flex items-center justify-center">
+                            <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                          </div>
+                          <span className="text-xs font-medium text-foreground/60">{project.paymentPlan}</span>
+                        </div>
                       </div>
                     </div>
 

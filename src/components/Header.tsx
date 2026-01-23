@@ -133,7 +133,7 @@ const Header = () => {
 
   const navLinks: NavItem[] = [
     { name: "Home", href: "/", isRoute: true, icon: <MapPin className="w-4 h-4" /> },
-    { name: "Properties", href: "/properties", isRoute: true, icon: <ArrowRight className="w-4 h-4" /> },
+    { name: "Our Estates", href: "/properties", isRoute: true, icon: <ArrowRight className="w-4 h-4" /> },
     { 
       name: "Services", 
       href: "/services", 
@@ -147,12 +147,12 @@ const Header = () => {
       ]
     },
     { 
-      name: "Company", 
+      name: "About Us", 
       href: "/about", 
       isRoute: true,
       icon: <ChevronDown className="w-4 h-4" />,
       subLinks: [
-        { name: "About Us", href: "/about", description: "Our story and mission" },
+        { name: "Who We Are", href: "/about", description: "Our story and mission" },
         { name: "Our Team", href: "/about#team", description: "Meet our experts" },
         { name: "Careers", href: "/career", description: "Join our team" },
         { name: "Blog", href: "/blog", description: "Latest insights" },
@@ -203,14 +203,14 @@ const Header = () => {
             >
               <div className="relative">
                 <img 
-                  src={logo} 
+                  src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                   alt="Light Way Homes" 
-                  className={`transition-all duration-500 group-hover:brightness-110 ${
-                    isScrolled ? 'h-10 md:h-12' : 'h-11 md:h-14'
+                  className={`transition-all duration-500 group-hover:brightness-110 object-contain ${
+                    isScrolled ? 'h-10 md:h-12' : 'h-11 md:h-16'
                   }`}
                 />
                 {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-secondary/20 -z-10" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-white/10 -z-10" />
               </div>
             </Link>
 
@@ -360,7 +360,7 @@ const Header = () => {
                 asChild
               >
                 <Link to="/contact">
-                  <span className="relative z-10">Get Started</span>
+                  <span className="relative z-10">Request Property Info</span>
                   {/* Shine effect */}
                   <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] hover:translate-x-[200%] transition-transform duration-700" />
@@ -412,9 +412,9 @@ const Header = () => {
         <div className="flex items-center justify-between px-6 h-20 border-b border-white/[0.05] bg-[#0a0a0f] shrink-0">
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
             <img 
-              src={logo} 
+              src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
               alt="Light Way Homes" 
-              className="h-9 w-auto"
+              className="h-10 w-auto object-contain"
             />
           </Link>
           <button
@@ -538,7 +538,7 @@ const Header = () => {
               asChild
             >
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Get Started
+                Request Property Info
               </Link>
             </Button>
           </div>

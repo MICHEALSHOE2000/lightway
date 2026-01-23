@@ -1,164 +1,125 @@
-import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import CountUpNumber from "@/components/CountUpNumber";
 
-const videos = [
-  "/videos/hero-1.mp4",
-  "/videos/hero-2.mp4",
-  "/videos/hero-3.mp4",
-  "/videos/hero-4.mp4",
+const heroImages = [
+  "https://lightwayhomesltd.com/static/media/roman-height-home-hero.e25a3979b37f2bf5a8df.jpg",
+  "https://lightwayhomesltd.com/static/media/lifestyle-hero-home.edd2d0348ed0fd5ce4f9.jpeg",
+  "https://lightwayhomesltd.com/static/media/dream-hero-home.6974bea0dad75785db35.jpeg",
+  "https://lightwayhomesltd.com/static/media/naples-hero-home.84931261b54080dda499.jpg",
+  "https://lightwayhomesltd.com/static/media/novara-hero-home.5745192a9c1a3cbceb42.jpg",
 ];
 
 const Hero = () => {
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNextVideo();
-    }, 8000);
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
     return () => clearInterval(interval);
-  }, [currentVideo]);
-
-  const handleNextVideo = () => {
-    setCurrentVideo((prev) => (prev + 1) % videos.length);
-  };
-
-  const handlePrevVideo = () => {
-    setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
-  };
-
-  const goToVideo = (index: number) => {
-    if (index !== currentVideo) {
-      setCurrentVideo(index);
-    }
-  };
+  }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video Background */}
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
-        {videos.map((video, index) => (
-          <video
-            key={video}
-            ref={(el) => (videoRefs.current[index] = el)}
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
-              index === currentVideo ? "opacity-100 scale-100" : "opacity-0 scale-105"
-            }`}
-            style={{ 
-              filter: 'brightness(0.8) contrast(1.1)',
-              visibility: index === currentVideo || isTransitioning ? 'visible' : 'hidden'
-            }}
-          />
-        ))}
-        
-        {/* Multi-layer Professional Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-slate-900/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/30" />
-      </div>
-
-
-      {/* Video Indicators */}
-      <div className="absolute bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-4">
-        {videos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToVideo(index)}
-            className={`group relative h-1.5 transition-all duration-500 rounded-full bg-white/20 hover:bg-white/40 overflow-hidden ${
-              index === currentVideo ? "w-16" : "w-4"
+        {heroImages.map((image, index) => (
+          <div
+            key={image}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === currentImage ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
           >
-            {index === currentVideo && (
-              <div 
-                className="absolute inset-0 bg-secondary animate-[progress_8s_linear]"
-              />
-            )}
-          </button>
+            <img
+              src={image}
+              alt="Luxury Real Estate"
+              className="w-full h-full object-cover"
+              style={{ filter: 'brightness(0.65) contrast(1.1)' }}
+            />
+          </div>
         ))}
+        
+        {/* Soft, Welcoming Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-slate-950/20" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto container-padding relative z-10 pt-20">
-        <div className="max-w-2xl lg:max-w-4xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5 mb-8 animate-fade-in opacity-0 fill-mode-forwards" style={{ animationDelay: '0.1s' }}>
-            <div className="relative">
-              <div className="w-2 h-2 rounded-full bg-secondary" />
-              <div className="absolute inset-0 w-2 h-2 rounded-full bg-secondary animate-ping" />
-            </div>
-            <span className="text-xs sm:text-sm text-white/90 font-bold uppercase tracking-widest">
-              Nigeria's No. 1 Real Estate Partners
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl">
+          {/* Welcoming Badge */}
+          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-8 animate-fade-in">
+            <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            <span className="text-xs sm:text-sm text-white font-medium uppercase tracking-wider">
+              Welcome to the Future of Home Ownership
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] mb-8 animate-fade-in opacity-0 fill-mode-forwards" style={{ animationDelay: '0.3s' }}>
-            <span className="text-white drop-shadow-2xl">Your Perfect Home</span>
-            <br />
-            <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Wait for You</span>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] mb-8 text-white animate-fade-up">
+            Your Journey to a <br />
+            <span className="text-secondary italic">Perfect Home</span> Starts Here
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mb-12 leading-relaxed animate-fade-in opacity-0 fill-mode-forwards" style={{ animationDelay: '0.5s' }}>
-            Transforming dreams into addresses with excellence and integrity across Nigeria.
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mb-12 leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            Experience extraordinary living with Nigeria's most trusted real estate partner. 
+            We make owning your dream home simple, secure, and stress-free.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-6 animate-fade-in opacity-0 fill-mode-forwards" style={{ animationDelay: '0.7s' }}>
+          {/* Features Checklist */}
+          <div className="flex flex-wrap gap-4 mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            {["Verified Titles", "Flexible Payment", "Prime Locations"].map((item) => (
+              <div key={item} className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/10">
+                <CheckCircle2 className="w-4 h-4 text-secondary" />
+                <span className="text-white/90 text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Large Welcoming CTAs */}
+          <div className="flex flex-col sm:flex-row gap-5 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <Button 
-              variant="hero" 
               size="lg" 
-              className="h-16 px-10 group bg-gradient-to-r from-secondary to-primary hover:scale-[1.02] transition-all border-0 shadow-2xl shadow-secondary/20 font-bold uppercase tracking-widest text-sm"
+              className="h-16 px-10 bg-secondary hover:bg-secondary/90 text-white font-bold uppercase tracking-widest text-sm rounded-xl transition-all hover:scale-[1.02] shadow-xl"
               asChild
             >
               <Link to="/properties">
-                Explore Properties
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+                Explore Our Properties
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
-            <a href="tel:+2348038034077" className="h-16 inline-flex items-center justify-center gap-3 px-10 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white hover:bg-white/20 transition-all font-bold uppercase tracking-widest text-sm">
+            <a 
+              href="tel:+2348038034077" 
+              className="h-16 inline-flex items-center justify-center gap-3 px-10 rounded-xl bg-white text-slate-950 hover:bg-slate-100 transition-all font-bold uppercase tracking-widest text-sm shadow-xl"
+            >
               <Phone className="w-5 h-5" />
-              Call Now
+              Talk to an Expert
             </a>
           </div>
-
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-3 gap-6 sm:gap-10 mt-12 pt-10 border-t border-white/10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <div className="text-center sm:text-left group">
-              <CountUpNumber end={5} suffix="+" className="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform inline-block" />
-              <div className="text-xs sm:text-sm text-white/50 mt-1 font-medium">Years Experience</div>
-            </div>
-            <div className="text-center sm:text-left group">
-              <CountUpNumber end={500} suffix="+" className="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform inline-block" />
-              <div className="text-xs sm:text-sm text-white/50 mt-1 font-medium">Happy Clients</div>
-            </div>
-            <div className="text-center sm:text-left group">
-              <CountUpNumber end={10} suffix="+" className="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform inline-block" />
-              <div className="text-xs sm:text-sm text-white/50 mt-1 font-medium">Estate Projects</div>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 z-10">
-        <span className="text-xs text-white/40 uppercase tracking-[0.2em] font-medium">Scroll</span>
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-gradient-to-b from-secondary to-primary rounded-full animate-bounce" />
-        </div>
+      {/* Slide Indicators */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImage(index)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              index === currentImage ? "w-12 bg-secondary" : "w-3 bg-white/30 hover:bg-white/50"
+            }`}
+          />
+        ))}
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+      {/* Elegant scroll indicator */}
+      <div className="absolute bottom-10 right-10 hidden lg:flex flex-col items-center gap-4 animate-bounce">
+        <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/50 to-white" />
+        <span className="text-[10px] uppercase tracking-[0.3em] text-white/50 vertical-text">Scroll</span>
+      </div>
     </section>
   );
 };

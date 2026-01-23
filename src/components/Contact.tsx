@@ -97,7 +97,8 @@ const Contact = () => {
           {/* Contact Form */}
           <AnimatedSection animation="slide-left" className="lg:col-span-3">
             <div className="bg-card rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-card">
-              <h3 className="text-xl md:text-2xl font-bold mb-5 md:mb-6 text-foreground">Send Us a <span className="text-secondary">Message</span></h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">Send Us a <span className="text-secondary">Message</span></h3>
+              <p className="text-sm text-muted-foreground mb-6">Fill out the form below to get a <span className="text-secondary font-bold">Free Property Investment Guide</span> sent to your email.</p>
               <form className="space-y-4 md:space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>

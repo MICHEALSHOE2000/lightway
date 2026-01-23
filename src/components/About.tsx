@@ -52,19 +52,19 @@ const teamMembers = [
   {
     name: "Funmilayo Adesanya",
     role: "MD/CEO",
-    image: funmilayoImg,
+    image: "https://lightwayhomesltd.com/images/funmi3.jpg",
     description: "Leading Light Way Homes with vision and dedication to transform the Nigerian real estate landscape.",
   },
   {
     name: "Olumide Olujuyigbe",
     role: "Chartered Architect",
-    image: olumideImg,
+    image: "https://lightwayhomesltd.com/images/olumide2.jpg",
     description: "Bringing architectural excellence and innovative designs to every project.",
   },
   {
     name: "Agboola O. Osunbanjo",
     role: "Civil/Structural Engineer",
-    image: agboolaImg,
+    image: "https://lightwayhomesltd.com/images/Engr-Biyi2.jpg",
     description: "Ensuring structural integrity and engineering excellence in all our developments.",
   },
 ];

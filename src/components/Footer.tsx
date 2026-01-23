@@ -9,7 +9,7 @@ const Footer = () => {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Properties", href: "/properties" },
+    { name: "Our Estates", href: "/properties" },
     { name: "Services", href: "/services" },
     { name: "Career", href: "/career" },
     { name: "Contact", href: "/contact" },
@@ -45,9 +45,9 @@ const Footer = () => {
           <AnimatedSection animation="fade-up" className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-block mb-4 md:mb-6 group">
               <img 
-                src={logo} 
+                src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                 alt="Light Way Homes" 
-                className="h-12 md:h-14 w-auto brightness-0 invert group-hover:scale-105 transition-transform"
+                className="h-12 md:h-16 w-auto brightness-0 invert group-hover:scale-105 transition-transform object-contain"
               />
             </Link>
             <p className="text-primary-foreground/70 text-xs md:text-sm mb-4 md:mb-6 leading-relaxed">
@@ -129,13 +129,14 @@ const Footer = () => {
                   info@lightwayhomesltd.com
                 </a>
               </li>
-              <li className="flex items-start gap-2 group">
-                <MapPin className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5 group-hover:scale-110 group-hover:rotate-12 transition-transform" />
-                <span className="text-primary-foreground/70 leading-relaxed">
-                  No. 4, Oyewo close, Clay Busstop, Juli Estate, Oregun, Ikeja Lagos.
-                </span>
-              </li>
             </ul>
+            <div className="mt-6 pt-6 border-t border-primary-foreground/10">
+              <p className="text-[10px] uppercase tracking-widest text-primary-foreground/40 font-bold mb-2">Accreditations</p>
+              <div className="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+                <span className="text-[10px] border border-primary-foreground/20 px-2 py-1 rounded">NIESV MEMBER</span>
+                <span className="text-[10px] border border-primary-foreground/20 px-2 py-1 rounded">ESVARBON</span>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </div>

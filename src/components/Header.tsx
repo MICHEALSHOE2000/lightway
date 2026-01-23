@@ -181,18 +181,18 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
-        hideNav ? '-translate-y-full' : 'translate-y-0'
+      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-700 ease-out px-4 sm:px-6 lg:px-8 ${
+        hideNav ? '-translate-y-[120%]' : 'translate-y-0'
       } opacity-100`}
     >
-      {/* Premium glass navbar container */}
-      <div className={`transition-all duration-500 ${
+      {/* Premium glass island navbar container */}
+      <div className={`mx-auto max-w-7xl transition-all duration-500 ease-in-out ${
         isScrolled 
-          ? 'bg-[#0a0a0f] shadow-[0_10px_40px_rgba(0,0,0,0.6)] border-b border-white/[0.08]' 
-          : 'bg-[#0a0a0f]/90 md:bg-[#0a0a0f]/80 backdrop-blur-2xl border-b border-white/[0.05]'
+          ? 'bg-[#0a0a0f]/90 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-white/10 rounded-2xl' 
+          : 'bg-black/60 md:bg-black/40 backdrop-blur-xl border border-white/5 rounded-[2rem]'
       }`}>
-        {/* Top accent line */}
-        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-secondary to-transparent opacity-100" />
+        {/* Top accent line - subtle and matched to island width */}
+        <div className="absolute top-0 left-10 right-10 h-[1.5px] bg-gradient-to-r from-transparent via-secondary/50 to-transparent opacity-80" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
@@ -205,12 +205,12 @@ const Header = () => {
                 <img 
                   src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                   alt="Light Way Homes" 
-                  className={`transition-all duration-500 group-hover:brightness-110 object-contain ${
-                    isScrolled ? 'h-10 md:h-12' : 'h-11 md:h-16'
+                  className={`transition-all duration-500 group-hover:brightness-200 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] ${
+                    isScrolled ? 'h-11 md:h-13' : 'h-12 md:h-18'
                   }`}
                 />
                 {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-white/10 -z-10" />
+                <div className="absolute inset-0 opacity-40 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-white/20 -z-10" />
               </div>
             </Link>
 

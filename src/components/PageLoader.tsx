@@ -30,7 +30,7 @@ const PageLoader = () => {
           <img
             src={logo}
             alt="Light Way Homes"
-            className="h-16 md:h-20 animate-pulse"
+            className="h-24 md:h-32 animate-pulse"
           />
           {/* Glow effect */}
           <div className="absolute inset-0 blur-xl opacity-50 bg-secondary rounded-full animate-ping" />

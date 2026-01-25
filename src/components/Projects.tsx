@@ -11,7 +11,7 @@ const projectDisplayData = [
     price: "From ₦7.5M",
     type: "Land & Townhouse",
     size: "300-500 SQM",
-    paymentPlan: "Up to 24 Months Payment Plan",
+    paymentPlan: "Up to 12 Months Payment Plan",
     verification: "Registered Survey / C of O",
   },
   {

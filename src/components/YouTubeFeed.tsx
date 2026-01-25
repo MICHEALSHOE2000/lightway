@@ -11,14 +11,6 @@ const videos = [
     id: "GvULfaw64hE", 
     title: "Novara Court Project Showcase",
   },
-  {
-    id: "lGYYn2j5OPw", 
-    title: "Real Estate Investment Advice in Nigeria",
-  },
-  {
-    id: "Qa9yCvC-T3Y", 
-    title: "Property Value Preservation Strategies",
-  },
 ];
 
 // To display more videos or a specific playlist, you can use the playlist ID:

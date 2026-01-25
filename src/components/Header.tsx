@@ -133,7 +133,17 @@ const Header = () => {
 
   const navLinks: NavItem[] = [
     { name: "Home", href: "/", isRoute: true, icon: <MapPin className="w-4 h-4" /> },
-    { name: "Our Estates", href: "/properties", isRoute: true, icon: <ArrowRight className="w-4 h-4" /> },
+    { 
+      name: "Our Estates", 
+      href: "/properties", 
+      isRoute: true, 
+      icon: <ArrowRight className="w-4 h-4" />,
+      subLinks: [
+        { name: "The Naples Estate", href: "/projects/the-naples", description: "Premium Land & Townhouses" },
+        { name: "The Novara Courts", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
+        { name: "View All Properties", href: "/properties", description: "Explore our full portfolio" },
+      ]
+    },
     { 
       name: "Services", 
       href: "/services", 
@@ -206,7 +216,7 @@ const Header = () => {
                   src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                   alt="Light Way Homes" 
                   className={`transition-all duration-500 group-hover:brightness-200 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] ${
-                    isScrolled ? 'h-11 md:h-13' : 'h-12 md:h-18'
+                    isScrolled ? 'h-12 md:h-14' : 'h-16 md:h-24'
                   }`}
                 />
                 {/* Subtle glow on hover */}
@@ -414,7 +424,7 @@ const Header = () => {
             <img 
               src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
               alt="Light Way Homes" 
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </Link>
           <button

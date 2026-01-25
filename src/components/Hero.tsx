@@ -1,45 +1,26 @@
-import { useState, useEffect } from "react";
 import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const heroImages = [
-  "https://lightwayhomesltd.com/static/media/roman-height-home-hero.e25a3979b37f2bf5a8df.jpg",
-  "https://lightwayhomesltd.com/static/media/lifestyle-hero-home.edd2d0348ed0fd5ce4f9.jpeg",
-  "https://lightwayhomesltd.com/static/media/dream-hero-home.6974bea0dad75785db35.jpeg",
-  "https://lightwayhomesltd.com/static/media/naples-hero-home.84931261b54080dda499.jpg",
-  "https://lightwayhomesltd.com/static/media/novara-hero-home.5745192a9c1a3cbceb42.jpg",
-];
-
 const Hero = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 md:pt-36">
-      {/* Background Image Slider */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {heroImages.map((image, index) => (
-          <div
-            key={image}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              index === currentImage ? "opacity-100 scale-100" : "opacity-0 scale-105"
-            }`}
-          >
-            <img
-              src={image}
-              alt="Luxury Real Estate"
-              className="w-full h-full object-cover"
-              style={{ filter: 'brightness(0.65) contrast(1.1)' }}
-            />
-          </div>
-        ))}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          webkit-playsinline="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'brightness(0.65) contrast(1.1)' }}
+        >
+          <source src="/videos/hero-vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         
         {/* Soft, Welcoming Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/40 to-transparent" />
@@ -100,19 +81,6 @@ const Hero = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImage(index)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              index === currentImage ? "w-12 bg-secondary" : "w-3 bg-white/30 hover:bg-white/50"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Elegant scroll indicator */}

@@ -5,6 +5,7 @@ import naplesLand1 from "@/assets/projects/naples-land-1.jpg";
 import naplesLand2 from "@/assets/projects/naples-land-2.jpg";
 import naplesBedroom1 from "@/assets/projects/naples-bedroom-1.jpg";
 import naplesBedroom2 from "@/assets/projects/naples-bedroom-2.jpg";
+import naplesArepo from "@/assets/properties/naples-arepo.jpg";
 
 // Property Images
 import naples4BedBq from "@/assets/properties/naples-4bed-bq.png";
@@ -61,17 +62,17 @@ export const projects: Project[] = [
   {
     id: "project-1",
     slug: "the-naples",
-    title: "The Naples Estate",
+    title: "Naples Arepo",
     location: "Arepo, Ogun State",
-    address: "Naples Estate, Arepo, Ogun State",
-    image: "https://lightwayhomesltd.com/static/media/naples-hero-home.84931261b54080dda499.jpg",
+    address: "Naples Arepo, Arepo, Ogun State",
+    image: naplesArepo,
     images: [
-      "https://lightwayhomesltd.com/static/media/naples-hero-home.84931261b54080dda499.jpg",
+      naplesArepo,
       "https://i.ytimg.com/vi/9uws_QMkQUQ/hqdefault.jpg",
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
     status: "Now Selling",
-    description: "Naples Estate, Arepo is a premium residential development with registered survey. The development offers serviced land plots and exquisitely designed 4-bedroom terrace townhouses with BQ in a secured and fully serviced community.",
+    description: "Naples Arepo, Arepo is a premium residential development with registered survey. The development offers serviced land plots and exquisitely designed 4-bedroom terrace townhouses with BQ in a secured and fully serviced community.",
     amenities: [
       "24/7 Security and Power",
       "Parking Space",
@@ -114,15 +115,15 @@ export const projects: Project[] = [
 
 // All Properties (Naples: Land + 4bed BQ | Novara: Land only)
 export const properties: Property[] = [
-  // Naples Estate Properties
+  // Naples Arepo Properties
   {
     id: "naples-townhouse",
     slug: "the-naples-4bed-terrace-townhouse",
     title: "4 Bedroom + BQ",
-    location: "Naples Estate, Arepo, Ogun State",
-    address: "Naples Estate, Arepo, Ogun State",
-    image: naplesHero,
-    images: [naplesHero, naplesBedroom1, naplesBedroom2],
+    location: "Naples Arepo, Arepo, Ogun State",
+    address: "Naples Arepo, Arepo, Ogun State",
+    image: naplesArepo,
+    images: [naplesArepo, naplesBedroom1, naplesBedroom2],
     status: "Now Selling",
     price: "From ₦150,000,000",
     priceRange: { min: 150000000, max: 180000000 },
@@ -130,7 +131,7 @@ export const properties: Property[] = [
     size: "450 SQM",
     bedrooms: 4,
     bathrooms: 5,
-    description: "Luxurious 4-bedroom terrace townhouse with boys' quarters at Naples Estate, Arepo. Features contemporary architecture, premium finishes, and spacious living areas designed for modern family living.",
+    description: "Luxurious 4-bedroom terrace townhouse with boys' quarters at Naples Arepo, Arepo. Features contemporary architecture, premium finishes, and spacious living areas designed for modern family living.",
     features: [
       "Contemporary architectural design",
       "Spacious living and dining areas",
@@ -169,8 +170,8 @@ export const properties: Property[] = [
     id: "naples-500sqm",
     slug: "the-naples-500sqm-serviced-plot",
     title: "500 SQM Serviced Plot",
-    location: "Naples Estate, Arepo, Ogun State",
-    address: "Naples Estate, Arepo, Ogun State",
+    location: "Naples Arepo, Arepo, Ogun State",
+    address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand1,
     images: [naplesLand1, naplesLand2],
     status: "Now Selling",
@@ -178,7 +179,7 @@ export const properties: Property[] = [
     priceRange: { min: 9000000, max: 15000000 },
     type: "Land",
     size: "500 SQM",
-    description: "Premium 500 square meter serviced plot at Naples Estate, Arepo. Registered survey with excellent infrastructure and amenities. Perfect for building your dream home.",
+    description: "Premium 500 square meter serviced plot at Naples Arepo, Arepo. Registered survey with excellent infrastructure and amenities. Perfect for building your dream home.",
     features: [
       "Dry and solid land",
       "Registered survey",
@@ -215,8 +216,8 @@ export const properties: Property[] = [
     id: "naples-300sqm",
     slug: "the-naples-300sqm-serviced-plot",
     title: "300 SQM Serviced Plot",
-    location: "Naples Estate, Arepo, Ogun State",
-    address: "Naples Estate, Arepo, Ogun State",
+    location: "Naples Arepo, Arepo, Ogun State",
+    address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand2,
     images: [naplesLand2, naplesLand1],
     status: "Now Selling",
@@ -224,7 +225,7 @@ export const properties: Property[] = [
     priceRange: { min: 7500000, max: 12000000 },
     type: "Land",
     size: "300 SQM",
-    description: "Affordable 300 square meter serviced plot at Naples Estate, Arepo. Registered survey with excellent infrastructure. Ideal for compact home designs.",
+    description: "Affordable 300 square meter serviced plot at Naples Arepo, Arepo. Registered survey with excellent infrastructure. Ideal for compact home designs.",
     features: [
       "Dry and solid land",
       "Registered survey",

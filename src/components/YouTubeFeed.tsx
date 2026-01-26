@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 const videos = [
   {
     id: "9uws_QMkQUQ", 
-    title: "The Naples Development - Premium Real Estate",
+    title: "Naples Arepo Development - Premium Real Estate",
   },
   {
     id: "GvULfaw64hE", 

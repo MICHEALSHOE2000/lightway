@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, MapPin, ArrowUpRight, Bed, Ruler } from "lucide-react";
+import { ArrowLeft, MapPin, ArrowUpRight, Bed, Ruler, LayoutGrid, Home, TreePine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
@@ -7,15 +7,29 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { getProjectBySlug, getPropertiesByProject, projects } from "@/data/properties";
 import NotFound from "@/pages/NotFound";
 import FAQ from "@/components/FAQ";
+import { useState, useMemo } from "react";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const [activeTab, setActiveTab] = useState<"All" | "Land" | "Building">("All");
+  
   const project = getProjectBySlug(slug || "");
-  const properties = getPropertiesByProject(slug || "");
+  const allProperties = getPropertiesByProject(slug || "");
+
+  const filteredProperties = useMemo(() => {
+    if (activeTab === "All") return allProperties;
+    return allProperties.filter(p => p.type.includes(activeTab));
+  }, [activeTab, allProperties]);
 
   if (!project) {
     return <NotFound />;
   }
+
+  const tabs = [
+    { id: "All", label: "All Units", icon: LayoutGrid },
+    { id: "Land", label: "Land Plots", icon: TreePine },
+    { id: "Building", label: "Houses/Buildings", icon: Home },
+  ] as const;
 
   return (
     <Layout>
@@ -51,12 +65,37 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="mb-8 border-b border-border pb-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 border-b border-border pb-6">
             <h3 className="text-xl md:text-2xl font-bold text-foreground">Available Units</h3>
+            
+            {/* Category Slider/Segmented Control */}
+            <div className="relative p-1 bg-muted rounded-xl flex items-center w-full max-w-md">
+              <div 
+                className="absolute h-[calc(100%-8px)] bg-white shadow-sm rounded-lg transition-all duration-300 ease-in-out z-0"
+                style={{
+                  width: `${100 / tabs.length}%`,
+                  left: `${(tabs.findIndex(t => t.id === activeTab) * 100) / tabs.length + (4 / (tabs.length * 2))}%`,
+                  transform: 'translateX(-2px)'
+                }}
+              />
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`relative z-10 flex-1 flex items-center justify-center gap-2 py-2 text-sm font-semibold transition-colors duration-200 ${
+                    activeTab === tab.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <tab.icon className="w-4 h-4" />
+                  <span className="hidden sm:inline">{tab.label}</span>
+                  <span className="sm:hidden">{tab.id}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
-            {properties.map((property, index) => (
+            {filteredProperties.map((property, index) => (
               <AnimatedSection
                 key={property.id}
                 animation="fade-up"

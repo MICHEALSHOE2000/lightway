@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
       <p>Many developers, including Light Way Homes, now offer flexible payment plans that make property ownership more accessible. You can spread payments over 12-24 months, making it easier to acquire your dream property.</p>
       
       <h2>Our Recommendation</h2>
-      <p>Consider investing in our Naples or Novara Court estates, which offer land plots starting from 300sqm with guaranteed titles and comprehensive facility management services.</p>
+      <p>Consider investing in our Naples Arepo or Novara Court estates, which offer land plots starting from 300sqm with guaranteed titles and comprehensive facility management services.</p>
     `,
     author: "Agboola Osunbanjo",
     date: "2024-01-15",
@@ -64,7 +64,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       
       <h2>Light Way Homes Guarantee</h2>
-      <p>All our properties come with proper documentation. The Naples is covered by a Certificate of Occupancy, while Novara Court is covered by a registered survey (OG/0765/2023/067), ensuring your investment is secure.</p>
+      <p>All our properties come with proper documentation. The Naples Arepo is covered by a Certificate of Occupancy, while Novara Court is covered by a registered survey (OG/0765/2023/067), ensuring your investment is secure.</p>
     `,
     author: "Funmilayo Adesanya",
     date: "2024-01-08",
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
       <p>Well-managed estates tend to maintain and increase property values over time due to consistent maintenance and development of common areas.</p>
       
       <h2>Experience Estate Living with Light Way Homes</h2>
-      <p>Our estates at Naples and Novara Court are designed with all these benefits in mind, providing you with a premium living experience at affordable prices.</p>
+      <p>Our estates at Naples Arepo and Novara Court are designed with all these benefits in mind, providing you with a premium living experience at affordable prices.</p>
     `,
     author: "Olumide Olujuyigbe",
     date: "2024-01-02",

@@ -223,7 +223,7 @@ const ContactPage = () => {
                     <select className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base">
                       <option value="">Select an estate</option>
                       <option value="roman-heights">Roman Heights</option>
-                      <option value="the-naples">The Naples</option>
+                      <option value="the-naples">Naples Arepo</option>
                       <option value="novara-court">Novara Court</option>
                       <option value="other">Other / General Inquiry</option>
                     </select>

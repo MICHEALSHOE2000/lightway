@@ -7,7 +7,7 @@ import { projects } from "@/data/properties";
 // Map projects to display format with price ranges (Naples and Novara only)
 const projectDisplayData = [
   {
-    ...projects[0], // Naples Estate
+    ...projects[0], // Naples Arepo
     price: "From ₦7.5M",
     type: "Land & Townhouse",
     size: "300-500 SQM",
@@ -50,7 +50,7 @@ const Projects = () => {
               animation="fade-up"
               delay={index * 150}
             >
-              <Link to={`/properties?project=${project.slug}`} className="block h-full">
+              <Link to={`/projects/${project.slug}`} className="block h-full">
                 <div className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated border border-border h-full transition-all duration-300 hover:-translate-y-1">
                   {/* Image */}
                   <div className="relative h-48 sm:h-52 md:h-60 overflow-hidden">

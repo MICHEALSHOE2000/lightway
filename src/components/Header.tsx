@@ -139,7 +139,7 @@ const Header = () => {
       isRoute: true, 
       icon: <ArrowRight className="w-4 h-4" />,
       subLinks: [
-        { name: "The Naples Estate", href: "/projects/the-naples", description: "Premium Land & Townhouses" },
+        { name: "Naples Arepo", href: "/projects/the-naples", description: "Premium Land & Townhouses" },
         { name: "The Novara Courts", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
         { name: "View All Properties", href: "/properties", description: "Explore our full portfolio" },
       ]

@@ -65,34 +65,40 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 border-b border-border pb-6">
-            <h3 className="text-xl md:text-2xl font-bold text-foreground">Available Units</h3>
-            
-            {/* Category Slider/Segmented Control */}
-            <div className="relative p-1 bg-muted rounded-xl flex items-center w-full max-w-md">
-              <div 
-                className="absolute h-[calc(100%-8px)] bg-white shadow-sm rounded-lg transition-all duration-300 ease-in-out z-0"
-                style={{
-                  width: `${100 / tabs.length}%`,
-                  left: `${(tabs.findIndex(t => t.id === activeTab) * 100) / tabs.length + (4 / (tabs.length * 2))}%`,
-                  transform: 'translateX(-2px)'
-                }}
-              />
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative z-10 flex-1 flex items-center justify-center gap-2 py-2 text-sm font-semibold transition-colors duration-200 ${
-                    activeTab === tab.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  <tab.icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{tab.label}</span>
-                  <span className="sm:hidden">{tab.id}</span>
-                </button>
-              ))}
+          {allProperties.some(p => p.type.includes("Land")) && allProperties.some(p => p.type.includes("Building")) ? (
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 border-b border-border pb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">Available Units</h3>
+              
+              {/* Category Slider/Segmented Control - Only shown if both types exist */}
+              <div className="relative p-1 bg-muted rounded-xl flex items-center w-full max-w-md">
+                <div 
+                  className="absolute h-[calc(100%-8px)] bg-white shadow-sm rounded-lg transition-all duration-300 ease-in-out z-0"
+                  style={{
+                    width: `${100 / tabs.length}%`,
+                    left: `${(tabs.findIndex(t => t.id === activeTab) * 100) / tabs.length + (4 / (tabs.length * 2))}%`,
+                    transform: 'translateX(-2px)'
+                  }}
+                />
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`relative z-10 flex-1 flex items-center justify-center gap-2 py-2 text-sm font-semibold transition-colors duration-200 ${
+                      activeTab === tab.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    <tab.icon className="w-4 h-4" />
+                    <span className="hidden sm:inline">{tab.label}</span>
+                    <span className="sm:hidden">{tab.id}</span>
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="mb-8 border-b border-border pb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">Available Units</h3>
+            </div>
+          )}
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {filteredProperties.map((property, index) => (

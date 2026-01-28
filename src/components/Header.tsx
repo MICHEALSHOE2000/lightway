@@ -211,16 +211,16 @@ const Header = () => {
               to="/" 
               className="flex items-center group transition-all duration-700"
             >
-              <div className="relative">
+              <div className="relative transform hover:scale-105 transition-transform duration-500">
                 <img 
                   src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                   alt="Light Way Homes" 
-                  className={`transition-all duration-500 group-hover:brightness-200 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] ${
-                    isScrolled ? 'h-12 md:h-14' : 'h-16 md:h-24'
+                  className={`transition-all duration-700 group-hover:brightness-200 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] ${
+                    isScrolled ? 'h-10 md:h-12' : 'h-14 md:h-20'
                   }`}
                 />
                 {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-40 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-white/20 -z-10" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl bg-white/20 -z-10" />
               </div>
             </Link>
 

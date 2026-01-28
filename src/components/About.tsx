@@ -149,7 +149,7 @@ const About = () => {
 
         {/* Core Values */}
         <div className="mb-20">
-          <AnimatedSection animation="fade-up" className="text-center mb-12">
+          <AnimatedSection animation="slide-up-reveal" className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary font-semibold uppercase tracking-widest text-sm rounded-full">
               What Drives Us
             </span>
@@ -158,12 +158,12 @@ const About = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {coreValues.map((value, index) => (
-              <AnimatedSection key={value.title} animation="scale" delay={index * 100}>
-                <div className="bg-card rounded-xl p-6 border border-border shadow-card hover:shadow-elevated transition-all duration-300 group h-full">
-                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <value.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+              <AnimatedSection key={value.title} animation="slide-up-reveal" delay={index * 100}>
+                <div className="bg-card rounded-xl p-6 border border-border shadow-card hover:shadow-elevated transition-all duration-500 ease-premium hover:-translate-y-2 group h-full">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <value.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{value.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{value.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
                 </div>
               </AnimatedSection>
@@ -173,7 +173,7 @@ const About = () => {
 
         {/* Meet Our Team */}
         <div className="mb-20">
-          <AnimatedSection animation="fade-up" className="text-center mb-12">
+          <AnimatedSection animation="slide-up-reveal" className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary font-semibold uppercase tracking-widest text-sm rounded-full">
               Leadership
             </span>
@@ -182,18 +182,18 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {teamMembers.map((member, index) => (
-              <AnimatedSection key={member.name} animation="fade-up" delay={index * 150}>
-                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all duration-300 group">
+              <AnimatedSection key={member.name} animation="slide-up-reveal" delay={index * 150}>
+                <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-elevated transition-all duration-500 ease-premium hover:-translate-y-2 group">
                   <div className="aspect-[4/5] overflow-hidden relative">
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-1000 ease-premium"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">{member.name}</h3>
                     <p className="text-secondary font-semibold mb-3">{member.role}</p>
                     <p className="text-muted-foreground text-sm">{member.description}</p>
                   </div>
@@ -205,7 +205,7 @@ const About = () => {
 
         {/* Testimonials */}
         <div className="mb-20">
-          <AnimatedSection animation="fade-up" className="text-center mb-12">
+          <AnimatedSection animation="slide-up-reveal" className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary font-semibold uppercase tracking-widest text-sm rounded-full">
               Testimonials
             </span>
@@ -214,20 +214,20 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={testimonial.author} animation="fade-up" delay={index * 150}>
-                <div className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-elevated transition-all duration-300 relative group">
-                  <Quote className="w-12 h-12 text-muted absolute top-6 right-6" />
+              <AnimatedSection key={testimonial.author} animation="slide-up-reveal" delay={index * 150}>
+                <div className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-elevated transition-all duration-500 ease-premium hover:-translate-y-2 relative group">
+                  <Quote className="w-12 h-12 text-muted absolute top-6 right-6 opacity-20 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
                   <p className="text-muted-foreground italic mb-6 leading-relaxed relative z-10">
                     "{testimonial.quote}"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-brand">
                       <span className="text-primary-foreground font-bold text-lg">
                         {testimonial.author.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <p className="font-bold text-foreground">{testimonial.author}</p>
+                      <p className="font-bold text-foreground group-hover:text-primary transition-colors">{testimonial.author}</p>
                       <p className="text-muted-foreground text-sm">Satisfied Client</p>
                     </div>
                   </div>

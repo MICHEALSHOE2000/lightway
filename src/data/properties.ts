@@ -1,19 +1,19 @@
 // Project Images
 import naplesHero from "@/assets/projects/naples-hero.jpg";
-import novaraHero from "@/assets/projects/novara-hero.jpg";
 import naplesLand1 from "@/assets/projects/naples-land-1.jpg";
 import naplesLand2 from "@/assets/projects/naples-land-2.jpg";
 import naplesBedroom1 from "@/assets/projects/naples-bedroom-1.jpg";
 import naplesBedroom2 from "@/assets/projects/naples-bedroom-2.jpg";
 import naplesArepo from "@/assets/properties/naples-arepo.jpg";
+import naplesBack from "@/assets/projects/naples-back.jpg";
 
 // Property Images
 import naples4BedBq from "@/assets/properties/naples-4bed-bq.png";
 import naples500sqm from "@/assets/properties/naples-500sqm.jpg";
 import naples300sqm from "@/assets/properties/naples-300sqm.jpg";
-import novara300sqm from "@/assets/properties/novara-300sqm.jpg";
-import novara500sqm from "@/assets/properties/novara-500sqm.jpg";
-import novaraLand from "@/assets/projects/novara-hero.jpg";
+import novara1 from "@/assets/projects/novara-1.jpg";
+import novara2 from "@/assets/projects/novara-2.jpg";
+import novara3 from "@/assets/projects/novara-3.jpg";
 
 export interface Property {
   id: string;
@@ -68,6 +68,7 @@ export const projects: Project[] = [
     image: naplesArepo,
     images: [
       naplesArepo,
+      naplesBack,
       "https://i.ytimg.com/vi/9uws_QMkQUQ/hqdefault.jpg",
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
@@ -91,11 +92,11 @@ export const projects: Project[] = [
     title: "The Novara Courts",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
-    image: "https://lightwayhomesltd.com/static/media/novara-hero-home.5745192a9c1a3cbceb42.jpg",
+    image: novara1,
     images: [
-      "https://lightwayhomesltd.com/static/media/novara-hero-home.5745192a9c1a3cbceb42.jpg",
-      "https://i.ytimg.com/vi/GvULfaw64hE/hqdefault.jpg",
-      "https://lightwayhomesltd.com/static/media/lifestyle-hero-home.edd2d0348ed0fd5ce4f9.jpeg"
+      novara1,
+      novara2,
+      novara3,
     ],
     status: "Now Selling",
     description: "The Novara Courts is an eco-friendly residential development strategically located near major industrial hubs including Nestlé, Olam Group, International Breweries, Apple and Pears Ltd, Christopher University, and RCCG Camp. 45 minutes to Lagos International Airport.",
@@ -123,10 +124,10 @@ export const properties: Property[] = [
     location: "Naples Arepo, Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesArepo,
-    images: [naplesArepo, naplesBedroom1, naplesBedroom2],
+    images: [naplesArepo, naplesBack, naplesBedroom1, naplesBedroom2],
     status: "Now Selling",
-    price: "From ₦150,000,000",
-    priceRange: { min: 150000000, max: 180000000 },
+    price: "₦30,000,000 Initial Deposit",
+    priceRange: { min: 30000000, max: 180000000 },
     type: "Building",
     size: "450 SQM",
     bedrooms: 4,
@@ -157,10 +158,10 @@ export const properties: Property[] = [
         initialDeposit: "100%",
       },
       {
-        name: "Installment Plan",
+        name: "Flexible Payment Plan",
         duration: "Up to 12 months",
         initialDeposit: "₦30,000,000",
-        monthlyPayment: "Spread balance over 12 months",
+        monthlyPayment: "Balance spread up to 12 months",
       },
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
@@ -266,11 +267,11 @@ export const properties: Property[] = [
     title: "300 SQM Plot",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
-    image: novaraLand,
-    images: [novaraLand, novara300sqm],
+    image: novara1,
+    images: [novara1, novara2, novara3],
     status: "Now Selling",
-    price: "₦5,000,000",
-    priceRange: { min: 5000000, max: 5500000 },
+    price: "₦4,500,000",
+    priceRange: { min: 4500000, max: 5000000 },
     type: "Residential Land",
     size: "300 SQM",
     description: "Affordable 300 square meter plot at The Novara Courts, Orilemo Mowe. Near major industrial hubs including Nestlé, Olam Group, International Breweries, Apple and Pears Ltd, Christopher University, and RCCG Camp. 45 minutes to Lagos International Airport.",
@@ -297,7 +298,7 @@ export const properties: Property[] = [
       {
         name: "Outright Payment",
         duration: "Immediate",
-        initialDeposit: "₦5,000,000 (5% discount)",
+        initialDeposit: "₦4,500,000 (5% discount)",
       },
       {
         name: "Flexible Payment",
@@ -315,8 +316,8 @@ export const properties: Property[] = [
     title: "500 SQM Plot",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
-    image: novaraLand,
-    images: [novaraLand, novara500sqm],
+    image: novara2,
+    images: [novara1, novara2, novara3],
     status: "Now Selling",
     price: "₦6,500,000",
     priceRange: { min: 6500000, max: 7000000 },
@@ -364,8 +365,8 @@ export const properties: Property[] = [
     title: "600 SQM Plot",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
-    image: novaraLand,
-    images: [novaraLand, novara500sqm],
+    image: novara3,
+    images: [novara1, novara2, novara3],
     status: "Now Selling",
     price: "₦7,500,000",
     priceRange: { min: 7500000, max: 8000000 },

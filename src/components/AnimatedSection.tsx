@@ -34,6 +34,10 @@ const animationClasses = {
     hidden: "opacity-0 blur-sm",
     visible: "opacity-100 blur-0",
   },
+  "slide-up-reveal": {
+    hidden: "opacity-0 translate-y-8",
+    visible: "opacity-100 translate-y-0",
+  },
 };
 
 const AnimatedSection = ({
@@ -41,16 +45,16 @@ const AnimatedSection = ({
   className = "",
   animation = "fade-up",
   delay = 0,
-  duration = 700,
+  duration = 800,
 }: AnimatedSectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const { hidden, visible } = animationClasses[animation];
+  const { hidden, visible } = animationClasses[animation] || animationClasses["fade-up"];
 
   return (
     <div
       ref={ref}
-      className={`transition-all ease-out ${isVisible ? visible : hidden} ${className}`}
+      className={`transition-all ease-premium ${isVisible ? visible : hidden} ${className}`}
       style={{
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,

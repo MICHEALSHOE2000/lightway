@@ -185,7 +185,7 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      <FAQ />
+      <FAQ category={project.slug === "the-naples" ? "Naples" : "Novara"} />
 
       {/* Other Estates Section */}
       <section className="section-padding bg-muted/30 border-t border-border">

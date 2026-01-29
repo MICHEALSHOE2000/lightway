@@ -142,22 +142,22 @@ const AboutPage = () => {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto container-padding relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <AnimatedSection animation="slide-right">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <AnimatedSection animation="slide-up-reveal" className="text-center lg:text-left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-foreground">
                 We're a Reputable Real Estate Firm with{" "}
                 <span className="text-gradient-brand">
                   Uncompromising Integrity
                 </span>
               </h2>
-              <p className="text-muted-foreground text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
+              <p className="text-muted-foreground text-sm lg:text-lg mb-6 leading-relaxed">
                 Light Way Homes and Investment Limited is a real estate
                 development company committed to bridging the massive housing
                 deficit in Nigeria. We offer a new path to home ownership for
                 Nigerians especially first time homeowners, by making it
                 possible to own a home without stress or strain.
               </p>
-              <p className="text-muted-foreground text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
+              <p className="text-muted-foreground text-sm lg:text-lg mb-6 leading-relaxed">
                 Through a well-crafted concept of developing multiple units
                 within a colony, acquiring affordable, luxurious, sustainable
                 and environmental friendly houses for our affable customers
@@ -165,7 +165,7 @@ const AboutPage = () => {
               </p>
 
               {/* Features */}
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3 text-left">
                 {features.map((feature, index) => (
                   <AnimatedSection
                     key={index}
@@ -184,34 +184,38 @@ const AboutPage = () => {
             </AnimatedSection>
 
             {/* Mission & Vision */}
-            <AnimatedSection animation="slide-left" className="space-y-6">
-              <div className="bg-card rounded-2xl p-6 md:p-8 border border-border card-hover">
-                <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                  <Target className="w-7 h-7 text-primary-foreground" />
+            <div className="space-y-6">
+              <AnimatedSection animation="slide-up-reveal">
+                <div className="bg-card rounded-2xl p-6 md:p-8 border border-border card-hover">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
+                    <Target className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                    Our Mission
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    To blend creativity with professionalism in delivering
+                    well-structured, globally acceptable, and top-notch properties
+                    to our revered clients.
+                  </p>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
-                  Our Mission
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  To blend creativity with professionalism in delivering
-                  well-structured, globally acceptable, and top-notch properties
-                  to our revered clients.
-                </p>
-              </div>
+              </AnimatedSection>
 
-              <div className="bg-card rounded-2xl p-6 md:p-8 border border-border card-hover">
-                <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                  <Lightbulb className="w-7 h-7 text-primary-foreground" />
+              <AnimatedSection animation="slide-up-reveal" delay={100}>
+                <div className="bg-card rounded-2xl p-6 md:p-8 border border-border card-hover">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
+                    <Lightbulb className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                    Our Vision
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    A world-class real estate development company, driven by value
+                    innovation and optimum service to deliver functional homes.
+                  </p>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
-                  Our Vision
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  A world-class real estate development company, driven by value
-                  innovation and optimum service to deliver functional homes.
-                </p>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
@@ -236,36 +240,36 @@ const AboutPage = () => {
               {milestones.map((milestone, index) => (
                 <AnimatedSection
                   key={milestone.year}
-                  animation={index % 2 === 0 ? "slide-right" : "slide-left"}
+                  animation="slide-up-reveal"
                   delay={index * 100}
                 >
                   <div
-                    className={`flex flex-col md:flex-row items-center gap-6 ${
+                    className={`flex flex-col md:flex-row items-center gap-4 md:gap-8 ${
                       index % 2 === 0 ? "md:flex-row-reverse" : ""
                     }`}
                   >
                     <div
-                      className={`flex-1 ${
+                      className={`w-full md:flex-1 ${
                         index % 2 === 0 ? "md:text-right" : ""
                       }`}
                     >
-                      <div className="bg-card rounded-2xl p-6 border border-border card-hover">
-                        <div className="flex items-center gap-3 mb-3">
+                      <div className="bg-card rounded-2xl p-5 md:p-6 border border-border card-hover">
+                        <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                           <Calendar className="w-5 h-5 text-secondary" />
                           <span className="text-secondary font-bold">
                             {milestone.year}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">
+                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                           {milestone.title}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground">
                           {milestone.description}
                         </p>
                       </div>
                     </div>
-                    <div className="w-4 h-4 bg-secondary rounded-full flex-shrink-0 hidden md:block" />
-                    <div className="flex-1" />
+                    <div className="w-4 h-4 bg-secondary rounded-full flex-shrink-0 hidden md:block border-4 border-background ring-4 ring-secondary/20" />
+                    <div className="hidden md:block flex-1" />
                   </div>
                 </AnimatedSection>
               ))}
@@ -311,7 +315,7 @@ const AboutPage = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="section-padding bg-muted">
+      <section id="team" className="section-padding bg-muted">
         <div className="container mx-auto container-padding">
           <AnimatedSection animation="fade-up" className="text-center mb-12">
             <span className="text-secondary font-semibold uppercase tracking-widest text-sm">
@@ -322,7 +326,7 @@ const AboutPage = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {teamMembers.map((member, index) => (
               <AnimatedSection
                 key={member.name}
@@ -367,7 +371,7 @@ const AboutPage = () => {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <AnimatedSection
                 key={testimonial.author}

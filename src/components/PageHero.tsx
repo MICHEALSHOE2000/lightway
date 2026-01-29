@@ -23,7 +23,7 @@ interface PageHeroProps {
 
 const PageHero = ({ title, subtitle, description, breadcrumbs }: PageHeroProps) => {
   return (
-    <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
+    <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-hero opacity-95" />
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5" />
       
@@ -47,7 +47,7 @@ const PageHero = ({ title, subtitle, description, breadcrumbs }: PageHeroProps) 
         {breadcrumbs && breadcrumbs.length > 0 && (
           <AnimatedSection animation="fade-up" className="mb-6">
             <Breadcrumb>
-              <BreadcrumbList>
+              <BreadcrumbList className="justify-center">
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
                     <Link to="/" className="text-primary-foreground/70 hover:text-secondary transition-colors">

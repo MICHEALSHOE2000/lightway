@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children, showLoader = false }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {showLoader && <PageLoader />}
       <Header />
       <main>{children}</main>

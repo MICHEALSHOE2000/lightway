@@ -33,28 +33,37 @@ const YouTubeFeed = () => {
               animation="fade-up"
               delay={index * 150}
             >
-              <div className="bg-[#0f0f0f] rounded-xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+              <div className="bg-[#121212] rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-primary/20 border border-white/5 group">
                 <div className="aspect-video relative">
                   <iframe
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&autohide=1&showinfo=0`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full border-none"
                   ></iframe>
                 </div>
-                <div className="px-4 py-3 bg-black flex items-center justify-between">
-                   <div className="flex items-center gap-2">
-                     <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
-                        <Youtube className="w-4 h-4 text-red-600" />
+                <div className="p-4 md:p-6 bg-gradient-to-b from-[#1a1a1a] to-black">
+                   <div className="flex flex-col gap-4">
+                     <div className="flex items-start gap-3">
+                       <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center flex-shrink-0 border border-red-600/20">
+                          <Youtube className="w-5 h-5 text-red-600" />
+                       </div>
+                       <div className="flex-1 min-w-0">
+                         <h3 className="text-white text-base md:text-lg font-bold leading-tight line-clamp-2">
+                           {video.title}
+                         </h3>
+                         <p className="text-white/40 text-xs mt-1 font-medium uppercase tracking-wider">Official Update</p>
+                       </div>
                      </div>
-                     <span className="text-white text-sm font-medium truncate max-w-[200px]">{video.title}</span>
+                     
+                     <Button variant="outline" className="w-full border-white/10 text-white hover:bg-white/5 hover:border-white/20 text-sm font-semibold transition-all group/btn" asChild>
+                       <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                         Watch on YouTube
+                         <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                       </a>
+                     </Button>
                    </div>
-                   <Button variant="ghost" size="sm" className="text-white hover:text-white hover:bg-white/10 text-xs font-bold" asChild>
-                     <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">
-                       Watch on YouTube
-                     </a>
-                   </Button>
                 </div>
               </div>
             </AnimatedSection>

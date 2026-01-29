@@ -150,10 +150,10 @@ const Header = () => {
       isRoute: true,
       icon: <Phone className="w-4 h-4" />,
       subLinks: [
-        { name: "Property Sales", href: "/services#sales", description: "Find your dream property" },
-        { name: "Property Management", href: "/services#management", description: "Expert property care" },
+        { name: "Property Sales", href: "/services#sales", description: "Find your dream home" },
+        { name: "Land Sales", href: "/services#land", description: "Secure land investments" },
         { name: "Real Estate Advisory", href: "/services#advisory", description: "Professional guidance" },
-        { name: "Investment Consulting", href: "/services#investment", description: "Smart investment strategies" },
+        { name: "Documentation", href: "/services#doc", description: "Hassle-free title processing" },
       ]
     },
     { 
@@ -527,7 +527,7 @@ const Header = () => {
               {[
                 { icon: Youtube, href: "https://www.youtube.com/@LightWay_Homes", label: "YouTube" },
                 { icon: Facebook, href: "https://facebook.com/lightwayhomes", label: "Facebook" },
-                { icon: Instagram, href: "https://instagram.com/lightwayhomes", label: "Instagram" },
+                { icon: Instagram, href: "https://instagram.com/lightwayhomesltd", label: "Instagram" },
                 { icon: MapPin, href: "/contact", label: "Office" }
               ].map((social) => (
                 <a

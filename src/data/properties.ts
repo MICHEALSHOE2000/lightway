@@ -2,6 +2,8 @@
 import naplesHero from "@/assets/projects/naples-hero.jpg";
 import naplesLand1 from "@/assets/projects/naples-land-1.jpg";
 import naplesLand2 from "@/assets/projects/naples-land-2.jpg";
+import naplesLand3 from "@/assets/projects/naples-land-3.jpg";
+import naplesLand4 from "@/assets/projects/naples-land-4.jpg";
 import naplesBedroom1 from "@/assets/projects/naples-bedroom-1.jpg";
 import naplesBedroom2 from "@/assets/projects/naples-bedroom-2.jpg";
 import naplesArepo from "@/assets/properties/naples-arepo.jpg";
@@ -69,6 +71,10 @@ export const projects: Project[] = [
     images: [
       naplesArepo,
       naplesBack,
+      naplesLand1,
+      naplesLand2,
+      naplesLand3,
+      naplesLand4,
       "https://i.ytimg.com/vi/9uws_QMkQUQ/hqdefault.jpg",
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
@@ -174,7 +180,7 @@ export const properties: Property[] = [
     location: "Naples Arepo, Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand1,
-    images: [naplesLand1, naplesLand2],
+    images: [naplesLand1, naplesLand2, naplesLand3, naplesLand4],
     status: "Now Selling",
     price: "₦9,000,000 Initial Deposit",
     priceRange: { min: 9000000, max: 15000000 },
@@ -220,7 +226,7 @@ export const properties: Property[] = [
     location: "Naples Arepo, Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand2,
-    images: [naplesLand2, naplesLand1],
+    images: [naplesLand2, naplesLand1, naplesLand3, naplesLand4],
     status: "Now Selling",
     price: "₦7,500,000 Initial Deposit",
     priceRange: { min: 7500000, max: 12000000 },

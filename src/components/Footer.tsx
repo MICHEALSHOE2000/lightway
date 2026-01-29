@@ -7,7 +7,7 @@ const Footer = () => {
 
   const socials = [
     { icon: Facebook, href: "https://facebook.com/lightwayhomes", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com/lightwayhomes", label: "Instagram" },
+    { icon: Instagram, href: "https://instagram.com/lightwayhomesltd", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com/lightwayhomes", label: "Twitter" },
     { icon: Linkedin, href: "https://linkedin.com/company/lightwayhomes", label: "LinkedIn" },
     { icon: Youtube, href: "https://www.youtube.com/@LightWay_Homes", label: "YouTube" },
@@ -65,8 +65,8 @@ const Footer = () => {
           <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
             <p>© {currentYear} Light Way Homes Ltd. All rights reserved.</p>
             <div className="flex gap-4">
-               <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-               <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+               <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+               <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
         </AnimatedSection>

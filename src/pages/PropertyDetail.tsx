@@ -167,6 +167,7 @@ const PropertyDetail = () => {
                     <span>{property.type}</span>
                   </div>
                 </div>
+
               </AnimatedSection>
 
               {/* Description */}
@@ -262,8 +263,8 @@ const PropertyDetail = () => {
                   {/* Price Card */}
                   <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
                     <div className="text-center mb-6">
-                      <span className="text-sm text-muted-foreground">
-                        Starting from
+                      <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
+                        Initial Price
                       </span>
                       <div className="text-3xl md:text-4xl font-bold text-gradient-brand mt-1">
                         {property.price}

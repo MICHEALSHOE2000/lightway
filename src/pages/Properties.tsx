@@ -22,6 +22,7 @@ const Properties = () => {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="container mx-auto container-padding relative z-10">
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => {
               const propertyCount = getPropertiesByProject(project.slug).length;
@@ -56,42 +57,52 @@ const Properties = () => {
                           </span>
                         </div>
 
-                        {/* Arrow */}
-                        <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <ArrowUpRight className="w-5 h-5 text-white" />
+                        {/* Price Overlay */}
+                        <div className="absolute bottom-4 left-4">
+                          <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
+                            Initial Price
+                          </span>
+                          <span className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg leading-none">
+                            {project.slug === "the-naples" ? "₦25,000,000" : "₦4,500,000"}
+                          </span>
                         </div>
 
-                        {/* Bottom Info */}
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                            {project.title}
-                          </h3>
-                          <div className="flex items-center gap-2 text-white/90 text-sm">
-                            <MapPin className="w-4 h-4" />
-                            <span>{project.location}</span>
-                          </div>
+                        {/* Arrow */}
+                        <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12 group-hover:scale-110">
+                          <ArrowUpRight className="w-5 h-5 text-white" />
                         </div>
                       </div>
 
                       {/* Content */}
-                      <div className="p-5 md:p-6">
-                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 line-clamp-3">
-                          {project.description}
-                        </p>
+                      <div className="p-5 md:p-6 flex flex-col flex-grow">
+                        <div className="mb-4">
+                          <div className="flex items-center gap-1.5 text-primary font-semibold text-xs md:text-sm mb-2 uppercase tracking-tight">
+                            <MapPin className="w-3.5 h-3.5" />
+                            <span>{project.location}</span>
+                          </div>
+                          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                            {project.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm md:text-base leading-relaxed line-clamp-2">
+                            {project.description}
+                          </p>
+                        </div>
                         
-                        <div className="flex items-center justify-between pt-4 border-t border-border">
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Home className="w-4 h-4 text-primary" />
-                            <span className="font-medium text-foreground">{propertyCount} Properties</span>
+                        <div className="mt-auto pt-5 border-t border-border flex flex-col gap-4">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
+                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                              <Home className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="text-foreground">{propertyCount} Units Available</span>
                           </div>
                           
                           <Button 
-                            variant="ghost" 
-                            size="sm"
-                            className="text-primary hover:text-primary hover:bg-primary/10 font-semibold group/btn"
+                            variant="hero" 
+                            size="lg"
+                            className="w-full text-white font-bold group/btn shadow-md hover:shadow-xl transition-all duration-300"
                           >
-                            View Estate
-                            <ArrowUpRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                            Explore Estate Details
+                            <ArrowUpRight className="w-5 h-5 ml-1.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                           </Button>
                         </div>
                       </div>

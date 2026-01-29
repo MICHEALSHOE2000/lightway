@@ -75,7 +75,10 @@ const Projects = () => {
                     </div>
 
                     {/* Price overlay */}
-                    <div className="absolute bottom-3 left-3 transform group-hover:translate-x-1 transition-transform">
+                    <div className="absolute bottom-3 left-3 transform group-hover:translate-x-1 transition-transform text-left">
+                      <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
+                        Initial Price
+                      </span>
                       <span className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">{project.price}</span>
                     </div>
 
@@ -86,33 +89,37 @@ const Projects = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-4 md:p-5">
-                    <div className="flex items-center gap-1.5 text-muted-foreground text-xs md:text-sm mb-2">
-                      <MapPin className="w-3.5 h-3.5" />
-                      <span>{project.location}</span>
+                  <div className="p-4 md:p-5 flex flex-col flex-grow">
+                    <div className="mb-4">
+                      <div className="flex items-center gap-1.5 text-muted-foreground text-xs md:text-sm mb-2">
+                        <MapPin className="w-3.5 h-3.5" />
+                        <span>{project.location}</span>
+                      </div>
+                      <h3 className="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors text-foreground">
+                        {project.title}
+                      </h3>
                     </div>
-                    <h3 className="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors text-foreground">
-                      {project.title}
-                    </h3>
                     
                     {/* Property details */}
-                    <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground mb-4 pb-4 border-b border-border">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1.5 font-medium text-foreground/80">
-                          <Home className="w-4 h-4 text-secondary" />
-                          <span>{project.type}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 font-medium text-foreground/80">
-                          <Ruler className="w-4 h-4 text-secondary" />
-                          <span>{project.size}</span>
+                    <div className="mt-auto">
+                      <div className="flex flex-col gap-2 text-xs md:text-sm text-muted-foreground mb-4 pb-4 border-b border-border">
+                        <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-1.5 font-medium text-foreground/80">
+                            <Home className="w-4 h-4 text-secondary" />
+                            <span>{project.type}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5 font-medium text-foreground/80">
+                            <Ruler className="w-4 h-4 text-secondary" />
+                            <span>{project.size}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <Button variant="outline" size="sm" className="w-full group/btn hover-magnetic border-primary text-primary transition-colors duration-300">
-                      View Details
-                      <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                    </Button>
+                      <Button variant="hero" size="md" className="w-full group/btn hover-magnetic text-white font-bold transition-all duration-300 shadow-md hover:shadow-lg">
+                        Explore This Property
+                        <ArrowUpRight className="w-5 h-5 ml-1.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </Link>

@@ -8,7 +8,7 @@ import { projects } from "@/data/properties";
 const projectDisplayData = [
   {
     ...projects[0], // Naples Arepo
-    price: "From ₦7.5M",
+    price: "From ₦25M",
     type: "Land & Townhouse",
     size: "300-500 SQM",
     paymentPlan: "Spread balance up to 12 months",

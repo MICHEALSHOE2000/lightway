@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
 
 interface SubLink {
   name: string;
@@ -209,18 +208,18 @@ const Header = () => {
             {/* Logo */}
             <Link 
               to="/" 
-              className="flex items-center group transition-all duration-700"
+              className="flex items-center group transition-all duration-700 relative z-50"
             >
               <div className="relative transform hover:scale-105 transition-transform duration-500">
                 <img 
                   src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
                   alt="Light Way Homes" 
-                  className={`transition-all duration-700 group-hover:brightness-200 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] ${
-                    isScrolled ? 'h-10 md:h-12' : 'h-14 md:h-20'
+                  className={`transition-all duration-700 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] group-hover:filter-none group-hover:brightness-100 group-hover:invert-0 group-hover:sepia group-hover:hue-rotate-[240deg] group-hover:saturate-[3] ${
+                    isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-24'
                   }`}
                 />
                 {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl bg-white/20 -z-10" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl bg-secondary/20 -z-10" />
               </div>
             </Link>
 

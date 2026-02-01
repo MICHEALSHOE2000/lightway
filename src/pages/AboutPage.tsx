@@ -15,9 +15,6 @@ import CountUpNumber from "@/components/CountUpNumber";
 import AnimatedSection from "@/components/AnimatedSection";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
-import funmilayoImg from "@/assets/team/funmilayo-adesanya.jpg";
-import olumideImg from "@/assets/team/olumide-olujuyigbe.jpg";
-import agboolaImg from "@/assets/team/agboola-osunbanjo.jpg";
 
 const features = [
   "Premium estate developments with modern architecture",
@@ -68,19 +65,13 @@ const coreValues = [
 
 const teamMembers = [
   {
-    name: "Funmilayo Adesanya",
+    name: "Funmilola Adesanya",
     role: "MD/CEO",
     image: "https://lightwayhomesltd.com/images/funmi3.jpg",
     description:
       "Leading Light Way Homes with vision and dedication to transform the Nigerian real estate landscape.",
   },
-  {
-    name: "Olumide Olujuyigbe",
-    role: "Chartered Architect",
-    image: "https://lightwayhomesltd.com/images/olumide2.jpg",
-    description:
-      "Bringing architectural excellence and innovative designs to every project.",
-  },
+
   {
     name: "Agboola O. Osunbanjo",
     role: "Civil/Structural Engineer",
@@ -105,24 +96,24 @@ const testimonials = [
 
 const milestones = [
   {
-    year: "2018",
+    year: "2022",
     title: "Company Founded",
     description: "Light Way Homes was established with a vision to transform Nigerian real estate.",
   },
   {
-    year: "2019",
+    year: "2023",
     title: "First Project Launch",
     description: "Successfully launched our first estate development project.",
   },
   {
-    year: "2021",
-    title: "500+ Happy Homeowners",
-    description: "Reached the milestone of helping over 500 families own their dream homes.",
-  },
-  {
-    year: "2023",
+    year: "2024",
     title: "Expansion",
     description: "Expanded operations with multiple premium estate projects across Lagos and Ogun State.",
+  },
+  {
+    year: "2025",
+    title: "500+ Happy Homeowners",
+    description: "Reached the milestone of helping over 500 families own their dream homes.",
   },
 ];
 

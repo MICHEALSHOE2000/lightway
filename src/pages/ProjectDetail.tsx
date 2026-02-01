@@ -36,7 +36,6 @@ const ProjectDetail = () => {
       <PageHero
         title={project.title}
         subtitle="Estate Details"
-        description={project.description}
         breadcrumbs={[
           { label: "Properties", href: "/properties" },
           { label: project.title },
@@ -142,6 +141,11 @@ const ProjectDetail = () => {
                         <span className="text-xl md:text-2xl font-bold text-primary-foreground drop-shadow-lg">
                           {property.price}
                         </span>
+                        {property.id === "naples-townhouse" && (
+                          <span className="text-[10px] md:text-xs font-medium text-white/90 block mt-1 drop-shadow-md">
+                            Balance can be spread up to 12 months
+                          </span>
+                        )}
                       </div>
 
                       {/* Arrow */}

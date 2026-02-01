@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socials = [
-    { icon: Facebook, href: "https://facebook.com/lightwayhomes", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com/lightwayhomesltd", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/lightwayhomes", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/lightwayhomesltd/", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com/lightwayhomes", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com/company/lightwayhomes", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/lightwayhomes/", label: "LinkedIn" },
     { icon: Youtube, href: "https://www.youtube.com/@LightWay_Homes", label: "YouTube" },
   ];
 

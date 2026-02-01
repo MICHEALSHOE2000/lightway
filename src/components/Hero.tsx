@@ -1,46 +1,26 @@
-import { useState, useEffect } from "react";
 import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
 
-import hero1 from "@/assets/hero/hero-1.jpg";
-import hero2 from "@/assets/hero/hero-2.jpg";
-import hero3 from "@/assets/hero/hero-3.jpg";
-
-const images = [hero1, hero2, hero3];
+import heroVideo from "@/assets/hero/heros.mp4";
 
 const Hero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 md:pt-36">
-      {/* Background Images Slider */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {images.map((img, index) => (
-          <div
-            key={img}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={img}
-              alt={`Premium Real Estate ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${
-                index === currentImageIndex ? "scale-110" : "scale-100"
-              }`}
-              style={{ filter: 'brightness(0.65) contrast(1.1)' }}
-            />
-          </div>
-        ))}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'brightness(0.65) contrast(1.1)' }}
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         
         {/* Soft, Welcoming Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/40 to-transparent" />

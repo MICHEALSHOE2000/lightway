@@ -23,7 +23,7 @@ const socials = [
   },
   {
     icon: Instagram,
-    href: "https://instagram.com/lightwayhomesltd",
+    href: "https://www.instagram.com/lightway_homes",
     label: "Instagram",
   },
   {
@@ -33,7 +33,7 @@ const socials = [
   },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/company/lightwayhomes",
+    href: "https://www.linkedin.com/company/light-way-homes-and-investment/",
     label: "LinkedIn",
   },
 ];

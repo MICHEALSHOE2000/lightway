@@ -526,7 +526,7 @@ const Header = () => {
               {[
                 { icon: Youtube, href: "https://www.youtube.com/@LightWay_Homes", label: "YouTube" },
                 { icon: Facebook, href: "https://facebook.com/lightwayhomes", label: "Facebook" },
-                { icon: Instagram, href: "https://instagram.com/lightwayhomesltd", label: "Instagram" },
+                { icon: Instagram, href: "https://www.instagram.com/lightway_homes", label: "Instagram" },
                 { icon: MapPin, href: "/contact", label: "Office" }
               ].map((social) => (
                 <a

@@ -16,7 +16,7 @@ const projectDisplayData = [
   },
   {
     ...projects[1], // Novara Courts
-    price: "From ₦4.5M",
+    price: "From ₦4.275M",
     type: "Residential Land",
     size: "300-600 SQM",
     paymentPlan: "Flexible Payment Options",
@@ -77,7 +77,7 @@ const Projects = () => {
                     {/* Price overlay */}
                     <div className="absolute bottom-3 left-3 transform group-hover:translate-x-1 transition-transform text-left">
                       <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
-                        Initial Price
+                        Starting Price
                       </span>
                       <span className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">{project.price}</span>
                     </div>

@@ -242,10 +242,10 @@ const PropertyDetail = () => {
                           Duration: {plan.duration}
                         </p>
                         <p className="text-sm text-muted-foreground mb-1">
-                          Initial: {plan.initialDeposit}
+                          Deposit: {plan.initialDeposit}
                         </p>
                         {plan.monthlyPayment && (
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm font-semibold text-foreground mt-2">
                             {plan.monthlyPayment}
                           </p>
                         )}
@@ -264,10 +264,10 @@ const PropertyDetail = () => {
                   <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
                     <div className="text-center mb-6">
                       <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
-                        Initial Price
+                        Starting Price
                       </span>
                       <div className="text-3xl md:text-4xl font-bold text-gradient-brand mt-1">
-                        {property.price}
+                        {property.price}{property.id === "naples-townhouse" ? " (Deposit)" : ""}
                       </div>
                     </div>
 

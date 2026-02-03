@@ -136,10 +136,10 @@ const ProjectDetail = () => {
                       {/* Price overlay */}
                       <div className="absolute bottom-3 left-3">
                         <span className="text-[10px] md:text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider block mb-0.5">
-                          Initial Price
+                          Starting Price
                         </span>
                         <span className="text-xl md:text-2xl font-bold text-primary-foreground drop-shadow-lg">
-                          {property.price}
+                          {property.price}{property.id === "naples-townhouse" ? " (Deposit)" : ""}
                         </span>
                         {property.id === "naples-townhouse" && (
                           <span className="text-[10px] md:text-xs font-medium text-white/90 block mt-1 drop-shadow-md">

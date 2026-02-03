@@ -60,10 +60,10 @@ const Properties = () => {
                         {/* Price Overlay */}
                         <div className="absolute bottom-4 left-4">
                           <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
-                            Initial Price
+                            Starting Price
                           </span>
                           <span className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg leading-none">
-                            {project.slug === "the-naples" ? "₦25,000,000" : "₦4,500,000"}
+                            {project.slug === "the-naples" ? "₦25,000,000" : "₦4,275,000"}
                           </span>
                         </div>
 

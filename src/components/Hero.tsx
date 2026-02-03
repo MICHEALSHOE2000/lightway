@@ -5,22 +5,28 @@ import AnimatedSection from "./AnimatedSection";
 
 import heroVideo from "@/assets/hero/heros.mp4";
 
+import heroPoster from "@/assets/hero/hero-1.jpg";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 md:pt-36">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-slate-950">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.65) contrast(1.1)' }}
+          preload="auto"
+          poster={heroPoster}
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
         >
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        
+        {/* Darkening layer for performance (replaces CSS filter) */}
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Soft, Welcoming Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/40 to-transparent" />

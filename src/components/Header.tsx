@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -138,7 +139,7 @@ const Header = () => {
       isRoute: true, 
       icon: <ArrowRight className="w-4 h-4" />,
       subLinks: [
-        { name: "Naples Arepo", href: "/projects/the-naples", description: "Premium Land & Townhouses" },
+        { name: "Naples Arepo", href: "/properties/the-naples-4bed-terrace-townhouse", description: "Premium Land & Townhouses" },
         { name: "The Novara Courts", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
         { name: "View All Properties", href: "/properties", description: "Explore our full portfolio" },
       ]
@@ -205,16 +206,15 @@ const Header = () => {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo */}
             <Link 
               to="/" 
               className="flex items-center group transition-all duration-700 relative z-50"
             >
               <div className="relative transform hover:scale-105 transition-transform duration-500">
                 <img 
-                  src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
+                  src={logo} 
                   alt="Light Way Homes" 
-                  className={`transition-all duration-700 object-contain brightness-0 invert [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] group-hover:filter-none group-hover:brightness-100 group-hover:invert-0 group-hover:sepia group-hover:hue-rotate-[240deg] group-hover:saturate-[3] ${
+                  className={`transition-all duration-700 object-contain [filter:brightness(0)_invert(1)_drop-shadow(0_0_8px_rgba(255,255,255,0.3))] group-hover:filter-none group-hover:brightness-100 group-hover:invert-0 group-hover:sepia group-hover:hue-rotate-[240deg] group-hover:saturate-[3] ${
                     isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-24'
                   }`}
                 />
@@ -421,9 +421,9 @@ const Header = () => {
         <div className="flex items-center justify-between px-6 h-20 border-b border-white/[0.05] bg-[#0a0a0f] shrink-0">
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
             <img 
-              src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
+              src={logo} 
               alt="Light Way Homes" 
-              className="h-14 w-auto object-contain"
+              className="h-14 w-auto object-contain [filter:brightness(1.2)_contrast(1.1)]"
             />
           </Link>
           <button
@@ -510,7 +510,7 @@ const Header = () => {
         <div className="mt-auto p-6 bg-[#0c0c12] border-t border-white/[0.05] shrink-0">
           <div className="flex flex-col space-y-6">
             <a 
-              href="tel:+2348038034077" 
+              href="tel:+2349037497790" 
               className="flex items-center gap-4 group"
             >
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary border border-secondary/20">
@@ -518,7 +518,7 @@ const Header = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-0.5">Contact Us</span>
-                <span className="text-lg font-bold tracking-tight text-white">+234 803 803 4077</span>
+                <span className="text-lg font-bold tracking-tight text-white">09037497790</span>
               </div>
             </a>
 

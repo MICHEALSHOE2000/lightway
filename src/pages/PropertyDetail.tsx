@@ -24,6 +24,7 @@ const PropertyDetail = () => {
   const navigate = useNavigate();
   const property = getPropertyBySlug(slug || "");
   const [activeImage, setActiveImage] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
 
   if (!property) {
     return (
@@ -83,47 +84,118 @@ const PropertyDetail = () => {
           {/* Image Gallery */}
           <AnimatedSection animation="fade-up" className="mb-8">
             <div className="grid lg:grid-cols-3 gap-4">
-              {/* Main Image */}
+              {/* Main Image/Video Area */}
               <div className="lg:col-span-2 relative aspect-[16/10] rounded-2xl overflow-hidden">
-                <img
-                  src={property.images[activeImage]}
-                  alt={property.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4">
-                  <span
-                    className={`px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm ${
-                      property.status === "Now Selling"
-                        ? "bg-secondary/90 text-secondary-foreground"
-                        : property.status === "Coming Soon"
-                        ? "bg-foreground/70 text-background"
-                        : "bg-primary/90 text-primary-foreground"
-                    }`}
-                  >
-                    {property.status}
-                  </span>
-                </div>
-              </div>
-
-              {/* Thumbnails */}
-              <div className="flex lg:flex-col gap-4">
-                {property.images.map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveImage(index)}
-                    className={`relative aspect-[16/10] lg:aspect-[16/9] rounded-xl overflow-hidden flex-1 transition-all ${
-                      activeImage === index
-                        ? "ring-2 ring-secondary ring-offset-2"
-                        : "opacity-70 hover:opacity-100"
-                    }`}
-                  >
+                {showVideo && property.videoUrl ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={property.videoUrl.replace("watch?v=", "embed/").replace("youtube.com/shorts/", "youtube.com/embed/").split('?')[0] + "?autoplay=1"}
+                    title={`${property.title} Video Tour`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <>
                     <img
-                      src={img}
-                      alt={`${property.title} ${index + 1}`}
+                      src={property.images[activeImage]}
+                      alt={property.title}
                       className="w-full h-full object-cover"
                     />
+                    <div className="absolute top-4 left-4">
+                      <span
+                        className={`px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm ${
+                          property.status === "Now Selling"
+                            ? "bg-secondary/90 text-secondary-foreground"
+                            : property.status === "Coming Soon"
+                            ? "bg-foreground/70 text-background"
+                            : "bg-primary/90 text-primary-foreground"
+                        }`}
+                      >
+                        {property.status}
+                      </span>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Thumbnails & Video */}
+              <div className="flex lg:flex-col gap-4">
+                {property.images.map((img, index) => {
+                  // Show first image
+                  if (index === 0) {
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          setActiveImage(index);
+                          setShowVideo(false);
+                        }}
+                        className={`relative aspect-[16/10] lg:aspect-[16/9] rounded-xl overflow-hidden flex-1 transition-all ${
+                          activeImage === index && !showVideo
+                            ? "ring-2 ring-secondary ring-offset-2"
+                            : "opacity-70 hover:opacity-100"
+                        }`}
+                      >
+                        <img
+                          src={img}
+                          alt={`${property.title} ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    );
+                  }
+                  return null;
+                })}
+                
+                {/* Video in 2nd position */}
+                {property.videoUrl && (
+                  <button
+                    onClick={() => setShowVideo(true)}
+                    className={`relative aspect-[16/10] lg:aspect-[16/9] rounded-xl overflow-hidden flex-1 bg-card border transition-all ${
+                      showVideo
+                        ? "ring-2 ring-secondary ring-offset-2 border-secondary"
+                        : "border-border opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20">
+                      <div className="text-center">
+                        <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-white/90 flex items-center justify-center">
+                          <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                        <p className="text-xs font-semibold text-foreground">Video Tour</p>
+                      </div>
+                    </div>
                   </button>
-                ))}
+                )}
+
+                {/* Remaining images */}
+                {property.images.map((img, index) => {
+                  // Skip first image (already shown)
+                  if (index === 0) return null;
+                  
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setActiveImage(index);
+                        setShowVideo(false);
+                      }}
+                      className={`relative aspect-[16/10] lg:aspect-[16/9] rounded-xl overflow-hidden flex-1 transition-all ${
+                        activeImage === index && !showVideo
+                          ? "ring-2 ring-secondary ring-offset-2"
+                          : "opacity-70 hover:opacity-100"
+                      }`}
+                    >
+                      <img
+                        src={img}
+                        alt={`${property.title} ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </AnimatedSection>
@@ -176,7 +248,7 @@ const PropertyDetail = () => {
                   <h2 className="text-xl font-bold text-foreground mb-4">
                     About This Property
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                     {property.description}
                   </p>
                 </div>
@@ -264,7 +336,7 @@ const PropertyDetail = () => {
                   <div className="bg-card rounded-2xl p-6 border border-border shadow-card">
                     <div className="text-center mb-6">
                       <span className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
-                        Starting Price
+                        Initial Deposit
                       </span>
                       <div className="text-3xl md:text-4xl font-bold text-gradient-brand mt-1">
                         {property.price}{property.id === "naples-townhouse" ? " (Deposit)" : ""}

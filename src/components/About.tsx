@@ -52,31 +52,31 @@ const teamMembers = [
   {
     name: "Funmilayo Adesanya",
     role: "MD/CEO",
-    image: "https://lightwayhomesltd.com/images/funmi3.jpg",
+    image: funmilayoImg,
     description: "Leading Light Way Homes with vision and dedication to transform the Nigerian real estate landscape.",
   },
   {
     name: "Olumide Olujuyigbe",
     role: "Chartered Architect",
-    image: "https://lightwayhomesltd.com/images/olumide2.jpg",
+    image: olumideImg,
     description: "Bringing architectural excellence and innovative designs to every project.",
   },
   {
     name: "Agboola O. Osunbanjo",
     role: "Civil/Structural Engineer",
-    image: "https://lightwayhomesltd.com/images/Engr-Biyi2.jpg",
+    image: agboolaImg,
     description: "Ensuring structural integrity and engineering excellence in all our developments.",
   },
 ];
 
 const testimonials = [
   {
-    quote: "Light Way Homes delivered as promised with my Land and ensured my allocation and documentation were done immediately after my final payment. Thank you for helping me find my dream home. I look forward to working with you again in the future.",
-    author: "Maryam Abubakar",
+    quote: "I feel good, excited, and truly impressed. The allocation is excellent and well done. Light Way Homes is legit. From getting my land to being allocated, they proved to be a brand you can genuinely trust.",
+    author: "Mrs Sharon Iroeche",
   },
   {
-    quote: "The team was not only professional but also friendly and approachable. The day I called was the same day I inspected the site. After my due diligence, I paid for my two-bedroom maisonette, and to my surprise, I got my receipt and contract of sale the same day. I would highly recommend their services to anyone in need of a trusted and reliable real estate company.",
-    author: "Bukola Falana",
+    quote: "From my initial inquiries to the site inspection and payment process, the entire experience was blissful. I was pleasantly surprised by the instant allocation, accurate land measurement, and seamless documentation process. What stood out most was the transparency, professionalism, and customer-centred approach. Light Way Homes is truly a brand you can fully trust.",
+    author: "Mr Micheal Destiny",
   },
 ];
 
@@ -240,9 +240,9 @@ const About = () => {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-10 md:pt-12 border-t border-border">
           {[
-            { end: 500, suffix: "+", label: "Happy Homeowners" },
+            { end: 10, suffix: "+", label: "Happy homeowners" },
             { end: 5, suffix: "+", label: "Years of Excellence" },
-            { end: 10, suffix: "+", label: "Premium Estates" },
+            { end: 3, suffix: "+", label: "Premium estate" },
             { end: 99, suffix: "%", label: "Client Satisfaction" },
           ].map((stat, index) => (
             <AnimatedSection key={stat.label} animation="fade-up" delay={index * 100}>

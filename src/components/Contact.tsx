@@ -24,7 +24,7 @@ const Contact = () => {
           {/* Contact Info */}
           <AnimatedSection animation="slide-right" className="lg:col-span-2 space-y-4">
             <a 
-              href="tel:+2348038034077" 
+              href="tel:+2349037497790" 
               className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
             >
               <div className="w-11 h-11 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -32,7 +32,7 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground mb-0.5">Phone</div>
-                <div className="font-semibold text-sm md:text-base text-foreground">+234 803 803 4077</div>
+                <div className="font-semibold text-sm md:text-base text-foreground">09037497790</div>
               </div>
             </a>
 
@@ -50,7 +50,7 @@ const Contact = () => {
             </a>
 
             <a 
-              href="mailto:info@lightwayhomesltd.com" 
+              href="mailto:Info.lightwayhomesltd@gmail.com" 
               className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
             >
               <div className="w-11 h-11 md:w-12 md:h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -58,7 +58,7 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground mb-0.5">Email</div>
-                <div className="font-semibold text-sm md:text-base text-foreground break-all">info@lightwayhomesltd.com</div>
+                <div className="font-semibold text-sm md:text-base text-foreground break-all">Info.lightwayhomesltd@gmail.com</div>
               </div>
             </a>
 

@@ -15,6 +15,9 @@ import CountUpNumber from "@/components/CountUpNumber";
 import AnimatedSection from "@/components/AnimatedSection";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
+import funmilayoImg from "@/assets/team/funmilayo-adesanya.jpg";
+import agboolaImg from "@/assets/team/agboola-osunbanjo.jpg";
+import olumideImg from "@/assets/team/olumide-olujuyigbe.jpg";
 
 const features = [
   "Premium estate developments with modern architecture",
@@ -67,15 +70,21 @@ const teamMembers = [
   {
     name: "Funmilola Adesanya",
     role: "MD/CEO",
-    image: "https://lightwayhomesltd.com/images/funmi3.jpg",
+    image: funmilayoImg,
     description:
       "Leading Light Way Homes with vision and dedication to transform the Nigerian real estate landscape.",
   },
-
+  {
+    name: "Olumide Olujuyigbe",
+    role: "Chartered Architect",
+    image: olumideImg,
+    description:
+      "Bringing architectural excellence and innovative designs to every project.",
+  },
   {
     name: "Agboola O. Osunbanjo",
     role: "Civil/Structural Engineer",
-    image: "https://lightwayhomesltd.com/images/Engr-Biyi2.jpg",
+    image: agboolaImg,
     description:
       "Ensuring structural integrity and engineering excellence in all our developments.",
   },
@@ -83,14 +92,12 @@ const teamMembers = [
 
 const testimonials = [
   {
-    quote:
-      "Light Way Homes delivered as promised with my Land and ensured my allocation and documentation were done immediately after my final payment. Thank you for helping me find my dream home. I look forward to working with you again in the future.",
-    author: "Maryam Abubakar",
+    quote: "I feel good, excited, and truly impressed. The allocation is excellent and well done. Light Way Homes is legit. From getting my land to being allocated, they proved to be a brand you can genuinely trust.",
+    author: "Mrs Sharon Iroeche",
   },
   {
-    quote:
-      "The team was not only professional but also friendly and approachable. The day I called was the same day I inspected the site. After my due diligence, I paid for my two-bedroom maisonette, and to my surprise, I got my receipt and contract of sale the same day. I would highly recommend their services to anyone in need of a trusted and reliable real estate company.",
-    author: "Bukola Falana",
+    quote: "From my initial inquiries to the site inspection and payment process, the entire experience was blissful. I was pleasantly surprised by the instant allocation, accurate land measurement, and seamless documentation process. What stood out most was the transparency, professionalism, and customer-centred approach. Light Way Homes is truly a brand you can fully trust.",
+    author: "Mr Micheal Destiny",
   },
 ];
 
@@ -112,8 +119,8 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "500+ Happy Homeowners",
-    description: "Reached the milestone of helping over 500 families own their dream homes.",
+    title: "10+ Happy homeowners",
+    description: "Reached the milestone of helping over 10 families own their dream homes.",
   },
 ];
 
@@ -401,9 +408,9 @@ const AboutPage = () => {
         <div className="container mx-auto container-padding">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              { end: 500, suffix: "+", label: "Happy Homeowners" },
+              { end: 10, suffix: "+", label: "Happy homeowners" },
               { end: 5, suffix: "+", label: "Years of Excellence" },
-              { end: 10, suffix: "+", label: "Premium Estates" },
+              { end: 3, suffix: "+", label: "Premium estate" },
               { end: 99, suffix: "%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <AnimatedSection

@@ -43,6 +43,7 @@ export interface Property {
   }[];
   coordinates?: { lat: number; lng: number };
   projectSlug?: string;
+  videoUrl?: string;
 }
 
 export interface Project {
@@ -57,6 +58,7 @@ export interface Project {
   description: string;
   amenities: string[];
   coordinates?: { lat: number; lng: number };
+  videoUrl?: string;
 }
 
 // Main Projects (Naples and Novara only)
@@ -64,7 +66,7 @@ export const projects: Project[] = [
   {
     id: "project-1",
     slug: "the-naples",
-    title: "The Naples Estate",
+    title: "The Naples — 4 Bedroom + BQ",
     location: "Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesArepo,
@@ -79,9 +81,36 @@ export const projects: Project[] = [
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
     status: "Now Selling",
-    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access.\n\nArepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free.\n\nAsides from proximity, Arepo offers serenity and fresh air.",
+    description: "Own a Luxury 4-Bedroom Home With Just ₦30 Million — Move In Immediately. Not next year. Not “when construction is done.” You pay ₦30M, pack your bags, and move in. Welcome to The Naples — a home designed for people who value space, certainty, and quiet luxury.",
     amenities: [
       "Recreational Centre",
+      "24/7 Security",
+      "Paved Roads",
+      "Electricity & Electrification",
+      "Street Lights",
+      "Drainage System",
+      "Green Areas",
+      "Building Approval & C of O",
+    ],
+    coordinates: { lat: 6.7074, lng: 3.4416 },
+    videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
+  },
+  {
+    id: "project-naples-land",
+    slug: "the-naples-land",
+    title: "The Naples Land",
+    location: "Arepo, Ogun State",
+    address: "Naples Arepo, Arepo, Ogun State",
+    image: naplesLand1,
+    images: [
+      naplesLand1,
+      naplesLand2,
+      naplesLand3,
+      naplesLand4,
+    ],
+    status: "Now Selling",
+    description: "Premium serviced plots at Naples Arepo, Arepo. Comes with a registered survey. Perfect for building your dream home in a serene environment with fresh air and proximity to Lagos.",
+    amenities: [
       "24/7 Security",
       "Paved Roads",
       "Electricity & Electrification",
@@ -105,14 +134,11 @@ export const projects: Project[] = [
       novara3,
     ],
     status: "Now Selling",
-    description: "The Novara Courts is situated at Orilemo, Mowe Ofada by interchange. The land is covered with Registered Survey and is free from government acquisition. Landmarks include RCCG Camp, Nestle, Olam Group, International Breweries, Christopher University, and Apple and Pears Ltd.",
+    description: "The Novara Courts is situated at Orilemo, Mowe Ofada by interchange. The land is covered with Registered Survey and is free from government acquisition.",
     amenities: [
       "Security",
       "Motorable Road Network",
       "Electricity Connection",
-      "Portable Water",
-      "Effective Drainage System",
-      "Perimeter Fencing",
       "Street Lights",
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
@@ -137,40 +163,38 @@ export const properties: Property[] = [
     size: "4-Bedroom Terrace + BQ",
     bedrooms: 4,
     bathrooms: 5,
-    description: "Luxurious 4-bedroom terrace townhouse with boys' quarters at The Naples Estate, Arepo. Delivered fully finished with C of O and building approval. All rooms are en-suite. Features contemporary architecture and premium finishes.",
+    videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
+    description: "Own a Luxury 4-Bedroom Home With Just ₦30 Million — Move In Immediately.\n\nNot next year. Not “when construction is done.” You pay ₦30M, pack your bags, and move in.\n\nWelcome to The Naples — a home designed for people who value space, certainty, and quiet luxury.\n\nThis Is Not Just a House. It’s Peace of Mind in Brick and Concrete.\n\nMost luxury homes in Lagos come with hidden charges and endless delays. The Naples is different.\n\n✔ C of O & Building Approval secured\n✔ Fully finished — inside and outside\n✔ Exactly what you see is what you get\n✔ No hidden fees. No surprises.\n\nStep Inside… And Feel the Difference. ✨ Living Room: 40sqm of Freedom. Big enough to entertain guests comfortably and host family gatherings.\n\nDesigned for Comfort. Finished for Pride.\n• 4 Spacious Bedrooms — All Ensuite\n• BQ Included\n• Exquisite Interior Finishes\n• Fully Finished Exterior\n• Dedicated Car Park (2 Cars)",
     features: [
-      "Fully finished delivery",
       "C of O & Building Approval",
-      "All rooms en-suite",
-      "Spacious living and dining areas",
-      "Modern fitted kitchen",
-      "Boys' quarters (BQ)",
-      "Private parking space",
-      "Glazed balconies",
+      "Fully finished delivery",
+      "4 Spacious Bedrooms — All Ensuite",
+      "BQ Included",
+      "40sqm Living Room",
+      "Exquisite Interior Finishes",
+      "Dedicated Car Park (2 Cars)",
     ],
     amenities: [
       "24/7 Security and Power",
       "Parking Space",
-      "Glazed Balconies",
       "Children's Playground",
-      "Greenery and Landscaping",
       "Gated Community",
     ],
     paymentPlans: [
       {
-        name: "Interest Free",
+        name: "0–3 Months (Interest-Free)",
         duration: "0-3 months",
         initialDeposit: "₦30,000,000",
         monthlyPayment: "Total: ₦150,000,000",
       },
       {
-        name: "Short Term (5% Interest)",
+        name: "6 Months Plan (5% Interest)",
         duration: "6 months",
         initialDeposit: "₦30,000,000",
         monthlyPayment: "Total: ₦157,500,000",
       },
       {
-        name: "Long Term (10% Interest)",
+        name: "12 Months Plan (10% Interest)",
         duration: "12 months",
         initialDeposit: "₦30,000,000",
         monthlyPayment: "Total: ₦165,000,000",
@@ -187,8 +211,8 @@ export const properties: Property[] = [
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand1,
     images: [naplesLand1, naplesLand2, naplesLand3, naplesLand4],
-    price: "₦30,000,000",
-    priceRange: { min: 30000000, max: 33000000 },
+    price: "₦6,000,000",
+    priceRange: { min: 6000000, max: 33000000 },
     type: "Land",
     size: "500 SQM",
     description: "Premium 500 square meter serviced plot at Naples Arepo, Arepo. Comes with a registered survey. Prices are all-inclusive with no hidden charges. Perfect for building your dream home.",
@@ -205,14 +229,12 @@ export const properties: Property[] = [
       "Gated Community",
       "Motorable Roads",
       "Street Lights",
-      "Perimeter Fencing",
-      "Green Spaces",
     ],
     paymentPlans: [
       {
         name: "Interest Free",
         duration: "0-3 months",
-        initialDeposit: "₦30,000,000",
+        initialDeposit: "₦6,000,000",
       },
       {
         name: "6 Months Plan (5% Interest)",
@@ -226,7 +248,7 @@ export const properties: Property[] = [
       },
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
-    projectSlug: "the-naples",
+    projectSlug: "the-naples-land",
   },
   {
     id: "naples-300sqm",
@@ -236,8 +258,8 @@ export const properties: Property[] = [
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand2,
     images: [naplesLand2, naplesLand1, naplesLand3, naplesLand4],
-    price: "₦25,000,000",
-    priceRange: { min: 25000000, max: 27500000 },
+    price: "₦3,000,000",
+    priceRange: { min: 3000000, max: 27500000 },
     type: "Land",
     size: "300 SQM",
     description: "Affordable 300 square meter serviced plot at Naples Arepo, Arepo. Comes with a registered survey. Prices are all-inclusive with no hidden charges. Ideal for compact home designs.",
@@ -261,7 +283,7 @@ export const properties: Property[] = [
       {
         name: "Interest Free",
         duration: "0-3 months",
-        initialDeposit: "₦25,000,000",
+        initialDeposit: "₦3,000,000",
       },
       {
         name: "6 Months Plan (5% Interest)",
@@ -275,7 +297,7 @@ export const properties: Property[] = [
       },
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
-    projectSlug: "the-naples",
+    projectSlug: "the-naples-land",
   },
 
   // Novara Courts Properties (Land Only - 300sqm, 500sqm, 600sqm)
@@ -288,8 +310,8 @@ export const properties: Property[] = [
     image: novara1,
     images: [novara1, novara2, novara3],
     status: "Now Selling",
-    price: "₦4,275,000",
-    priceRange: { min: 4275000, max: 5400000 },
+    price: "₦200,000",
+    priceRange: { min: 200000, max: 5400000 },
     type: "Residential Land",
     size: "300 SQM",
     description: "Affordable 300 square meter plot at The Novara Courts, Orilemo Mowe. Near major industrial hubs including Nestlé, Olam Group, International Breweries, Apple and Pears Ltd, Christopher University, and RCCG Camp. 45 minutes to Lagos International Airport.",
@@ -316,7 +338,7 @@ export const properties: Property[] = [
       {
         name: "0-3 Months (5% Discount)",
         duration: "0-3 months",
-        initialDeposit: "₦4,275,000",
+        initialDeposit: "₦200,000",
       },
       {
         name: "6 Months (Interest Free)",
@@ -346,8 +368,8 @@ export const properties: Property[] = [
     image: novara2,
     images: [novara1, novara2, novara3],
     status: "Now Selling",
-    price: "₦6,175,000",
-    priceRange: { min: 6175000, max: 7800000 },
+    price: "₦200,000",
+    priceRange: { min: 200000, max: 7800000 },
     type: "Residential Land",
     size: "500 SQM",
     description: "Well-sized 500 square meter plot at The Novara Courts, Orilemo Mowe. Strategic location near major industrial hubs. 45 minutes to Lagos International Airport.",
@@ -374,7 +396,7 @@ export const properties: Property[] = [
       {
         name: "0-3 Months (5% Discount)",
         duration: "0-3 months",
-        initialDeposit: "₦6,175,000",
+        initialDeposit: "₦200,000",
       },
       {
         name: "6 Months (Interest Free)",
@@ -404,8 +426,8 @@ export const properties: Property[] = [
     image: novara3,
     images: [novara1, novara2, novara3],
     status: "Now Selling",
-    price: "₦7,125,000",
-    priceRange: { min: 7125000, max: 9000000 },
+    price: "₦200,000",
+    priceRange: { min: 200000, max: 9000000 },
     type: "Residential Land",
     size: "600 SQM",
     description: "Spacious 600 square meter plot at The Novara Courts, Orilemo Mowe. Perfect for larger family homes. Near major industrial hubs and 45 minutes to Lagos International Airport.",
@@ -432,7 +454,7 @@ export const properties: Property[] = [
       {
         name: "0-3 Months (5% Discount)",
         duration: "0-3 months",
-        initialDeposit: "₦7,125,000",
+        initialDeposit: "₦200,000",
       },
       {
         name: "6 Months (Interest Free)",

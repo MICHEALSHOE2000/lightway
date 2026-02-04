@@ -65,7 +65,7 @@ const ContactPage = () => {
               </h2>
 
               <a
-                href="tel:+2348038034077"
+                href="tel:09037497790"
                 className="flex items-center gap-4 p-4 bg-card rounded-xl card-hover border border-border group"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -76,7 +76,7 @@ const ContactPage = () => {
                     Phone
                   </div>
                   <div className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
-                    +234 803 803 4077
+                    09037497790
                   </div>
                 </div>
               </a>
@@ -99,7 +99,7 @@ const ContactPage = () => {
               </a>
 
               <a
-                href="mailto:info@lightwayhomesltd.com"
+                href="mailto:Info.lightwayhomesltd@gmail.com"
                 className="flex items-center gap-4 p-4 bg-card rounded-xl card-hover border border-border group"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -110,7 +110,7 @@ const ContactPage = () => {
                     Email
                   </div>
                   <div className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors break-all">
-                    info@lightwayhomesltd.com
+                    Info.lightwayhomesltd@gmail.com
                   </div>
                 </div>
               </a>
@@ -267,7 +267,7 @@ const ContactPage = () => {
       <section className="py-0">
         <div className="h-[400px] bg-muted relative">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3680458908894!2d3.3615299!3d6.6047111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922e8c10c26d%3A0x7b1f3c0c0c0c0c0c!2sOregun%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.298284698585!2d3.3592815749767287!3d6.657519193339097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93f9c6d36e2f%3A0x673059d9c227361a!2sOyewo%20Cl%2C%20Oregun%2C%20Lagos%20100271%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1707035728362!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}

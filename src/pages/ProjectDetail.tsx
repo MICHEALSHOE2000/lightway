@@ -63,6 +63,21 @@ const ProjectDetail = () => {
               ))}
             </div>
 
+            {/* Video Section */}
+            {project.videoUrl && (
+              <div className="mt-12">
+                <h2 className="text-2xl font-bold text-foreground mb-6">Experience {project.title}</h2>
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-elevated max-w-4xl border border-border">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={project.videoUrl.replace("watch?v=", "embed/").replace("youtube.com/shorts/", "youtube.com/embed/")}
+                    title={`${project.title} Video Tour`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            )}
           </div>
 
           {allProperties.some(p => p.type.includes("Land")) && allProperties.some(p => p.type.includes("Building")) ? (
@@ -136,7 +151,7 @@ const ProjectDetail = () => {
                       {/* Price overlay */}
                       <div className="absolute bottom-3 left-3">
                         <span className="text-[10px] md:text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider block mb-0.5">
-                          Starting Price
+                          Initial Deposit
                         </span>
                         <span className="text-xl md:text-2xl font-bold text-primary-foreground drop-shadow-lg">
                           {property.price}{property.id === "naples-townhouse" ? " (Deposit)" : ""}

@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Twitter, Linkedin, Youtube, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,17 +23,17 @@ const Footer = () => {
              <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
                 <Link to="/" className="inline-block">
                   <img 
-                    src="https://lightwayhomesltd.com/static/media/logo-colured.5a5b52f6a137a4d7ba12.png" 
+                    src={logo} 
                     alt="Light Way Homes" 
                     className="h-10 w-auto brightness-[1.2] contrast-[1.1] object-contain"
                   />
                 </Link>
                 <div className="flex flex-col gap-1 text-sm text-white/60">
-                  <a href="tel:+2348038034077" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <Phone className="w-3 h-3" /> +234 803 803 4077
+                  <a href="tel:+2349037497790" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                    <Phone className="w-3 h-3" /> 09037497790
                   </a>
-                  <a href="mailto:info@lightwayhomesltd.com" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <Mail className="w-3 h-3" /> info@lightwayhomesltd.com
+                  <a href="mailto:Info.lightwayhomesltd@gmail.com" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                    <Mail className="w-3 h-3" /> Info.lightwayhomesltd@gmail.com
                   </a>
                 </div>
              </div>

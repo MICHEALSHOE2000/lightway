@@ -88,7 +88,7 @@ const Hero = () => {
                 </Link>
               </Button>
               <a 
-                href="tel:+2348038034077" 
+                href="tel:+2349037497790" 
                 className="h-16 inline-flex items-center justify-center gap-3 px-10 rounded-xl bg-white text-slate-950 hover:bg-slate-100 transition-all font-bold uppercase tracking-widest text-sm shadow-xl hover-lift"
               >
                 <Phone className="w-5 h-5" />

@@ -7,16 +7,24 @@ import { projects } from "@/data/properties";
 // Map projects to display format with price ranges (Naples and Novara only)
 const projectDisplayData = [
   {
-    ...projects[0], // Naples Arepo
-    price: "From ₦25M",
-    type: "Land & Townhouse",
-    size: "300-500 SQM",
-    paymentPlan: "Spread balance up to 12 months",
-    verification: "Registered Survey / C of O",
+    ...projects[0], // Naples 4-Bed BQ
+    price: "₦30,000,000 (Deposit)",
+    type: "Premium Townhouse",
+    size: "4 Bedroom + BQ",
+    paymentPlan: "Move in immediately",
+    verification: "C of O / Built Approval",
   },
   {
-    ...projects[1], // Novara Courts
-    price: "From ₦4.275M",
+    ...projects[1], // Naples Land
+    price: "From ₦3M",
+    type: "Serviced Plots",
+    size: "300-500 SQM",
+    paymentPlan: "Spread balance up to 12 months",
+    verification: "Registered Survey",
+  },
+  {
+    ...projects[2], // Novara Courts
+    price: "From ₦200K",
     type: "Residential Land",
     size: "300-600 SQM",
     paymentPlan: "Flexible Payment Options",
@@ -50,7 +58,10 @@ const Projects = () => {
               animation="slide-up-reveal"
               delay={index * 150}
             >
-              <Link to={`/projects/${project.slug}`} className="block h-full cursor-pointer">
+              <Link 
+                to={index === 0 ? `/properties/the-naples-4bed-terrace-townhouse` : `/projects/${project.slug}`} 
+                className="block h-full cursor-pointer"
+              >
                 <div className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated border border-border h-full transition-all duration-500 ease-premium hover:-translate-y-2">
                   {/* Image */}
                   <div className="relative h-48 sm:h-52 md:h-60 overflow-hidden">
@@ -77,7 +88,7 @@ const Projects = () => {
                     {/* Price overlay */}
                     <div className="absolute bottom-3 left-3 transform group-hover:translate-x-1 transition-transform text-left">
                       <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
-                        Starting Price
+                        Initial Deposit
                       </span>
                       <span className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">{project.price}</span>
                     </div>

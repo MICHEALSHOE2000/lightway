@@ -6,7 +6,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import PageLoader from "@/components/PageLoader";
 import StickyCTA from "@/components/StickyCTA";
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">

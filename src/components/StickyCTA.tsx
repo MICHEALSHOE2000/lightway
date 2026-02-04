@@ -37,7 +37,7 @@ const StickyCTA = () => {
         </span>
       </a>
       <a
-        href="tel:+2348075161213"
+        href="tel:09037497790"
         className="flex items-center justify-center w-14 h-14 bg-secondary text-white rounded-full shadow-2xl hover:bg-secondary/90 transition-all hover:scale-110 active:scale-95 group relative"
         aria-label="Call Now"
       >

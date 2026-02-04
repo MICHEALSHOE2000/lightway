@@ -33,7 +33,10 @@ const Properties = () => {
                   animation="fade-up"
                   delay={index * 150}
                 >
-                  <Link to={`/projects/${project.slug}`} className="block h-full">
+                  <Link 
+                    to={project.slug === "the-naples" ? "/properties/the-naples-4bed-terrace-townhouse" : `/projects/${project.slug}`} 
+                    className="block h-full"
+                  >
                     <div className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated border border-border h-full transition-all duration-300 hover:-translate-y-1">
                       {/* Image */}
                       <div className="relative h-64 md:h-72 overflow-hidden">
@@ -60,10 +63,10 @@ const Properties = () => {
                         {/* Price Overlay */}
                         <div className="absolute bottom-4 left-4">
                           <span className="text-[10px] md:text-xs font-semibold text-white/90 uppercase tracking-wider block mb-0.5">
-                            Starting Price
+                            Initial Deposit
                           </span>
                           <span className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg leading-none">
-                            {project.slug === "the-naples" ? "₦25,000,000" : "₦4,275,000"}
+                            {project.slug === "the-naples" ? "₦30,000,000" : project.slug === "the-naples-land" ? "From ₦3M" : "From ₦200K"}
                           </span>
                         </div>
 
@@ -93,7 +96,7 @@ const Properties = () => {
                             <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                               <Home className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="text-foreground">{propertyCount} Units Available</span>
+                            <span className="text-foreground">20 Units Available</span>
                           </div>
                           
                           <Button 

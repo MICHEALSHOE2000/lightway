@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import CountUpNumber from "@/components/CountUpNumber";
 import AnimatedSection from "@/components/AnimatedSection";
 import funmilayoImg from "@/assets/team/funmilayo-adesanya.jpg";
-import olumideImg from "@/assets/team/olumide-olujuyigbe.jpg";
 import agboolaImg from "@/assets/team/agboola-osunbanjo.jpg";
 
 const features = [
@@ -54,12 +53,6 @@ const teamMembers = [
     role: "MD/CEO",
     image: funmilayoImg,
     description: "Leading Light Way Homes with vision and dedication to transform the Nigerian real estate landscape.",
-  },
-  {
-    name: "Olumide Olujuyigbe",
-    role: "Chartered Architect",
-    image: olumideImg,
-    description: "Bringing architectural excellence and innovative designs to every project.",
   },
   {
     name: "Agboola O. Osunbanjo",

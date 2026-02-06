@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, ChevronDown, ArrowRight, Mail, Youtube, MapPin, Facebook, Instagram, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SubLink {
@@ -14,7 +14,7 @@ interface NavItem {
   name: string;
   href: string;
   isRoute: boolean;
-  icon?: any;
+  icon?: React.ReactNode;
   subLinks?: SubLink[];
 }
 
@@ -167,6 +167,12 @@ const Header = () => {
         { name: "Careers", href: "/career", description: "Join our team" },
         { name: "Blog", href: "/blog", description: "Latest insights" },
       ]
+    },
+    { 
+      name: "Valentine's Offer", 
+      href: "/valentine-offer", 
+      isRoute: true, 
+      icon: <Heart className="w-4 h-4 text-red-500 animate-pulse fill-red-500" /> 
     },
     { name: "Contact", href: "/contact", isRoute: true, icon: <Mail className="w-4 h-4" /> },
   ];
@@ -518,7 +524,7 @@ const Header = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-0.5">Contact Us</span>
-                <span className="text-lg font-bold tracking-tight text-white">09037497790</span>
+                <span className="text-lg font-bold tracking-tight text-white">+234 903 749 7790</span>
               </div>
             </a>
 

@@ -344,12 +344,14 @@ const PropertyDetail = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <Button variant="hero" size="lg" className="w-full">
-                        <Phone className="w-5 h-5" />
-                        Schedule a Visit
-                      </Button>
+                      <a href="tel:+2348075161213" className="w-full">
+                        <Button variant="hero" size="lg" className="w-full">
+                          <Phone className="w-5 h-5" />
+                          Schedule a Visit
+                        </Button>
+                      </a>
                       <a
-                        href={`https://wa.me/2348075161213?text=Hello, I'm interested in ${property.title}`}
+                        href={`https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#20BD5A] transition-all"

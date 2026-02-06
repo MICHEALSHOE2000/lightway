@@ -29,9 +29,14 @@ const Footer = () => {
                   />
                 </Link>
                 <div className="flex flex-col gap-1 text-sm text-white/60">
-                  <a href="tel:+2349037497790" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <Phone className="w-3 h-3" /> 09037497790
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+2349037497790" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                      <Phone className="w-3 h-3" /> +234 903 749 7790
+                    </a>
+                    <a href="tel:+2348075161213" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                      <Phone className="w-3 h-3" /> +234 807 516 1213
+                    </a>
+                  </div>
                   <a href="mailto:Info.lightwayhomesltd@gmail.com" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
                     <Mail className="w-3 h-3" /> Info.lightwayhomesltd@gmail.com
                   </a>

@@ -76,7 +76,7 @@ const ContactPage = () => {
                     Phone
                   </div>
                   <div className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
-                    09037497790
+                    +234 903 749 7790
                   </div>
                 </div>
               </a>
@@ -167,7 +167,7 @@ const ContactPage = () => {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/2348075161213"
+                href="https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-[#20BD5A] transition-all hover:scale-[1.02] shadow-lg shadow-[#25D366]/20"

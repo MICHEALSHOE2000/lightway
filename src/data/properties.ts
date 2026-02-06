@@ -66,7 +66,7 @@ export const projects: Project[] = [
   {
     id: "project-1",
     slug: "the-naples",
-    title: "The Naples — 4 Bedroom + BQ",
+    title: "The Naples Arepo- 4 Bedroom Terrace + BQ",
     location: "Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesArepo,
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
     status: "Now Selling",
-    description: "Own a Luxury 4-Bedroom Home With Just ₦30 Million — Move In Immediately. Not next year. Not “when construction is done.” You pay ₦30M, pack your bags, and move in. Welcome to The Naples — a home designed for people who value space, certainty, and quiet luxury.",
+    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access. Arepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free. Asides from proximity, Arepo offers serenity and fresh air. Schedule a visit 08075161213",
     amenities: [
       "Recreational Centre",
       "24/7 Security",
@@ -151,7 +151,7 @@ export const properties: Property[] = [
   {
     id: "naples-townhouse",
     slug: "the-naples-4bed-terrace-townhouse",
-    title: "4 Bedroom + BQ",
+    title: "The Naples Arepo- 4 Bedroom Terrace + BQ",
     location: "Naples Arepo, Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesArepo,
@@ -164,7 +164,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 5,
     videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
-    description: "Own a Luxury 4-Bedroom Home With Just ₦30 Million — Move In Immediately.\n\nNot next year. Not “when construction is done.” You pay ₦30M, pack your bags, and move in.\n\nWelcome to The Naples — a home designed for people who value space, certainty, and quiet luxury.\n\nThis Is Not Just a House. It’s Peace of Mind in Brick and Concrete.\n\nMost luxury homes in Lagos come with hidden charges and endless delays. The Naples is different.\n\n✔ C of O & Building Approval secured\n✔ Fully finished — inside and outside\n✔ Exactly what you see is what you get\n✔ No hidden fees. No surprises.\n\nStep Inside… And Feel the Difference. ✨ Living Room: 40sqm of Freedom. Big enough to entertain guests comfortably and host family gatherings.\n\nDesigned for Comfort. Finished for Pride.\n• 4 Spacious Bedrooms — All Ensuite\n• BQ Included\n• Exquisite Interior Finishes\n• Fully Finished Exterior\n• Dedicated Car Park (2 Cars)",
+    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access.\n\nArepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free.\n\nAsides from proximity, Arepo offers serenity and fresh air.\n\nSchedule a visit 08075161213\n\nThis Is Not Just a House. It’s Peace of Mind in Brick and Concrete.\n\nMost luxury homes in Lagos come with hidden charges and endless delays. The Naples is different.\n\n✔ C of O & Building Approval secured\n✔ Fully finished — inside and outside\n✔ Exactly what you see is what you get\n✔ No hidden fees. No surprises.\n\nStep Inside… And Feel the Difference. ✨ Living Room: 40sqm of Freedom. Big enough to entertain guests comfortably and host family gatherings.\n\nDesigned for Comfort. Finished for Pride.\n• 4 Spacious Bedrooms — All Ensuite\n• BQ Included\n• Exquisite Interior Finishes\n• Fully Finished Exterior\n• Dedicated Car Park (2 Cars)",
     features: [
       "C of O & Building Approval",
       "Fully finished delivery",

@@ -10,7 +10,7 @@ const projectDisplayData = [
     ...projects[0], // Naples 4-Bed BQ
     price: "₦30,000,000 (Deposit)",
     type: "Premium Townhouse",
-    size: "4 Bedroom + BQ",
+    size: "4-Bedroom Terrace + BQ",
     paymentPlan: "Move in immediately",
     verification: "C of O / Built Approval",
   },

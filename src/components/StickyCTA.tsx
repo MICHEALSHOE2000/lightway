@@ -24,7 +24,7 @@ const StickyCTA = () => {
       }`}
     >
       <a
-        href="https://wa.me/2348038034077"
+        href="https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 active:scale-95 group relative shadow-glow"
@@ -37,7 +37,7 @@ const StickyCTA = () => {
         </span>
       </a>
       <a
-        href="tel:09037497790"
+        href="tel:+2348075161213"
         className="flex items-center justify-center w-14 h-14 bg-secondary text-white rounded-full shadow-2xl hover:bg-secondary/90 transition-all hover:scale-110 active:scale-95 group relative"
         aria-label="Call Now"
       >

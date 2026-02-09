@@ -97,7 +97,7 @@ const ValentineOffer = () => {
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
                 This Valentine season, Light Way Homes is giving you a rare opportunity to own land at 
-                <span className="text-white font-semibold"> Novara Court, Orilemo–Mowe</span> at a 
+                <span className="text-white font-semibold"> Novara Court, Orilemo Mowe</span> at a 
                 <span className="text-red-500 font-bold"> massive 30% discount</span> — but only for a short time.
               </p>
               
@@ -108,7 +108,7 @@ const ValentineOffer = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/5 border border-white/10 rounded-xl">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />
-                  <span className="text-white/90 text-xs sm:text-sm md:text-base font-medium">Orilemo–Mowe, Ogun State</span>
+                  <span className="text-white/90 text-xs sm:text-sm md:text-base font-medium">Orilemo Mowe, Ogun State</span>
                 </div>
               </div>
             </AnimatedSection>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Phone,
   Mail,
@@ -39,6 +40,15 @@ const socials = [
 ];
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    interestedEstate: "",
+    subject: "",
+    message: "",
+  });
+
   return (
     <Layout>
       <PageHero
@@ -65,7 +75,7 @@ const ContactPage = () => {
               </h2>
 
               <a
-                href="tel:09037497790"
+                href="tel:+2349037497790"
                 className="flex items-center gap-4 p-4 bg-card rounded-xl card-hover border border-border group"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -167,7 +177,15 @@ const ContactPage = () => {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo"
+                href={`https://wa.me/2348075161213?text=${encodeURIComponent(
+                  formData.interestedEstate === "the-naples"
+                    ? "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
+                    : formData.interestedEstate === "novara-court"
+                    ? "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+                    : formData.interestedEstate === "roman-heights"
+                    ? "Hello, I'm interested in Roman Heights, can I get more info about it?"
+                    : "Hello Lightway, I am interested in your property offerings."
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-[#20BD5A] transition-all hover:scale-[1.02] shadow-lg shadow-[#25D366]/20"
@@ -193,6 +211,8 @@ const ContactPage = () => {
                         type="text"
                         className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                         placeholder="Enter your full name"
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       />
                     </div>
                     <div>
@@ -203,6 +223,8 @@ const ContactPage = () => {
                         type="tel"
                         className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                         placeholder="Enter your phone number"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />
                     </div>
                   </div>
@@ -214,13 +236,19 @@ const ContactPage = () => {
                       type="email"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
                   <div>
                     <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">
                       Interested Estate
                     </label>
-                    <select className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base">
+                    <select 
+                      className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
+                      value={formData.interestedEstate}
+                      onChange={(e) => setFormData({ ...formData, interestedEstate: e.target.value })}
+                    >
                       <option value="">Select an estate</option>
                       <option value="roman-heights">Roman Heights</option>
                       <option value="the-naples">Naples Arepo</option>
@@ -236,6 +264,8 @@ const ContactPage = () => {
                       type="text"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="What is this about?"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     />
                   </div>
                   <div>
@@ -246,6 +276,8 @@ const ContactPage = () => {
                       rows={5}
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-foreground text-sm md:text-base"
                       placeholder="How can we help you?"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
                   <Button

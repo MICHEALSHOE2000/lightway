@@ -1,8 +1,17 @@
+import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    interestedEstate: "",
+    message: "",
+  });
+
   return (
     <section id="contact" className="section-padding bg-muted relative overflow-hidden">
       <div className="container mx-auto container-padding relative z-10">
@@ -84,7 +93,15 @@ const Contact = () => {
 
             {/* WhatsApp CTA */}
             <a 
-              href="https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo" 
+              href={`https://wa.me/2348075161213?text=${encodeURIComponent(
+                formData.interestedEstate === "the-naples"
+                  ? "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
+                  : formData.interestedEstate === "novara-court"
+                  ? "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+                  : formData.interestedEstate === "roman-heights"
+                  ? "Hello, I'm interested in Roman Heights, can I get more info about it?"
+                  : "Hello Lightway, I am interested in your property offerings."
+              )}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-[#20BD5A] transition-all hover:scale-[1.02] shadow-lg"
@@ -93,7 +110,7 @@ const Contact = () => {
               Chat on WhatsApp
             </a>
           </AnimatedSection>
-
+ 
           {/* Contact Form */}
           <AnimatedSection animation="slide-left" className="lg:col-span-3">
             <div className="bg-card rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-card">
@@ -107,6 +124,8 @@ const Contact = () => {
                       type="text"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your full name"
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     />
                   </div>
                   <div>
@@ -115,6 +134,8 @@ const Contact = () => {
                       type="tel"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your phone number"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                   </div>
                 </div>
@@ -124,11 +145,17 @@ const Contact = () => {
                     type="email"
                     className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                     placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
                 </div>
                 <div>
                   <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Interested Estate</label>
-                  <select className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base">
+                  <select 
+                    className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
+                    value={formData.interestedEstate}
+                    onChange={(e) => setFormData({ ...formData, interestedEstate: e.target.value })}
+                  >
                     <option value="">Select an estate</option>
                     <option value="roman-heights">Roman Heights</option>
                     <option value="the-naples">Naples Arepo</option>
@@ -142,6 +169,8 @@ const Contact = () => {
                     rows={4}
                     className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-foreground text-sm md:text-base"
                     placeholder="How can we help you?"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
                 <Button variant="hero" size="lg" className="w-full group">

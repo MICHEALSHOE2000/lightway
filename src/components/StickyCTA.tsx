@@ -24,7 +24,7 @@ const StickyCTA = () => {
       }`}
     >
       <a
-        href="https://wa.me/2348075161213?text=hello%20Lightway%20I%20am%20in%20interested%20in%20the%20Naples%20Arepo"
+        href="https://wa.me/2348075161213?text=Hello,%20I'm%20interested%20in%20the%20Naples%204%20Bedroom%20Terrace%20with%20Bq,%20can%20I%20get%20more%20info%20about%20it?"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 active:scale-95 group relative shadow-glow"

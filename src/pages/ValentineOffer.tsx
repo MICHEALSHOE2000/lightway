@@ -250,7 +250,7 @@ const ValentineOffer = () => {
         <div className="container mx-auto container-padding text-center max-w-5xl">
           <AnimatedSection animation="fade-up">
             <h2 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl font-bold mb-8 italic leading-[1.4] px-2">
-              <span className="block sm:inline-block sm:whitespace-nowrap">"Flower face. Chocolate finishes.</span> <span className="text-[#ff0000] sm:whitespace-nowrap">Land appreciates.</span>"
+              <span className="block sm:inline-block sm:whitespace-nowrap">"Flower Fade. Chocolate finishes.</span> <span className="text-[#ff0000] sm:whitespace-nowrap">Land appreciates.</span>"
             </h2>
             <p className="text-base sm:text-lg text-white/70 mb-10 leading-relaxed px-4">
               This Valentine, don’t just celebrate love — build a legacy with Novara Court. 

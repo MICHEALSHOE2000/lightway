@@ -44,6 +44,7 @@ export interface Property {
   coordinates?: { lat: number; lng: number };
   projectSlug?: string;
   videoUrl?: string;
+  whatsappMessage?: string;
 }
 
 export interface Project {
@@ -59,6 +60,7 @@ export interface Project {
   amenities: string[];
   coordinates?: { lat: number; lng: number };
   videoUrl?: string;
+  whatsappMessage?: string;
 }
 
 // Main Projects (Naples and Novara only)
@@ -81,7 +83,7 @@ export const projects: Project[] = [
       "https://lightwayhomesltd.com/static/media/welcome.52b0be5b484bbca1a15c.png"
     ],
     status: "Now Selling",
-    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access. Arepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free. Asides from proximity, Arepo offers serenity and fresh air. Schedule a visit 08075161213",
+    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access. Arepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free. Asides from proximity, Arepo offers serenity and fresh air. Schedule a visit +234 807 516 1213",
     amenities: [
       "Recreational Centre",
       "24/7 Security",
@@ -94,6 +96,7 @@ export const projects: Project[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
+    whatsappMessage: "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
   },
   {
     id: "project-naples-land",
@@ -120,6 +123,7 @@ export const projects: Project[] = [
       "Building Approval & C of O",
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
+    whatsappMessage: "Hello, I'm interested in the Naples Land (Arepo), can I get more info about it?"
   },
   {
     id: "project-2",
@@ -142,6 +146,7 @@ export const projects: Project[] = [
       "Street Lights",
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
+    whatsappMessage: "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
   },
 ];
 
@@ -164,7 +169,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 5,
     videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
-    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access.\n\nArepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free.\n\nAsides from proximity, Arepo offers serenity and fresh air.\n\nSchedule a visit 08075161213\n\nThis Is Not Just a House. It’s Peace of Mind in Brick and Concrete.\n\nMost luxury homes in Lagos come with hidden charges and endless delays. The Naples is different.\n\n✔ C of O & Building Approval secured\n✔ Fully finished — inside and outside\n✔ Exactly what you see is what you get\n✔ No hidden fees. No surprises.\n\nStep Inside… And Feel the Difference. ✨ Living Room: 40sqm of Freedom. Big enough to entertain guests comfortably and host family gatherings.\n\nDesigned for Comfort. Finished for Pride.\n• 4 Spacious Bedrooms — All Ensuite\n• BQ Included\n• Exquisite Interior Finishes\n• Fully Finished Exterior\n• Dedicated Car Park (2 Cars)",
+    description: "The Naples estate is situated in Arepo which is the satellite town of the Lagos/Ibadan expressway in the Obafemi Owode Local Government Area. It is a well developed and pleasant place to live in with good road access.\n\nArepo has proximity to Lagos. It is a perfect location for citizens who want to live close to the Lagos capital thus making commuting stress-free.\n\nAsides from proximity, Arepo offers serenity and fresh air.\n\nSchedule a visit +234 807 516 1213\n\nThis Is Not Just a House. It’s Peace of Mind in Brick and Concrete.\n\nMost luxury homes in Lagos come with hidden charges and endless delays. The Naples is different.\n\n✔ C of O & Building Approval secured\n✔ Fully finished — inside and outside\n✔ Exactly what you see is what you get\n✔ No hidden fees. No surprises.\n\nStep Inside… And Feel the Difference. ✨ Living Room: 40sqm of Freedom. Big enough to entertain guests comfortably and host family gatherings.\n\nDesigned for Comfort. Finished for Pride.\n• 4 Spacious Bedrooms — All Ensuite\n• BQ Included\n• Exquisite Interior Finishes\n• Fully Finished Exterior\n• Dedicated Car Park (2 Cars)",
     features: [
       "C of O & Building Approval",
       "Fully finished delivery",
@@ -202,6 +207,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples",
+    whatsappMessage: "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
   },
   {
     id: "naples-500sqm",
@@ -249,6 +255,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples-land",
+    whatsappMessage: "Hello, I'm interested in the 500 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
   },
   {
     id: "naples-300sqm",
@@ -298,6 +305,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples-land",
+    whatsappMessage: "Hello, I'm interested in the 300 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
   },
 
   // Novara Courts Properties (Land Only - 300sqm, 500sqm, 600sqm)
@@ -358,6 +366,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
+    whatsappMessage: "Hello, I'm interested in the 300 SQM Plot at The Novara Courts, can I get more info about it?"
   },
   {
     id: "novara-500sqm",
@@ -416,6 +425,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
+    whatsappMessage: "Hello, I'm interested in the 500 SQM Plot at The Novara Courts, can I get more info about it?"
   },
   {
     id: "novara-600sqm",
@@ -474,6 +484,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
+    whatsappMessage: "Hello, I'm interested in the 600 SQM Plot at The Novara Courts, can I get more info about it?"
   },
 ];
 

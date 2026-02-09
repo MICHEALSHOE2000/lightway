@@ -24,11 +24,28 @@ const ValentineOffer = () => {
     plotSize: "500sqm",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Valentine Slot Secured:", formData);
-    toast.success("Success! Your Valentine offer slot has been secured. We will contact you shortly.");
-    setFormData({ fullName: "", phone: "", plotSize: "500sqm" });
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xlgwdbvz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        toast.success("Success! Your Valentine offer slot has been secured. We will contact you shortly.");
+        setFormData({ fullName: "", phone: "", plotSize: "500sqm" });
+      } else {
+        toast.error("Oops! There was a problem submitting your form. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Oops! There was a problem submitting your form. Please try again.");
+    }
   };
 
   const promoPrices = [
@@ -280,6 +297,7 @@ const ValentineOffer = () => {
                     <input
                       required
                       type="text"
+                      name="fullName"
                       className="w-full px-4 py-2.5 sm:py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-red-500/20 focus:border-red-500 outline-none transition-all text-sm sm:text-base"
                       placeholder="Your full name"
                       value={formData.fullName}
@@ -292,6 +310,7 @@ const ValentineOffer = () => {
                     <input
                       required
                       type="tel"
+                      name="phone"
                       className="w-full px-4 py-2.5 sm:py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-red-500/20 focus:border-red-500 outline-none transition-all text-sm sm:text-base"
                       placeholder="e.g. +234..."
                       value={formData.phone}
@@ -302,6 +321,7 @@ const ValentineOffer = () => {
                   <div>
                     <label className="block text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 text-muted-foreground">Preferred Plot Size</label>
                     <select 
+                      name="plotSize"
                       className="w-full px-4 py-2.5 sm:py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-red-500/20 focus:border-red-500 outline-none transition-all text-sm sm:text-base"
                       value={formData.plotSize}
                       onChange={(e) => setFormData({ ...formData, plotSize: e.target.value })}

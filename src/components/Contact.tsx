@@ -12,6 +12,34 @@ const Contact = () => {
     message: "",
   });
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("https://formspree.io/f/xlgwdbvz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          interestedEstate: "",
+          message: "",
+        });
+        alert("Thank you! Your message has been sent successfully.");
+      } else {
+        alert("Oops! There was a problem sending your message.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem sending your message.");
+    }
+  };
+
   return (
     <section id="contact" className="section-padding bg-muted relative overflow-hidden">
       <div className="container mx-auto container-padding relative z-10">
@@ -116,12 +144,17 @@ const Contact = () => {
             <div className="bg-card rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-card">
               <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">Send Us a <span className="text-secondary">Message</span></h3>
               <p className="text-sm text-muted-foreground mb-6">Fill out the form below to get a <span className="text-secondary font-bold">Free Property Investment Guide</span> sent to your email.</p>
-              <form className="space-y-4 md:space-y-5">
+              <form 
+                onSubmit={handleSubmit}
+                className="space-y-4 md:space-y-5"
+              >
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Full Name</label>
                     <input
+                      required
                       type="text"
+                      name="fullName"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your full name"
                       value={formData.fullName}
@@ -131,7 +164,9 @@ const Contact = () => {
                   <div>
                     <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Phone Number</label>
                     <input
+                      required
                       type="tel"
+                      name="phone"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your phone number"
                       value={formData.phone}
@@ -142,7 +177,9 @@ const Contact = () => {
                 <div>
                   <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Email Address</label>
                   <input
+                    required
                     type="email"
+                    name="email"
                     className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                     placeholder="Enter your email"
                     value={formData.email}
@@ -152,6 +189,7 @@ const Contact = () => {
                 <div>
                   <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Interested Estate</label>
                   <select 
+                    name="interestedEstate"
                     className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                     value={formData.interestedEstate}
                     onChange={(e) => setFormData({ ...formData, interestedEstate: e.target.value })}
@@ -166,6 +204,8 @@ const Contact = () => {
                 <div>
                   <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">Message</label>
                   <textarea
+                    required
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-foreground text-sm md:text-base"
                     placeholder="How can we help you?"
@@ -173,7 +213,7 @@ const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
-                <Button variant="hero" size="lg" className="w-full group">
+                <Button type="submit" variant="hero" size="lg" className="w-full group">
                   Send Message
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

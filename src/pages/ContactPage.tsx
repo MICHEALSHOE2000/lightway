@@ -49,6 +49,35 @@ const ContactPage = () => {
     message: "",
   });
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("https://formspree.io/f/xlgwdbvz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          interestedEstate: "",
+          subject: "",
+          message: "",
+        });
+        alert("Thank you! Your message has been sent successfully.");
+      } else {
+        alert("Oops! There was a problem sending your message.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem sending your message.");
+    }
+  };
+
   return (
     <Layout>
       <PageHero
@@ -201,14 +230,19 @@ const ContactPage = () => {
                 <h3 className="text-xl md:text-2xl font-bold mb-5 md:mb-6 text-foreground">
                   Send Us a Message
                 </h3>
-                <form className="space-y-4 md:space-y-5">
+                <form 
+                  onSubmit={handleSubmit}
+                  className="space-y-4 md:space-y-5"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs md:text-sm text-muted-foreground mb-1.5 md:mb-2 font-medium">
                         Full Name
                       </label>
                       <input
+                        required
                         type="text"
+                        name="fullName"
                         className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                         placeholder="Enter your full name"
                         value={formData.fullName}
@@ -220,7 +254,9 @@ const ContactPage = () => {
                         Phone Number
                       </label>
                       <input
+                        required
                         type="tel"
+                        name="phone"
                         className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                         placeholder="Enter your phone number"
                         value={formData.phone}
@@ -233,7 +269,9 @@ const ContactPage = () => {
                       Email Address
                     </label>
                     <input
+                      required
                       type="email"
+                      name="email"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="Enter your email"
                       value={formData.email}
@@ -245,6 +283,7 @@ const ContactPage = () => {
                       Interested Estate
                     </label>
                     <select 
+                      name="interestedEstate"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       value={formData.interestedEstate}
                       onChange={(e) => setFormData({ ...formData, interestedEstate: e.target.value })}
@@ -261,7 +300,9 @@ const ContactPage = () => {
                       Subject
                     </label>
                     <input
+                      required
                       type="text"
+                      name="subject"
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground text-sm md:text-base"
                       placeholder="What is this about?"
                       value={formData.subject}
@@ -273,6 +314,8 @@ const ContactPage = () => {
                       Message
                     </label>
                     <textarea
+                      required
+                      name="message"
                       rows={5}
                       className="w-full px-4 py-2.5 md:py-3 bg-background border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-foreground text-sm md:text-base"
                       placeholder="How can we help you?"
@@ -281,6 +324,7 @@ const ContactPage = () => {
                     />
                   </div>
                   <Button
+                    type="submit"
                     variant="hero"
                     size="lg"
                     className="w-full shadow-lg shadow-secondary/20"

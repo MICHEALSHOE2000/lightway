@@ -138,7 +138,7 @@ export const projects: Project[] = [
       novara3,
     ],
     status: "Now Selling",
-    description: "The Novara Courts is situated at Orilemo, Mowe Ofada by interchange. The land is covered with Registered Survey and is free from government acquisition.",
+    description: "As Lagos expands, value keeps shifting and smart home seekers are moving with it! 🏡\n\nWith accommodation demand in Lagos rising daily and prices going even higher, more individuals and families are choosing to build their permanent homes in affordable, peaceful areas just outside the city but close enough to still enjoy the Lagos lifestyle.\n\nThat’s where Novara Court, Orilemo, Mowe comes in: only minutes away from landmarks like RCCG Camp, Nestlé, Apple & Pears, and Christopher University.\n\nEnjoy flexible payment from 3 to 24 months and get instant allocation once payment is complete.\n\nYour dream home doesn’t have to wait another year.",
     amenities: [
       "Security",
       "Motorable Road Network",

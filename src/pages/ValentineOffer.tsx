@@ -114,7 +114,7 @@ const ValentineOffer = () => {
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
                 This Valentine season, Light Way Homes is giving you a rare opportunity to own land at 
-                <span className="text-white font-semibold"> Novara Court, Orilemo Mowe</span> at a 
+                <span className="text-white font-semibold"> The Novara Courts, Orilemo Mowe</span> at a 
                 <span className="text-red-500 font-bold"> massive 30% discount</span> — but only for a short time.
               </p>
               
@@ -232,7 +232,7 @@ const ValentineOffer = () => {
             <AnimatedSection animation="slide-left" className="mt-8 lg:mt-0">
               <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border shadow-elevated">
                 <h3 className="text-xl sm:text-2xl font-bold mb-6 text-foreground border-b border-border pb-4">
-                  About Novara Court
+                  About The Novara Courts
                 </h3>
                 <div className="space-y-6">
                   {[
@@ -270,7 +270,7 @@ const ValentineOffer = () => {
               <span className="block sm:inline-block sm:whitespace-nowrap">"Flower Fade. Chocolate finishes.</span> <span className="text-[#ff0000] sm:whitespace-nowrap">Land appreciates.</span>"
             </h2>
             <p className="text-base sm:text-lg text-white/70 mb-10 leading-relaxed px-4">
-              This Valentine, don’t just celebrate love — build a legacy with Novara Court. 
+              This Valentine, don’t just celebrate love — build a legacy with The Novara Courts. 
               The discount <span className="text-red-500 font-bold uppercase tracking-widest">Ends February 16th, 2026</span>.
               Only secured slots enjoy the discounted price.
             </p>
@@ -352,7 +352,7 @@ const ValentineOffer = () => {
                   <span className="font-bold text-sm sm:text-base">+234 807 516 1213</span>
                 </a>
                 <a 
-                  href="https://wa.me/2348075161213?text=Hello%20Lightway%20I%20want%20to%20secure%20my%20Valentine%20slot" 
+                  href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20I%20want%20to%20secure%20my%20Valentine%20slot" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-green-500 transition-colors group"

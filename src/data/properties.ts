@@ -101,7 +101,7 @@ export const projects: Project[] = [
   {
     id: "project-naples-land",
     slug: "the-naples-land",
-    title: "The Naples Land",
+    title: "The Naples Arepo Land",
     location: "Arepo, Ogun State",
     address: "Naples Arepo, Arepo, Ogun State",
     image: naplesLand1,
@@ -123,12 +123,12 @@ export const projects: Project[] = [
       "Building Approval & C of O",
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
-    whatsappMessage: "Hello, I'm interested in the Naples Land (Arepo), can I get more info about it?"
+    whatsappMessage: "Hello, I'm interested in The Naples Arepo Land, can I get more info about it?"
   },
   {
     id: "project-2",
     slug: "the-novara-courts",
-    title: "The Novara Courts",
+    title: "Novara Courts",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
     image: novara1,
@@ -138,7 +138,7 @@ export const projects: Project[] = [
       novara3,
     ],
     status: "Now Selling",
-    description: "As Lagos expands, value keeps shifting and smart home seekers are moving with it! 🏡\n\nWith accommodation demand in Lagos rising daily and prices going even higher, more individuals and families are choosing to build their permanent homes in affordable, peaceful areas just outside the city but close enough to still enjoy the Lagos lifestyle.\n\nThat’s where Novara Court, Orilemo, Mowe comes in: only minutes away from landmarks like RCCG Camp, Nestlé, Apple & Pears, and Christopher University.\n\nEnjoy flexible payment from 3 to 24 months and get instant allocation once payment is complete.\n\nYour dream home doesn’t have to wait another year.",
+    description: "As Lagos expands, value keeps shifting and smart home seekers are moving with it! 🏡\n\nWith accommodation demand in Lagos rising daily and prices going even higher, more individuals and families are choosing to build their permanent homes in affordable, peaceful areas just outside the city but close enough to still enjoy the Lagos lifestyle.\n\nThat’s where The Novara Courts, Orilemo, Mowe comes in: only minutes away from landmarks like RCCG Camp, Nestlé, Apple & Pears, and Christopher University.\n\nEnjoy flexible payment from 3 to 24 months and get instant allocation once payment is complete.\n\nYour dream home doesn’t have to wait another year.",
     amenities: [
       "Security",
       "Motorable Road Network",

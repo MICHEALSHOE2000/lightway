@@ -66,7 +66,7 @@ const Properties = () => {
                             Initial Deposit
                           </span>
                           <span className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg leading-none">
-                            {project.slug === "the-naples" ? "₦30,000,000" : project.slug === "the-naples-land" ? "From ₦3M" : "From ₦200K"}
+                            {project.slug === "the-naples" ? "₦30,000,000" : project.slug === "the-naples-land" ? "₦3M" : "₦200K"}
                           </span>
                         </div>
 

@@ -9,7 +9,7 @@ const videos = [
   },
   {
     id: "GvULfaw64hE", 
-    title: "Novara Court Project Showcase",
+    title: "The Novara Courts Project Showcase",
   },
 ];
 

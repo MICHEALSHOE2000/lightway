@@ -41,17 +41,17 @@ const faqData = [
     category: "Naples",
   },
   {
-    question: "Where is Novara Court located?",
-    answer: "Novara Court is situated at Orilemo, Mowe Ofada, by interchange, Obafemi-Owode Local Government Area.",
+    question: "Where is The Novara Courts located?",
+    answer: "The Novara Courts is situated at Orilemo, Mowe Ofada, by interchange, Obafemi-Owode Local Government Area.",
     category: "Novara",
   },
   {
-    question: "Who is the developer of Novara Court?",
+    question: "Who is the developer of The Novara Courts?",
     answer: "Light Way Homes and Investment Limited.",
     category: "Novara",
   },
   {
-    question: "What title is on Novara Court?",
+    question: "What title is on The Novara Courts?",
     answer: "NOVARA COURT is covered by a registered survey (OG/0765/2023/067).",
     category: "Novara",
   },

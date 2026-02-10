@@ -104,7 +104,7 @@ const ContactPage = () => {
               </h2>
 
               <a
-                href="tel:+2349037497790"
+                href="tel:+2348075161213"
                 className="flex items-center gap-4 p-4 bg-card rounded-xl card-hover border border-border group"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -115,13 +115,13 @@ const ContactPage = () => {
                     Phone
                   </div>
                   <div className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
-                    +234 903 749 7790
+                    +234 807 516 1213
                   </div>
                 </div>
               </a>
 
               <a
-                href="tel:+2348075161213"
+                href="tel:+2348038034077"
                 className="flex items-center gap-4 p-4 bg-card rounded-xl card-hover border border-border group"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 bg-gradient-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -132,7 +132,7 @@ const ContactPage = () => {
                     Mobile
                   </div>
                   <div className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
-                    +234 807 516 1213
+                    +234 803 803 4077
                   </div>
                 </div>
               </a>
@@ -213,7 +213,7 @@ const ContactPage = () => {
                     ? "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
                     : formData.interestedEstate === "roman-heights"
                     ? "Hello, I'm interested in Roman Heights, can I get more info about it?"
-                    : "Hello Lightway, I am interested in your property offerings."
+                    : "Hello Light Way, I am interested in your property offerings."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -291,7 +291,7 @@ const ContactPage = () => {
                       <option value="">Select an estate</option>
                       <option value="roman-heights">Roman Heights</option>
                       <option value="the-naples">Naples Arepo</option>
-                      <option value="novara-court">Novara Court</option>
+                      <option value="novara-court">The Novara Courts</option>
                       <option value="other">Other / General Inquiry</option>
                     </select>
                   </div>

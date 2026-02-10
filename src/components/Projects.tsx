@@ -8,7 +8,7 @@ import { projects } from "@/data/properties";
 const projectDisplayData = [
   {
     ...projects[0], // Naples 4-Bed BQ
-    price: "₦30,000,000 (Deposit)",
+    price: "₦30,000,000",
     type: "Premium Townhouse",
     size: "4-Bedroom Terrace + BQ",
     paymentPlan: "Move in immediately",
@@ -16,7 +16,7 @@ const projectDisplayData = [
   },
   {
     ...projects[1], // Naples Land
-    price: "From ₦3M",
+    price: "₦3M",
     type: "Serviced Plots",
     size: "300-500 SQM",
     paymentPlan: "Spread balance up to 12 months",
@@ -24,7 +24,7 @@ const projectDisplayData = [
   },
   {
     ...projects[2], // Novara Courts
-    price: "From ₦200K",
+    price: "₦200K",
     type: "Residential Land",
     size: "300-600 SQM",
     paymentPlan: "Flexible Payment Options",

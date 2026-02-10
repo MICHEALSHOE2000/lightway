@@ -61,19 +61,6 @@ const Contact = () => {
           {/* Contact Info */}
           <AnimatedSection animation="slide-right" className="lg:col-span-2 space-y-4">
             <a 
-              href="tel:+2349037497790" 
-              className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
-            >
-              <div className="w-11 h-11 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                <Phone className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <div>
-                <div className="text-xs text-muted-foreground mb-0.5">Phone</div>
-                <div className="font-semibold text-sm md:text-base text-foreground">+234 903 749 7790</div>
-              </div>
-            </a>
-
-            <a 
               href="tel:+2348075161213" 
               className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
             >
@@ -81,8 +68,21 @@ const Contact = () => {
                 <Phone className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-xs text-muted-foreground mb-0.5">Mobile</div>
+                <div className="text-xs text-muted-foreground mb-0.5">Phone</div>
                 <div className="font-semibold text-sm md:text-base text-foreground">+234 807 516 1213</div>
+              </div>
+            </a>
+
+            <a 
+              href="tel:+2348038034077" 
+              className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
+            >
+              <div className="w-11 h-11 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Phone className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground mb-0.5">Mobile</div>
+                <div className="font-semibold text-sm md:text-base text-foreground">+234 803 803 4077</div>
               </div>
             </a>
 
@@ -128,7 +128,7 @@ const Contact = () => {
                   ? "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
                   : formData.interestedEstate === "roman-heights"
                   ? "Hello, I'm interested in Roman Heights, can I get more info about it?"
-                  : "Hello Lightway, I am interested in your property offerings."
+                  : "Hello Light Way, I am interested in your property offerings."
               )}`} 
               target="_blank" 
               rel="noopener noreferrer"
@@ -197,7 +197,7 @@ const Contact = () => {
                     <option value="">Select an estate</option>
                     <option value="roman-heights">Roman Heights</option>
                     <option value="the-naples">Naples Arepo</option>
-                    <option value="novara-court">Novara Court</option>
+                    <option value="novara-court">The Novara Courts</option>
                     <option value="other">Other / General Inquiry</option>
                   </select>
                 </div>

@@ -39,7 +39,7 @@ const NeighborhoodPerks = () => {
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               We carefully select our estate locations based on proximity to Lagos, 
               essential infrastructure, and future growth potential. When you buy from 
-              Lightway, you're not just buying land; you're investing in a lifestyle.
+              Light Way, you're not just buying land; you're investing in a lifestyle.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-8">

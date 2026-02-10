@@ -339,9 +339,10 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-0">
-        <div className="h-[400px] bg-muted relative">
+      {/* Enhanced Map Section */}
+      <section className="py-0 relative">
+        <div className="relative h-[500px] md:h-[600px] bg-muted overflow-hidden">
+          {/* Map Iframe */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.298284698585!2d3.3592815749767287!3d6.657519193339097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93f9c6d36e2f%3A0x673059d9c227361a!2sOyewo%20Cl%2C%20Oregun%2C%20Lagos%20100271%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1707035728362!5m2!1sen!2sus"
             width="100%"
@@ -350,8 +351,62 @@ const ContactPage = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Light Way Homes Location"
+            title="Light Way Homes Office Location"
+            className="grayscale-[20%] hover:grayscale-0 transition-all duration-500"
           />
+          
+          {/* Overlay Card - Office Information */}
+          <AnimatedSection 
+            animation="slide-up-reveal" 
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 w-[calc(100%-2rem)] md:w-auto md:max-w-md z-10"
+          >
+            <div className="bg-card/95 backdrop-blur-lg rounded-2xl p-6 md:p-8 shadow-2xl border border-border">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
+                    Visit Our Office
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    We're here to help you find your dream property
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-3 mb-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-foreground leading-relaxed">
+                    No. 4, Oyewo Close, Clay Busstop, Juli Estate, Off Kudirat Abiola Way, Oregun, Ikeja Lagos
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                  <p className="text-sm text-foreground">
+                    Mon - Sat: 9:00 AM - 5:00 PM
+                  </p>
+                </div>
+              </div>
+              
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=6.657519193339097,3.3592815749767287"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full group shadow-lg"
+                >
+                  Get Directions
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

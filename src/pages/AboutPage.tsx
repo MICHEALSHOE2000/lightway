@@ -10,6 +10,7 @@ import {
   Award,
   Building,
   Calendar,
+  MessageCircle,
 } from "lucide-react";
 import CountUpNumber from "@/components/CountUpNumber";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -153,6 +154,18 @@ const AboutPage = () => {
                 and environmental friendly houses for our affable customers
                 becomes very easy.
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a 
+                  href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I'm reading about your company and I'd like to learn more about your vision and available properties.")}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-xl font-bold hover:bg-[#20BD5A] transition-all shadow-lg"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat with Our Team
+                </a>
+              </div>
 
               {/* Features */}
               <div className="grid sm:grid-cols-2 gap-3 text-left">

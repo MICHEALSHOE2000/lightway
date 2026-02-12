@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
@@ -93,6 +93,15 @@ const Hero = () => {
               >
                 <Phone className="w-5 h-5" />
                 Talk to an Expert
+              </a>
+              <a 
+                href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I just landed on your homepage and I'm interested in exploring your premium estate offerings.")}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="h-16 inline-flex items-center justify-center gap-3 px-10 rounded-xl bg-[#25D366] text-white hover:bg-[#20BD5A] transition-all font-bold uppercase tracking-widest text-sm shadow-xl hover-lift"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat with Us
               </a>
             </div>
           </AnimatedSection>

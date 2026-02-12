@@ -7,6 +7,7 @@ import {
   Ruler,
   ArrowRight,
   CheckCircle,
+  MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -223,6 +224,18 @@ const Services = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          <AnimatedSection animation="fade-up" className="mt-16 text-center">
+            <a 
+              href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I'm interested in your real estate services. I'd like to discuss a property acquisition or investment.")}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-2xl font-bold text-lg hover:bg-[#20BD5A] transition-all shadow-xl hover:scale-105"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Speak with a Consultant Now
+            </a>
+          </AnimatedSection>
         </div>
       </section>
 

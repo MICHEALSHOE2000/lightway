@@ -1,4 +1,4 @@
-import { Briefcase, MapPin, Clock, DollarSign, ChevronRight, Users, Target, TrendingUp } from "lucide-react";
+import { Briefcase, MapPin, Clock, DollarSign, ChevronRight, Users, Target, TrendingUp, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -242,14 +242,20 @@ const Career = () => {
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 We're always looking for talented individuals. Send us your CV and we'll reach out when a matching position opens.
               </p>
-              <Button 
-                variant="hero" 
-                size="lg"
-                onClick={() => window.location.href = 'mailto:careers@lightwayhomesltd.com?subject=General Application'}
-              >
                 Submit Your CV
                 <ChevronRight className="w-5 h-5" />
               </Button>
+              <div className="mt-6">
+                <a 
+                  href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I'm interested in joining your team. I'd like to inquire about current or future career opportunities.")}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 text-[#25D366] font-bold hover:text-[#20BD5A] transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat with HR on WhatsApp
+                </a>
+              </div>
             </div>
           </AnimatedSection>
         </div>

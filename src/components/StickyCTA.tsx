@@ -24,7 +24,7 @@ const StickyCTA = () => {
       }`}
     >
       <a
-        href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20,%20I'm%20interested%20in%20your%20estate.%20Can%20I%20get%20more%20info%20about%20it?"
+        href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20Homes%2C%20I%20am%20browsing%20your%20website%20and%20would%20like%20to%20make%20an%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 active:scale-95 group relative shadow-glow"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import { trackClarityEvent } from "@/utils/clarity";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ const Contact = () => {
           interestedEstate: "",
           message: "",
         });
+        trackClarityEvent("contact_form_success");
         alert("Thank you! Your message has been sent successfully.");
       } else {
         alert("Oops! There was a problem sending your message.");
@@ -132,6 +134,7 @@ const Contact = () => {
               )}`} 
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => trackClarityEvent("whatsapp_chat_click")}
               className="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-[#20BD5A] transition-all hover:scale-[1.02] shadow-lg"
             >
               <MessageCircle className="w-5 h-5" />

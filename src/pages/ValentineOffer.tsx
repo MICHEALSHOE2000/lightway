@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { toast } from "sonner";
+import { trackClarityEvent } from "@/utils/clarity";
 
 const ValentineOffer = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,7 @@ const ValentineOffer = () => {
       });
       
       if (response.ok) {
+        trackClarityEvent("valentine_offer_success");
         toast.success("Success! Your Valentine offer slot has been secured. We will contact you shortly.");
         setFormData({ fullName: "", phone: "", plotSize: "500sqm" });
       } else {
@@ -355,6 +357,7 @@ const ValentineOffer = () => {
                   href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20I%20want%20to%20secure%20my%20Valentine%20slot" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => trackClarityEvent("whatsapp_valentine_click")}
                   className="flex items-center gap-3 text-muted-foreground hover:text-green-500 transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center group-hover:bg-green-50 transition-colors">

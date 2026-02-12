@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin, Youtube, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Youtube, Mail, Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import logo from "@/assets/logo.png";
@@ -35,6 +35,14 @@ const Footer = () => {
                     </a>
                     <a href="tel:+2348038034077" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
                        <Phone className="w-3 h-3" /> +234 803 803 4077
+                    </a>
+                    <a 
+                      href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I found your contact information in the footer of your website and I'd like to make an inquiry.")}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#25D366] hover:text-[#20BD5A] transition-colors flex items-center justify-center md:justify-start gap-2 text-xs font-bold"
+                    >
+                      <MessageCircle className="w-3 h-3" /> Chat on WhatsApp
                     </a>
                   </div>
                   <a href="mailto:Info.lightwayhomesltd@gmail.com" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">

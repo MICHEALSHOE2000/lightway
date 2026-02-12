@@ -5,7 +5,7 @@
 
 declare global {
   interface Window {
-    clarity: (command: string, ...args: any[]) => void;
+    clarity: (command: string, ...args: unknown[]) => void;
   }
 }
 

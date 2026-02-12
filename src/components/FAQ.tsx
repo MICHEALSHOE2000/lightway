@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { MessageCircle } from "lucide-react";
 
 const faqData = [
   {
@@ -128,6 +129,22 @@ const FAQ = ({ category = "All" }: FAQProps) => {
               </AccordionItem>
             ))}
           </Accordion>
+        </AnimatedSection>
+
+        <AnimatedSection animation="fade-up" delay={300} className="mt-12 text-center">
+          <div className="bg-muted/50 rounded-2xl p-6 md:p-8 border border-border inline-block">
+            <h3 className="text-xl font-bold text-foreground mb-3">Still have questions?</h3>
+            <p className="text-muted-foreground mb-6">If you didn't find the answer you were looking for, our team is ready to help.</p>
+            <a 
+              href={`https://wa.me/2348075161213?text=${encodeURIComponent("Hello Light Way Homes, I have some questions that weren't covered in your FAQ section. I'd like to get more clarification.")}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-xl font-bold hover:bg-[#20BD5A] transition-all shadow-md"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Chat with Our Support
+            </a>
+          </div>
         </AnimatedSection>
       </div>
     </section>

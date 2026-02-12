@@ -242,6 +242,11 @@ const Career = () => {
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 We're always looking for talented individuals. Send us your CV and we'll reach out when a matching position opens.
               </p>
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={() => window.location.href = 'mailto:careers@lightwayhomesltd.com?subject=General Application'}
+              >
                 Submit Your CV
                 <ChevronRight className="w-5 h-5" />
               </Button>

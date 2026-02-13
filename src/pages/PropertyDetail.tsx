@@ -351,7 +351,7 @@ const PropertyDetail = () => {
                         </Button>
                       </a>
                       <a
-                        href={`https://wa.me/2348075161213?text=${encodeURIComponent(property.whatsappMessage || "Hello Light Way, I am interested in this property")}`}
+                        href={`https://wa.me/2348075161213?text=${encodeURIComponent(property.whatsappMessage || "Hello Light Way Homes, I am interested in this property")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#20BD5A] transition-all"

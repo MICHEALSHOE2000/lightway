@@ -96,7 +96,7 @@ export const projects: Project[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     videoUrl: "https://youtube.com/shorts/PwLaHgAbHOc?si=eUjCJ4zNRxjVIV9B",
-    whatsappMessage: "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
   },
   {
     id: "project-naples-land",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "Building Approval & C of O",
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
-    whatsappMessage: "Hello, I'm interested in The Naples Arepo Land, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in The Naples Arepo Land, can I get more info about it?"
   },
   {
     id: "project-2",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       "Street Lights",
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
-    whatsappMessage: "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
   },
 ];
 
@@ -207,7 +207,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples",
-    whatsappMessage: "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
   },
   {
     id: "naples-500sqm",
@@ -255,7 +255,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples-land",
-    whatsappMessage: "Hello, I'm interested in the 500 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 500 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
   },
   {
     id: "naples-300sqm",
@@ -305,7 +305,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7074, lng: 3.4416 },
     projectSlug: "the-naples-land",
-    whatsappMessage: "Hello, I'm interested in the 300 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 300 SQM Serviced Plot at Naples Arepo, can I get more info about it?"
   },
 
   // Novara Courts Properties (Land Only - 300sqm, 500sqm, 600sqm)
@@ -366,7 +366,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello, I'm interested in the 300 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 300 SQM Plot at The Novara Courts, can I get more info about it?"
   },
   {
     id: "novara-500sqm",
@@ -425,7 +425,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello, I'm interested in the 500 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 500 SQM Plot at The Novara Courts, can I get more info about it?"
   },
   {
     id: "novara-600sqm",
@@ -484,7 +484,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello, I'm interested in the 600 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 600 SQM Plot at The Novara Courts, can I get more info about it?"
   },
 ];
 

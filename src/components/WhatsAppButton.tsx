@@ -1,10 +1,25 @@
 import { MessageCircle } from "lucide-react";
 import { trackClarityEvent } from "@/utils/clarity";
+import { useLocation } from "react-router-dom";
+import { getPropertyBySlug } from "@/data/properties";
 
 const WhatsAppButton = () => {
+  const location = useLocation();
+  const pathParts = location.pathname.split('/');
+  const isPropertyPage = pathParts[1] === 'properties' && pathParts[2];
+  
+  let whatsappMessage = "Hello Light Way Homes, I'm interested in your estate. Can I get more info about it?";
+  
+  if (isPropertyPage) {
+    const property = getPropertyBySlug(pathParts[2]);
+    if (property && property.whatsappMessage) {
+      whatsappMessage = property.whatsappMessage;
+    }
+  }
+
   return (
     <a
-      href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20,%20I'm%20interested%20in%20your%20estate.%20Can%20I%20get%20more%20info%20about%20it?"
+      href={`https://wa.me/2348075161213?text=${encodeURIComponent(whatsappMessage)}`}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackClarityEvent("whatsapp_global_click")}

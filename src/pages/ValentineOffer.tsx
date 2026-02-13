@@ -10,7 +10,8 @@ import {
   Calendar,
   ShieldCheck,
   TrendingUp,
-  Tag
+  Tag,
+  Mail
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
@@ -346,7 +347,7 @@ const ValentineOffer = () => {
                 </div>
               </form>
 
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                 <a href="tel:+2348075161213" className="flex items-center gap-3 text-muted-foreground hover:text-red-500 transition-colors group">
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center group-hover:bg-red-50 transition-colors">
                     <Phone className="w-4 h-4" />
@@ -354,7 +355,7 @@ const ValentineOffer = () => {
                   <span className="font-bold text-sm sm:text-base">+234 807 516 1213</span>
                 </a>
                 <a 
-                  href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20I%20want%20to%20secure%20my%20Valentine%20slot" 
+                  href="https://wa.me/2348075161213?text=Hello%20Light%20Way%20Homes%2C%20I%20want%20to%20secure%20my%20Valentine%20slot" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackClarityEvent("whatsapp_valentine_click")}
@@ -364,6 +365,15 @@ const ValentineOffer = () => {
                     <MessageCircle className="w-4 h-4" />
                   </div>
                   <span className="font-bold text-sm sm:text-base">WhatsApp Chat</span>
+                </a>
+                <a 
+                  href="mailto:Info@lightwayhomesltd.com.ng?subject=Valentine Offer Inquiry&body=Hello Light Way Homes, I want to secure my Valentine slot." 
+                  className="flex items-center gap-3 text-muted-foreground hover:text-blue-500 transition-colors group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <span className="font-bold text-sm sm:text-base">Send Email</span>
                 </a>
               </div>
             </AnimatedSection>

@@ -89,7 +89,7 @@ const Contact = () => {
             </a>
 
             <a 
-              href="mailto:Info.lightwayhomesltd@gmail.com" 
+              href="mailto:Info@lightwayhomesltd.com.ng" 
               className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-elevated border border-border group transition-all duration-300"
             >
               <div className="w-11 h-11 md:w-12 md:h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -97,7 +97,7 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground mb-0.5">Email</div>
-                <div className="font-semibold text-sm md:text-base text-foreground break-all">Info.lightwayhomesltd@gmail.com</div>
+                <div className="font-semibold text-sm md:text-base text-foreground break-all">Info@lightwayhomesltd.com.ng</div>
               </div>
             </a>
 
@@ -125,12 +125,12 @@ const Contact = () => {
             <a 
               href={`https://wa.me/2348075161213?text=${encodeURIComponent(
                 formData.interestedEstate === "the-naples"
-                  ? "Hello, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
+                  ? "Hello Light Way Homes, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
                   : formData.interestedEstate === "novara-court"
-                  ? "Hello, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+                  ? "Hello Light Way Homes, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
                   : formData.interestedEstate === "roman-heights"
-                  ? "Hello, I'm interested in Roman Heights, can I get more info about it?"
-                  : "Hello Light Way, I am interested in your property offerings."
+                  ? "Hello Light Way Homes, I'm interested in Roman Heights, can I get more info about it?"
+                  : "Hello Light Way Homes, I am interested in your property offerings."
               )}`} 
               target="_blank" 
               rel="noopener noreferrer"

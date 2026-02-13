@@ -45,8 +45,8 @@ const Footer = () => {
                       <MessageCircle className="w-3 h-3" /> Chat on WhatsApp
                     </a>
                   </div>
-                  <a href="mailto:Info.lightwayhomesltd@gmail.com" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <Mail className="w-3 h-3" /> Info.lightwayhomesltd@gmail.com
+                  <a href="mailto:Info@lightwayhomesltd.com.ng" className="hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2">
+                    <Mail className="w-3 h-3" /> Info@lightwayhomesltd.com.ng
                   </a>
                 </div>
              </div>

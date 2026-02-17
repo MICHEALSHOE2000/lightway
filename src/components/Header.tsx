@@ -140,7 +140,7 @@ const Header = () => {
       icon: <ArrowRight className="w-4 h-4" />,
       subLinks: [
         { name: "Naples Arepo", href: "/properties/the-naples-4bed-terrace-townhouse", description: "Premium Land & Townhouses" },
-        { name: "The Novara Courts", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
+        { name: "The Novara Court", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
         { name: "View All Properties", href: "/properties", description: "Explore our full portfolio" },
       ]
     },

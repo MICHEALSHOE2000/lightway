@@ -128,7 +128,7 @@ export const projects: Project[] = [
   {
     id: "project-2",
     slug: "the-novara-courts",
-    title: "Novara Courts",
+    title: "Novara Court",
     location: "Orilemo, Mowe, Ogun State",
     address: "Orilemo, Near Nestlé & Olam Group, Mowe, Ogun State",
     image: novara1,
@@ -138,7 +138,7 @@ export const projects: Project[] = [
       novara3,
     ],
     status: "Now Selling",
-    description: "As Lagos expands, value keeps shifting and smart home seekers are moving with it! 🏡\n\nWith accommodation demand in Lagos rising daily and prices going even higher, more individuals and families are choosing to build their permanent homes in affordable, peaceful areas just outside the city but close enough to still enjoy the Lagos lifestyle.\n\nThat’s where The Novara Courts, Orilemo, Mowe comes in: only minutes away from landmarks like RCCG Camp, Nestlé, Apple & Pears, and Christopher University.\n\nEnjoy flexible payment from 3 to 24 months and get instant allocation once payment is complete.\n\nYour dream home doesn’t have to wait another year.",
+    description: "As Lagos expands, value keeps shifting and smart home seekers are moving with it! 🏡\n\nWith accommodation demand in Lagos rising daily and prices going even higher, more individuals and families are choosing to build their permanent homes in affordable, peaceful areas just outside the city but close enough to still enjoy the Lagos lifestyle.\n\nThat’s where The Novara Court, Orilemo, Mowe comes in: only minutes away from landmarks like RCCG Camp, Nestlé, Apple & Pears, and Christopher University.\n\nEnjoy flexible payment from 3 to 24 months and get instant allocation once payment is complete.\n\nYour dream home doesn’t have to wait another year.",
     amenities: [
       "Security",
       "Motorable Road Network",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       "Street Lights",
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
-    whatsappMessage: "Hello Light Way Homes, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in The Novara Court (Mowe), can I get more info about it?"
   },
 ];
 
@@ -322,7 +322,7 @@ export const properties: Property[] = [
     priceRange: { min: 200000, max: 5400000 },
     type: "Residential Land",
     size: "300 SQM",
-    description: "Affordable 300 square meter plot at The Novara Courts, Orilemo Mowe. Near major industrial hubs including Nestlé, Olam Group, International Breweries, Apple and Pears Ltd, Christopher University, and RCCG Camp. 45 minutes to Lagos International Airport.",
+    description: "Affordable 300 square meter plot at The Novara Court, Orilemo Mowe. Near major industrial hubs including Nestlé, Olam Group, International Breweries, Apple and Pears Ltd, Christopher University, and RCCG Camp. 45 minutes to Lagos International Airport.",
     features: [
       "Dry and solid land",
       "Survey and title documents available",
@@ -366,7 +366,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello Light Way Homes, I'm interested in the 300 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 300 SQM Plot at The Novara Court, can I get more info about it?"
   },
   {
     id: "novara-500sqm",
@@ -381,7 +381,7 @@ export const properties: Property[] = [
     priceRange: { min: 200000, max: 7800000 },
     type: "Residential Land",
     size: "500 SQM",
-    description: "Well-sized 500 square meter plot at The Novara Courts, Orilemo Mowe. Strategic location near major industrial hubs. 45 minutes to Lagos International Airport.",
+    description: "Well-sized 500 square meter plot at The Novara Court, Orilemo Mowe. Strategic location near major industrial hubs. 45 minutes to Lagos International Airport.",
     features: [
       "Dry and solid land",
       "Survey and title documents available",
@@ -425,7 +425,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello Light Way Homes, I'm interested in the 500 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 500 SQM Plot at The Novara Court, can I get more info about it?"
   },
   {
     id: "novara-600sqm",
@@ -440,7 +440,7 @@ export const properties: Property[] = [
     priceRange: { min: 200000, max: 9000000 },
     type: "Residential Land",
     size: "600 SQM",
-    description: "Spacious 600 square meter plot at The Novara Courts, Orilemo Mowe. Perfect for larger family homes. Near major industrial hubs and 45 minutes to Lagos International Airport.",
+    description: "Spacious 600 square meter plot at The Novara Court, Orilemo Mowe. Perfect for larger family homes. Near major industrial hubs and 45 minutes to Lagos International Airport.",
     features: [
       "Dry and solid land",
       "Survey and title documents available",
@@ -484,7 +484,7 @@ export const properties: Property[] = [
     ],
     coordinates: { lat: 6.7274, lng: 3.4616 },
     projectSlug: "the-novara-courts",
-    whatsappMessage: "Hello Light Way Homes, I'm interested in the 600 SQM Plot at The Novara Courts, can I get more info about it?"
+    whatsappMessage: "Hello Light Way Homes, I'm interested in the 600 SQM Plot at The Novara Court, can I get more info about it?"
   },
 ];
 

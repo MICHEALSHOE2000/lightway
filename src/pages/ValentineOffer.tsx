@@ -117,14 +117,14 @@ const ValentineOffer = () => {
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
                 This Valentine season, Light Way Homes is giving you a rare opportunity to own land at 
-                <span className="text-white font-semibold"> The Novara Courts, Orilemo Mowe</span> at a 
-                <span className="text-red-500 font-bold"> massive 30% discount</span> — but only for a short time.
+                <span className="text-white font-semibold"> The Novara Court, Orilemo Mowe</span> at a 
+                <a href="#contact-section" className="text-red-500 font-bold hover:underline cursor-pointer"> massive 30% discount</a> — but only for a short time.
               </p>
               
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
                 <div className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/5 border border-white/10 rounded-xl">
                   <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 whitespace-nowrap" />
-                  <span className="text-white/90 text-xs sm:text-sm md:text-base font-medium">Offer Closes February 16th, 2026</span>
+                  <span className="text-white/90 text-xs sm:text-sm md:text-base font-medium">Offer Closes February 20th, 2026</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/5 border border-white/10 rounded-xl">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />
@@ -143,7 +143,7 @@ const ValentineOffer = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Valentine Promo Prices
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground">Outright Purchase Discounts — Only until February 16th, 2026</p>
+            <p className="text-sm sm:text-base text-muted-foreground">Outright Purchase Discounts — Only until February 20th, 2026</p>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
@@ -154,7 +154,13 @@ const ValentineOffer = () => {
                 delay={index * 100}
                 className={`relative group ${index === 2 ? 'sm:col-span-2 md:col-span-1 sm:max-w-md sm:mx-auto md:max-w-none' : ''}`}
               >
-                <div className="h-full bg-card border border-border rounded-2xl p-6 sm:p-8 hover:border-[#ff0000]/30 transition-all duration-300 shadow-card hover:shadow-elevated flex flex-col">
+                <div 
+                  onClick={() => {
+                    setFormData({ ...formData, plotSize: price.size.toLowerCase() });
+                    document.getElementById("secure-slot")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="h-full bg-card border border-border rounded-2xl p-6 sm:p-8 hover:border-[#ff0000]/30 transition-all duration-300 shadow-card hover:shadow-elevated flex flex-col cursor-pointer"
+                >
                   <div className="absolute top-4 right-4 bg-[#ff0000] text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter z-10">
                     Save 30%
                   </div>
@@ -184,7 +190,7 @@ const ValentineOffer = () => {
 
           <AnimatedSection className="mt-12 text-center" animation="fade-up">
             <p className="text-[#ff0000] font-bold text-base sm:text-lg animate-pulse">
-              Enjoy the savings now, as our regular prices returns after February 16th, 2026
+              Enjoy the savings now, as our regular prices returns after February 20th, 2026
             </p>
           </AnimatedSection>
         </div>
@@ -235,7 +241,7 @@ const ValentineOffer = () => {
             <AnimatedSection animation="slide-left" className="mt-8 lg:mt-0">
               <div className="bg-card rounded-2xl p-6 sm:p-8 border border-border shadow-elevated">
                 <h3 className="text-xl sm:text-2xl font-bold mb-6 text-foreground border-b border-border pb-4">
-                  About The Novara Courts
+                  About The Novara Court
                 </h3>
                 <div className="space-y-6">
                   {[
@@ -273,8 +279,8 @@ const ValentineOffer = () => {
               <span className="block sm:inline-block sm:whitespace-nowrap">"Flower Fade. Chocolate finishes.</span> <span className="text-[#ff0000] sm:whitespace-nowrap">Land appreciates.</span>"
             </h2>
             <p className="text-base sm:text-lg text-white/70 mb-10 leading-relaxed px-4">
-              This Valentine, don’t just celebrate love — build a legacy with The Novara Courts. 
-              The discount <span className="text-red-500 font-bold uppercase tracking-widest">Ends February 16th, 2026</span>.
+              This Valentine, don’t just celebrate love — build a legacy with The Novara Court. 
+              The discount <span className="text-red-500 font-bold uppercase tracking-widest">Ends February 20th, 2026</span>.
               Only secured slots enjoy the discounted price.
             </p>
           </AnimatedSection>
@@ -347,7 +353,7 @@ const ValentineOffer = () => {
                 </div>
               </form>
 
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <div id="contact-section" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                 <a href="tel:+2348075161213" className="flex items-center gap-3 text-muted-foreground hover:text-red-500 transition-colors group">
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center group-hover:bg-red-50 transition-colors">
                     <Phone className="w-4 h-4" />

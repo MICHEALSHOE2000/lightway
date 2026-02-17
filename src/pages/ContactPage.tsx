@@ -210,7 +210,7 @@ const ContactPage = () => {
                   formData.interestedEstate === "the-naples"
                     ? "Hello Light Way Homes, I'm interested in the Naples 4 Bedroom Terrace with Bq, can I get more info about it?"
                     : formData.interestedEstate === "novara-court"
-                    ? "Hello Light Way Homes, I'm interested in The Novara Courts (Mowe), can I get more info about it?"
+                    ? "Hello Light Way Homes, I'm interested in The Novara Court (Mowe), can I get more info about it?"
                     : formData.interestedEstate === "roman-heights"
                     ? "Hello Light Way Homes, I'm interested in Roman Heights, can I get more info about it?"
                     : "Hello Light Way Homes, I am interested in your property offerings."
@@ -291,7 +291,7 @@ const ContactPage = () => {
                       <option value="">Select an estate</option>
                       <option value="roman-heights">Roman Heights</option>
                       <option value="the-naples">Naples Arepo</option>
-                      <option value="novara-court">The Novara Courts</option>
+                      <option value="novara-court">The Novara Court</option>
                       <option value="other">Other / General Inquiry</option>
                     </select>
                   </div>

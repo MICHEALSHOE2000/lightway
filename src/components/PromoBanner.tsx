@@ -10,7 +10,7 @@ const PromoBanner = () => {
     // Current date
     const now = new Date();
     // Expiration date: Feb 16, 2026
-    const expiration = new Date("2026-02-17"); // Starts from Feb 17
+    const expiration = new Date("2026-02-21"); // Starts from Feb 17
     
     if (now > expiration) {
       setIsOfferExpired(true);
@@ -32,7 +32,7 @@ const PromoBanner = () => {
         </div>
         
         <p className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-wide text-center">
-          <span className="hidden xs:inline">Valentine Flash Sale: </span>Save 30% on The Novara Courts! 
+          <span className="hidden xs:inline">Valentine Flash Sale: </span>Save 30% on The Novara Court! 
           <Link 
             to="/valentine-offer" 
             className="ml-1 sm:ml-2 inline-flex items-center gap-1 underline underline-offset-4 hover:text-white/80 transition-colors"

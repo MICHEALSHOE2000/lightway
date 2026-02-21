@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { getPropertyBySlug } from "@/data/properties";
 
 const WhatsAppButton = () => {
+  const whatsappNumber = "2348038034077";
   const location = useLocation();
   const pathParts = location.pathname.split('/');
   const isPropertyPage = pathParts[1] === 'properties' && pathParts[2];
@@ -19,7 +20,7 @@ const WhatsAppButton = () => {
 
   return (
     <a
-      href={`https://wa.me/2348075161213?text=${encodeURIComponent(whatsappMessage)}`}
+      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackClarityEvent("whatsapp_global_click")}

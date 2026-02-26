@@ -227,6 +227,11 @@ const NovaraLanding = () => {
                     </p>
                   </div>
                 </a>
+                <div key={plot.title} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <p className="mb-2 text-xl font-bold text-primary">{plot.title}</p>
+                  <p className="font-medium">{plot.description}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">{plot.detail}</p>
+                </div>
               ))}
             </div>
             <p className="mt-4 text-sm font-medium">All plots are residential. Secure yours before price review.</p>

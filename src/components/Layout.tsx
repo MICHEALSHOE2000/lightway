@@ -8,15 +8,17 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 interface LayoutProps {
   children: React.ReactNode;
   showLoader?: boolean;
+  showHeader?: boolean;
+  showFooter?: boolean;
 }
 
-const Layout = ({ children, showLoader = false }: LayoutProps) => {
+const Layout = ({ children, showLoader = false, showHeader = true, showFooter = true }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {showLoader && <PageLoader />}
-      <Header />
+      {showHeader && <Header />}
       <main>{children}</main>
-      <Footer />
+      {showFooter && <Footer />}
       <WhatsAppButton />
     </div>
   );

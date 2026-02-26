@@ -38,7 +38,7 @@ import naples2BedMaisonette from "@/assets/properties/naples-2bed-maisonette.jpg
 const NaplesArepo = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({ houses: 4 });
+  const unitsAvailable = 4;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const NaplesArepo = () => {
   ];
 
   const features = [
-    { icon: <ShieldCheck className="w-6 h-6" />, text: "Certificate of Occupancy (COO)" },
+    { icon: <ShieldCheck className="w-6 h-6" />, text: "Certificate of Occupancy (C of O)" },
     { icon: <Layers className="w-6 h-6" />, text: "Fully Finished Delivery" },
     { icon: <CheckCircle2 className="w-6 h-6" />, text: "All Rooms Ensuite" },
     { icon: <Home className="w-6 h-6" />, text: "BQ Included" },
@@ -176,7 +176,7 @@ const NaplesArepo = () => {
 
               <div className="mt-20 grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
                 <div>
-                   <p className="text-4xl font-black text-white">12 MINS</p>
+                   <p className="text-4xl font-black text-white">10 MINS</p>
                    <p className="text-sm text-white/40 uppercase tracking-widest mt-1">From Lagos</p>
                 </div>
                 <div>
@@ -321,7 +321,7 @@ const NaplesArepo = () => {
              <div className="flex flex-wrap justify-center gap-6">
                 <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl min-w-[200px]">
                    <p className="text-sm text-white/40 uppercase tracking-widest mb-2 font-bold">Units Available</p>
-                   <p className="text-6xl font-black text-secondary">{timeLeft.houses}</p>
+                   <p className="text-6xl font-black text-secondary">{unitsAvailable}</p>
                 </div>
                 <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl min-w-[200px]">
                    <p className="text-sm text-white/40 uppercase tracking-widest mb-2 font-bold">Status</p>

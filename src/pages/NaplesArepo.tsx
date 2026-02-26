@@ -197,12 +197,12 @@ const NaplesArepo = () => {
                 <img 
                   src={naplesImg} 
                   alt="The Naples Arepo Architecture" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 
                 {/* Floating Specs */}
-                <div className="absolute bottom-6 left-10 right-10 grid grid-cols-2 gap-4">
+                <div className="absolute bottom-2 left-10 right-10 grid grid-cols-2 gap-4">
                    <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
                       <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
                       <p className="text-lg font-bold">40 SQM</p>

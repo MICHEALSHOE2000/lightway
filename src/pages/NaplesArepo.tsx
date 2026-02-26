@@ -83,9 +83,9 @@ const NaplesArepo = () => {
 
   const timeline = [
     { stage: "Site Clearing & Piling", status: "Completed", date: "Q3 2025" },
-    { stage: "Foundation & Ground Floor", status: "In Progress", date: "Current Phase" },
-    { stage: "Roofing & External Finishing", status: "Next Step", date: "Q2 2026" },
-    { stage: "Internal Finishing & Delivery", status: "Upcoming", date: "Q4 2026" }
+    { stage: "Foundation & Ground Floor", status: "Completed", date: "Q1 2026" },
+    { stage: "Roofing & External Finishing", status: "Completed", date: "Q2 2026" },
+    { stage: "Internal Finishing & Delivery", status: "In Progress", date: "Current Phase" }
   ];
 
   return (

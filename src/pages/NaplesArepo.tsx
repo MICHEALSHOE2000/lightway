@@ -38,7 +38,7 @@ import naples2BedMaisonette from "@/assets/properties/naples-2bed-maisonette.jpg
 const NaplesArepo = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({ houses: 4 });
+  const unitsAvailable = 4;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const NaplesArepo = () => {
   ];
 
   const features = [
-    { icon: <ShieldCheck className="w-6 h-6" />, text: "Certificate of Occupancy (COO)" },
+    { icon: <ShieldCheck className="w-6 h-6" />, text: "Certificate of Occupancy (C of O)" },
     { icon: <Layers className="w-6 h-6" />, text: "Fully Finished Delivery" },
     { icon: <CheckCircle2 className="w-6 h-6" />, text: "All Rooms Ensuite" },
     { icon: <Home className="w-6 h-6" />, text: "BQ Included" },
@@ -149,7 +149,7 @@ const NaplesArepo = () => {
               transition={{ duration: 0.8 }}
             >
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
-                Naples Arepo Phase 1
+                Naples Arepo
               </Badge>
               <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9] italic">
                 THE <span className="text-gradient-brand">NAPLES</span> AREPO
@@ -159,7 +159,7 @@ const NaplesArepo = () => {
                 <span className="block mt-4 text-white font-medium">Where Lagos Professionals Choose Peace Over Chaos.</span>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex">
                 <Button 
                   onClick={() => navigate("/schedule-viewing")}
                   size="lg" 
@@ -168,21 +168,22 @@ const NaplesArepo = () => {
                   SCHEDULE VIEWING
                   <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <div className="flex flex-col justify-center">
-                   <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-1">Price Starting From</p>
-                   <p className="text-3xl font-black">₦150,000,000</p>
-                </div>
               </div>
 
               <div className="mt-20 grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
                 <div>
-                   <p className="text-4xl font-black text-white">12 MINS</p>
+                   <p className="text-4xl font-black text-white">10 MINS</p>
                    <p className="text-sm text-white/40 uppercase tracking-widest mt-1">From Lagos</p>
                 </div>
                 <div>
                    <p className="text-4xl font-black text-white">C OF O</p>
                    <p className="text-sm text-white/40 uppercase tracking-widest mt-1">Verified Title</p>
                 </div>
+              </div>
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md">
+                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Price Starting From</p>
+                <p className="text-3xl font-black">₦120,000,000</p>
+                <p className="text-sm text-white/60 mt-2">Fully finished unit: <span className="font-semibold text-white">₦150,000,000</span></p>
               </div>
             </motion.div>
 
@@ -202,7 +203,7 @@ const NaplesArepo = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 
                 {/* Floating Specs */}
-                <div className="absolute bottom-10 left-10 right-10 grid grid-cols-2 gap-4">
+                <div className="absolute bottom-6 left-10 right-10 grid grid-cols-2 gap-4">
                    <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
                       <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
                       <p className="text-lg font-bold">40 SQM</p>
@@ -275,12 +276,8 @@ const NaplesArepo = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-square">
-                <img src={naplesImg} alt="Naples Lifestyle" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/10">
-                   <p className="text-sm italic font-medium">"You wake up in a quiet, organized estate. Your children play safely within the compound..."</p>
-                </div>
+              <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-10 shadow-2xl">
+                <p className="text-xl md:text-2xl italic font-medium text-white/90 leading-relaxed">"You wake up in a quiet, organized estate. Your children play safely within the compound..."</p>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -321,7 +318,7 @@ const NaplesArepo = () => {
              <div className="flex flex-wrap justify-center gap-6">
                 <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl min-w-[200px]">
                    <p className="text-sm text-white/40 uppercase tracking-widest mb-2 font-bold">Units Available</p>
-                   <p className="text-6xl font-black text-secondary">{timeLeft.houses}</p>
+                   <p className="text-6xl font-black text-secondary">{unitsAvailable}</p>
                 </div>
                 <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl min-w-[200px]">
                    <p className="text-sm text-white/40 uppercase tracking-widest mb-2 font-bold">Status</p>
@@ -370,7 +367,7 @@ const NaplesArepo = () => {
                   
                   <div className="grid sm:grid-cols-2 gap-6">
                      {[
-                        { title: '12 Mins to Lagos Mainland', desc: 'Stress-free commute for professionals.' },
+                        { title: '10 Mins to Lagos Mainland', desc: 'Stress-free commute for professionals.' },
                         { title: 'Developed Road Network', desc: 'Smooth access to the expressway.' },
                         { title: 'Rising Property Value', desc: 'Guaranteed ROI in Arepo corridor.' },
                         { title: 'High Rental Demand', desc: 'Ideal for corporate tenants.' }

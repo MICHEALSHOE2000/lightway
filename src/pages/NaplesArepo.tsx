@@ -466,7 +466,7 @@ const NaplesArepo = () => {
                   </div>
                   <div className="bg-white/5 border border-white/10 p-10 rounded-[3rem] text-center">
                      <p className="text-sm uppercase tracking-widest text-white/40 mb-4">Initial Deposit</p>
-                     <p className="text-5xl sm:text-7xl font-black text-white mb-6 tracking-tighter">₦30.0M</p>
+                     <p className="text-5xl sm:text-7xl font-black text-white mb-6 tracking-tighter">₦30,000,000</p>
                      <p className="text-white/60 mb-8 italic">Structured payment plans available. Transparent pricing. No hidden charges.</p>
                      <Button 
                        onClick={() => navigate("/schedule-viewing")}

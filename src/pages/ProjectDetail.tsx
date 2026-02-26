@@ -22,6 +22,7 @@ import { getProjectBySlug, getPropertiesByProject } from "@/data/properties";
 import NotFound from "@/pages/NotFound";
 import FAQ from "@/components/FAQ";
 import novaraHero from "@/assets/projects/novara-hero.jpg";
+import novaraLandImage from "@/assets/properties/novara-500sqm.jpg";
 
 const NOVARA_WHATSAPP =
   "https://wa.me/2348075161213?text=Hello%20Light%20Way%20Homes%2C%20I%20want%20to%20secure%20a%20plot%20at%20Novara%20Courts.";
@@ -76,21 +77,32 @@ const NovaraCountdown = () => {
 };
 
 const NovaraLanding = () => {
+  const sharedPlotImage = novaraLandImage;
+
   const plotOptions = [
     {
       title: "300 SQM Plot",
       description: "Perfect for compact residential homes",
       detail: "Start with ₦200,000 initial deposit. Flexible payment plan up to 24 months.",
+      image: sharedPlotImage,
+      whatsappText:
+        "Hello Light Way Homes, I want to check availability for the 300 SQM plot at Novara Courts.",
     },
     {
       title: "500 SQM Plot",
       description: "Ideal for standard family homes",
       detail: "Start with ₦200,000 initial deposit. Spread balance conveniently.",
+      image: sharedPlotImage,
+      whatsappText:
+        "Hello Light Way Homes, I want to check availability for the 500 SQM plot at Novara Courts.",
     },
     {
       title: "600 SQM Plot",
       description: "For spacious duplex or premium build",
       detail: "Start with ₦200,000 initial deposit. Flexible payment options available.",
+      image: sharedPlotImage,
+      whatsappText:
+        "Hello Light Way Homes, I want to check availability for the 600 SQM plot at Novara Courts.",
     },
   ];
 
@@ -193,6 +205,28 @@ const NovaraLanding = () => {
             <h2 className="text-3xl font-bold">Choose Your Plot Size</h2>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {plotOptions.map((plot) => (
+                <a
+                  key={plot.title}
+                  href={`https://wa.me/2348075161213?text=${encodeURIComponent(plot.whatsappText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <img
+                    src={plot.image}
+                    alt={`${plot.title} at Novara Courts`}
+                    className="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-6">
+                    <p className="mb-2 text-xl font-bold text-primary">{plot.title}</p>
+                    <p className="font-medium">{plot.description}</p>
+                    <p className="mt-3 text-sm text-muted-foreground">{plot.detail}</p>
+                    <p className="mt-4 inline-flex items-center text-sm font-semibold text-primary">
+                      Check Availability
+                      <ArrowUpRight className="ml-1 h-4 w-4" />
+                    </p>
+                  </div>
+                </a>
                 <div key={plot.title} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                   <p className="mb-2 text-xl font-bold text-primary">{plot.title}</p>
                   <p className="font-medium">{plot.description}</p>

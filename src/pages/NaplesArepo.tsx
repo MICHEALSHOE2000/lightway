@@ -151,7 +151,7 @@ const NaplesArepo = () => {
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
                 Naples Arepo
               </Badge>
-              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9] italic">
+              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-[1.02] md:leading-[1] pr-1">
                 THE <span className="text-gradient-brand">NAPLES</span> AREPO
               </h1>
               <p className="text-2xl md:text-3xl font-light text-white/60 mb-12 max-w-xl leading-relaxed">

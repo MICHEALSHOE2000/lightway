@@ -181,9 +181,8 @@ const NaplesArepo = () => {
                 </div>
               </div>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md">
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Price Starting From</p>
-                <p className="text-3xl font-black">₦120,000,000</p>
-                <p className="text-sm text-white/60 mt-2">Fully finished unit: <span className="font-semibold text-white">₦150,000,000</span></p>
+                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Starting Price: <span className="text-white">₦120,000,000</span></p>
+                <p className="text-sm text-white/80 mt-2">Fully Finished Unit: <span className="font-semibold text-white">₦150,000,000</span></p>
               </div>
             </motion.div>
 

@@ -151,7 +151,7 @@ const NaplesArepo = () => {
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
                 Naples Arepo
               </Badge>
-              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9] italic">
+              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-[1.02] md:leading-[1] pr-1">
                 THE <span className="text-gradient-brand">NAPLES</span> AREPO
               </h1>
               <p className="text-2xl md:text-3xl font-light text-white/60 mb-12 max-w-xl leading-relaxed">
@@ -181,9 +181,8 @@ const NaplesArepo = () => {
                 </div>
               </div>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md">
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Price Starting From</p>
-                <p className="text-3xl font-black">₦120,000,000</p>
-                <p className="text-sm text-white/60 mt-2">Fully finished unit: <span className="font-semibold text-white">₦150,000,000</span></p>
+                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Starting Price: <span className="text-white">₦120,000,000</span></p>
+                <p className="text-sm text-white/80 mt-2">Fully Finished Unit: <span className="font-semibold text-white">₦150,000,000</span></p>
               </div>
             </motion.div>
 

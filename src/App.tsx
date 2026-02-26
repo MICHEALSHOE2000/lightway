@@ -17,6 +17,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NaplesArepo = lazy(() => import("./pages/NaplesArepo"));
+const NovaraCourts = lazy(() => import("./pages/NovaraCourts"));
 const ScheduleViewing = lazy(() => import("./pages/ScheduleViewing"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/naples-arepo" element={<NaplesArepo />} />
+            <Route path="/novara-courts" element={<NovaraCourts />} />
             <Route path="/schedule-viewing" element={<ScheduleViewing />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

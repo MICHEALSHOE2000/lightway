@@ -59,7 +59,11 @@ const Projects = () => {
               delay={index * 150}
             >
               <Link 
-                to={index === 0 ? `/naples-arepo` : `/projects/${project.slug}`} 
+                to={
+                  index === 0 
+                    ? `/naples-arepo` 
+                    : `/projects/${project.slug}`
+                } 
                 className="block h-full cursor-pointer"
               >
                 <div className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated border border-border h-full transition-all duration-500 ease-premium hover:-translate-y-2">

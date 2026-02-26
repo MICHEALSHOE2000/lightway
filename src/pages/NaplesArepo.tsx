@@ -151,7 +151,7 @@ const NaplesArepo = () => {
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
                 Naples Arepo
               </Badge>
-              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9] italic">
+              <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight leading-[1.02] md:leading-[1] pr-1">
                 THE <span className="text-gradient-brand">NAPLES</span> AREPO
               </h1>
               <p className="text-2xl md:text-3xl font-light text-white/60 mb-12 max-w-xl leading-relaxed">
@@ -181,9 +181,8 @@ const NaplesArepo = () => {
                 </div>
               </div>
               <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md">
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Price Starting From</p>
-                <p className="text-3xl font-black">₦120,000,000</p>
-                <p className="text-sm text-white/60 mt-2">Fully finished unit: <span className="font-semibold text-white">₦150,000,000</span></p>
+                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Starting Price: <span className="text-white">₦120,000,000</span></p>
+                <p className="text-sm text-white/80 mt-2">Fully Finished Unit: <span className="font-semibold text-white">₦150,000,000</span></p>
               </div>
             </motion.div>
 
@@ -198,12 +197,12 @@ const NaplesArepo = () => {
                 <img 
                   src={naplesImg} 
                   alt="The Naples Arepo Architecture" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 
                 {/* Floating Specs */}
-                <div className="absolute bottom-6 left-10 right-10 grid grid-cols-2 gap-4">
+                <div className="absolute bottom-2 left-10 right-10 grid grid-cols-2 gap-4">
                    <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
                       <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
                       <p className="text-lg font-bold">40 SQM</p>

@@ -344,12 +344,15 @@ const PropertyDetail = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <a href="tel:+2348075161213" className="w-full">
-                        <Button variant="hero" size="lg" className="w-full">
-                          <Phone className="w-5 h-5" />
-                          Schedule a Visit
-                        </Button>
-                      </a>
+                      <Button 
+                        variant="hero" 
+                        size="lg" 
+                        className="w-full"
+                        onClick={() => navigate("/schedule-viewing")}
+                      >
+                        <Phone className="w-5 h-5" />
+                        Schedule a Visit
+                      </Button>
                       <a
                         href={`https://wa.me/2348075161213?text=${encodeURIComponent(property.whatsappMessage || "Hello Light Way Homes, I am interested in this property")}`}
                         target="_blank"

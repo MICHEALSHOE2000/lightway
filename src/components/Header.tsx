@@ -139,7 +139,7 @@ const Header = () => {
       isRoute: true, 
       icon: <ArrowRight className="w-4 h-4" />,
       subLinks: [
-        { name: "Naples Arepo", href: "/properties/the-naples-4bed-terrace-townhouse", description: "Premium Land & Townhouses" },
+        { name: "Naples Arepo", href: "/naples-arepo", description: "Premium Land & Townhouses" },
         { name: "The Novara Court", href: "/projects/the-novara-courts", description: "Affordable Residential Land" },
         { name: "View All Properties", href: "/properties", description: "Explore our full portfolio" },
       ]
@@ -167,12 +167,6 @@ const Header = () => {
         { name: "Careers", href: "/career", description: "Join our team" },
         { name: "Blog", href: "/blog", description: "Latest insights" },
       ]
-    },
-    { 
-      name: "Valentine's Offer", 
-      href: "/valentine-offer", 
-      isRoute: true, 
-      icon: <Heart className="w-4 h-4 text-red-500 animate-pulse fill-red-500" /> 
     },
     { name: "Contact", href: "/contact", isRoute: true, icon: <Mail className="w-4 h-4" /> },
   ];

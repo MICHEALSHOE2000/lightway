@@ -89,7 +89,7 @@ const NaplesArepo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-secondary selection:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#050505] text-white font-sans selection:bg-secondary selection:text-white">
       {/* Minimal Header */}
       <header className="absolute top-0 left-0 right-0 z-[100] p-6 lg:p-10 flex justify-between items-center">
         <Link to="/" className="group">
@@ -132,7 +132,7 @@ const NaplesArepo = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
+      <section className="relative min-h-screen w-full max-w-full flex items-start lg:items-center pt-32 pb-28 lg:pb-20 overflow-hidden bg-black">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050505]" />
@@ -141,7 +141,7 @@ const NaplesArepo = () => {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] bg-center" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto w-full max-w-full px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -180,9 +180,9 @@ const NaplesArepo = () => {
                    <p className="text-sm text-white/40 uppercase tracking-widest mt-1">Verified Title</p>
                 </div>
               </div>
-              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md">
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">Starting Price: <span className="text-white">₦120,000,000</span></p>
-                <p className="text-sm text-white/80 mt-2">Fully Finished Unit: <span className="font-semibold text-white">₦150,000,000</span></p>
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 max-w-md space-y-2">
+                <p className="text-sm font-bold tracking-widest uppercase text-secondary">Starting Price: <span className="text-white">₦120,000,000</span></p>
+                <p className="text-sm font-bold tracking-widest uppercase text-secondary">Fully Finished Unit: <span className="text-white">₦150,000,000</span></p>
               </div>
             </motion.div>
 
@@ -197,22 +197,11 @@ const NaplesArepo = () => {
                 <img 
                   src={naplesImg} 
                   alt="The Naples Arepo Architecture" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-auto md:h-full object-cover object-center scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                
-                {/* Floating Specs */}
-                <div className="absolute bottom-2 left-10 right-10 grid grid-cols-2 gap-4">
-                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
-                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
-                      <p className="text-lg font-bold">40 SQM</p>
-                   </div>
-                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
-                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Status</p>
-                      <p className="text-lg font-bold">Fully Finished</p>
-                   </div>
-                </div>
               </div>
+
 
               {/* Decorative Elements */}
               <div className="absolute -top-10 -right-10 w-40 h-40 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
@@ -222,7 +211,7 @@ const NaplesArepo = () => {
               <motion.div 
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-8 top-1/4 z-20 bg-secondary px-6 py-8 rounded-full shadow-2xl flex flex-col items-center text-center"
+                className="absolute right-2 md:-right-8 top-1/4 z-20 bg-secondary px-6 py-8 rounded-full shadow-2xl flex flex-col items-center text-center"
               >
                  <span className="text-xs font-bold uppercase tracking-tighter leading-none">Limited</span>
                  <span className="text-3xl font-black leading-none my-1">Units</span>

@@ -342,7 +342,7 @@ const NovaraCourts = () => {
               transition={{ duration: 0.8 }}
             >
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
-                Verified Plot Seconds From RCCG Camp
+                Verified Plot Close To Redemption Camp
               </Badge>
               <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[1.1]">
                 Own Your Plot at <span className="text-secondary italic">Novara Courts</span>
@@ -374,8 +374,8 @@ const NovaraCourts = () => {
                  </div>
               </div>
 
-              <div className="flex items-center gap-3 text-white/60 text-sm italic">
-                 <AlertTriangle className="w-4 h-4 text-secondary" />
+              <div className="flex items-center gap-3 text-white/60 text-lg md:text-xl italic font-semibold">
+                 <AlertTriangle className="w-5 h-5 text-secondary" />
                  Limited plots available at current price.
               </div>
             </motion.div>
@@ -396,7 +396,7 @@ const NovaraCourts = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 px-4">
-             <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">This Is Not For Everyone.</h2>
+             <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">This Is For Everyone.</h2>
              <p className="text-lg text-white/60">Novara Courts is for smart investors who recognize that early entry in the Mowe corridor is the fastest path to wealth.</p>
           </div>
 
@@ -496,7 +496,7 @@ const NovaraCourts = () => {
                   
                   <div className="grid sm:grid-cols-2 gap-6 mb-10">
                      {[
-                        "RCCG Camp", "Nestlé", "Apple & Pears", "Christopher University"
+                        "RCCG Camp", "Nestlé", "Apple & Pears", "Christopher University", "International Brewies"
                      ].map((item, idx) => (
                         <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/10">
                            <MapPin className="text-secondary w-5 h-5" />

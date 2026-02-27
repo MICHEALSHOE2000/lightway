@@ -200,19 +200,21 @@ const NaplesArepo = () => {
                   className="w-full h-full object-cover object-center scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                
+                {/* Floating Specs */}
+                <div className="absolute bottom-0 left-10 right-10 translate-y-1/2 grid grid-cols-2 gap-4">
+                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
+                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
+                      <p className="text-lg font-bold">40 SQM</p>
+                   </div>
+                   <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
+                      <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
+                      <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
+                   </div>
+                </div>
               </div>
 
-              {/* Specs */}
-              <div className="relative z-20 mt-4 md:mt-6 px-2 md:px-0 grid grid-cols-2 gap-3 md:gap-4">
-                 <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
-                    <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Living Area</p>
-                    <p className="text-2xl md:text-xl font-bold text-white leading-tight">40 SQM</p>
-                 </div>
-                 <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
-                    <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
-                    <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
-                 </div>
-              </div>
+
 
               {/* Decorative Elements */}
               <div className="absolute -top-10 -right-10 w-40 h-40 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
@@ -239,7 +241,7 @@ const NaplesArepo = () => {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="pt-10 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 px-4">
              <h2 className="text-3xl md:text-5xl font-bold mb-6">This Is Not For Everyone.</h2>

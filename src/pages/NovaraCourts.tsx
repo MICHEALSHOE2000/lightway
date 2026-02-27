@@ -342,7 +342,7 @@ const NovaraCourts = () => {
               transition={{ duration: 0.8 }}
             >
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 mb-8 px-4 py-2 text-sm uppercase tracking-[0.2em] backdrop-blur-md">
-                Verified Plot Close To Redemption Camp, Nestle & International Brewies
+                Verified Plots Of Land Close To Redemption Camp, Nestle & International Brewies
               </Badge>
               <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[1.1]">
                 Own Your Plot at <span className="text-secondary italic">Novara Courts</span>

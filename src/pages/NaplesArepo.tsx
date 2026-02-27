@@ -132,7 +132,7 @@ const NaplesArepo = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-start lg:items-center pt-32 pb-28 lg:pb-20 overflow-visible lg:overflow-hidden bg-black">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050505]" />

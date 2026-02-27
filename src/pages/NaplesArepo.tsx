@@ -32,8 +32,8 @@ import { Link } from "react-router-dom";
 
 // Property Images for Gallery
 import naples4BedBq from "@/assets/properties/naples-4bed-bq.png";
-import naples3BedApartment from "@/assets/properties/naples-3bed-apartment.jpg";
-import naples2BedMaisonette from "@/assets/properties/naples-2bed-maisonette.jpg";
+import naplesBedroom1 from "@/assets/projects/naples-bedroom-1.jpg";
+import naplesBedroom2 from "@/assets/projects/naples-bedroom-2.jpg";
 
 const NaplesArepo = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -495,10 +495,10 @@ const NaplesArepo = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { img: naples4BedBq, title: "4-Bedroom Terrace + BQ", category: "Available Unit" },
-              { img: naples3BedApartment, title: "3-Bedroom Luxury Apartment", category: "Floor Plan" },
-              { img: naples2BedMaisonette, title: "2-Bedroom Premium Maisonette", category: "Floor Plan" },
+              { img: naplesBedroom1, title: "4-Bedroom Terrace + BQ (Living Space)", category: "Floor Plan" },
+              { img: naplesBedroom2, title: "4-Bedroom Terrace + BQ (Bedroom Style)", category: "Floor Plan" },
               { img: naples4BedBq, title: "Detailed Exterior View", category: "Finishing" },
-              { img: naples3BedApartment, title: "Modern Interior Concept", category: "Interior" }
+              { img: naplesBedroom2, title: "4-Bedroom Terrace + BQ (Interior Style)", category: "Interior" }
             ].map((item, idx) => (
               <motion.div 
                 key={idx}

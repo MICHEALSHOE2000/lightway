@@ -192,28 +192,15 @@ const NaplesArepo = () => {
               transition={{ duration: 1, delay: 0.2 }}
               className="relative"
             >
-              {/* Premium Image Frame */}
-              <div className="relative z-10 rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] aspect-[4/5] lg:aspect-[3/4]">
-                <img 
-                  src={naplesImg} 
-                  alt="The Naples Arepo Architecture" 
-                  className="w-full h-full object-cover object-center scale-[1.02]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                
-                {/* Floating Specs */}
-                <div className="absolute bottom-0 left-10 right-10 translate-y-1/2 grid grid-cols-2 gap-4">
-                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
-                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
-                      <p className="text-lg font-bold">40 SQM</p>
-                   </div>
-                   <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
-                      <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
-                      <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
-                   </div>
-                </div>
-              </div>
-
+             {/* Premium Image Frame */}
+<div className="relative z-10 rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] aspect-[4/5] lg:aspect-[3/4]">
+  <img 
+    src={naplesImg} 
+    alt="The Naples Arepo Architecture" 
+    className="w-full h-full object-cover object-center scale-[1.02]"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+</div>
 
 
               {/* Decorative Elements */}

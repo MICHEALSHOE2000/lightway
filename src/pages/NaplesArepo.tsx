@@ -89,7 +89,7 @@ const NaplesArepo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-secondary selection:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#050505] text-white font-sans selection:bg-secondary selection:text-white">
       {/* Minimal Header */}
       <header className="absolute top-0 left-0 right-0 z-[100] p-6 lg:p-10 flex justify-between items-center">
         <Link to="/" className="group">
@@ -141,7 +141,7 @@ const NaplesArepo = () => {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] bg-center" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto w-full max-w-full px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -224,7 +224,7 @@ const NaplesArepo = () => {
               <motion.div 
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-8 top-1/4 z-20 bg-secondary px-6 py-8 rounded-full shadow-2xl flex flex-col items-center text-center"
+                className="absolute right-2 md:-right-8 top-1/4 z-20 bg-secondary px-6 py-8 rounded-full shadow-2xl flex flex-col items-center text-center"
               >
                  <span className="text-xs font-bold uppercase tracking-tighter leading-none">Limited</span>
                  <span className="text-3xl font-black leading-none my-1">Units</span>

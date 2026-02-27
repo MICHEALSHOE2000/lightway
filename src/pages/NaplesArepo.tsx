@@ -132,7 +132,7 @@ const NaplesArepo = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-start lg:items-center pt-32 pb-28 lg:pb-20 overflow-visible lg:overflow-hidden bg-black">
         {/* Luxury Background Elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050505]" />
@@ -200,6 +200,18 @@ const NaplesArepo = () => {
                   className="w-full h-full object-cover object-center scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                
+                {/* Floating Specs */}
+                <div className="absolute bottom-0 left-10 right-10 translate-y-1/2 grid grid-cols-2 gap-4">
+                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
+                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
+                      <p className="text-lg font-bold">40 SQM</p>
+                   </div>
+                   <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
+                      <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
+                      <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
+                   </div>
+                </div>
               </div>
 
 

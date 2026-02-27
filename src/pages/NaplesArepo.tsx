@@ -214,6 +214,8 @@ const NaplesArepo = () => {
                 </div>
               </div>
 
+
+
               {/* Decorative Elements */}
               <div className="absolute -top-10 -right-10 w-40 h-40 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 border-b-2 border-l-2 border-primary/30 rounded-bl-[4rem]" />
@@ -239,7 +241,7 @@ const NaplesArepo = () => {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="pt-10 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 px-4">
              <h2 className="text-3xl md:text-5xl font-bold mb-6">This Is Not For Everyone.</h2>

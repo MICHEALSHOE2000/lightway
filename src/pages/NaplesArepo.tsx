@@ -200,18 +200,18 @@ const NaplesArepo = () => {
                   className="w-full h-full object-cover object-center scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              </div>
-
-              {/* Specs */}
-              <div className="relative z-20 mt-4 md:mt-6 px-2 md:px-0 grid grid-cols-2 gap-3 md:gap-4">
-                 <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
-                    <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Living Area</p>
-                    <p className="text-2xl md:text-xl font-bold text-white leading-tight">40 SQM</p>
-                 </div>
-                 <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
-                    <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
-                    <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
-                 </div>
+                
+                {/* Floating Specs */}
+                <div className="absolute bottom-0 left-10 right-10 translate-y-1/2 grid grid-cols-2 gap-4">
+                   <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl">
+                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Living Area</p>
+                      <p className="text-lg font-bold">40 SQM</p>
+                   </div>
+                   <div className="bg-black/75 backdrop-blur-md border border-white/10 p-4 md:p-5 rounded-2xl">
+                      <p className="text-xs uppercase tracking-widest text-white/80 mb-1">Status</p>
+                      <p className="text-2xl md:text-xl font-bold text-white leading-tight">Fully Finished</p>
+                   </div>
+                </div>
               </div>
 
               {/* Decorative Elements */}

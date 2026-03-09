@@ -39,6 +39,7 @@ const SHOW_LEAD_MODAL_ONCE_PER_SESSION = true;
 const LEAD_MAGNET_GUIDE_URL = "/downloads/7-documents-property-lagos.pdf";
 const NOVARA_BROCHURE_URL = "/downloads/novara-courts-brochure.pdf";
 const NOVARA_PRICE_LIST_URL = "/downloads/novara-courts-price-list.pdf";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xlgwdbvz";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -250,9 +251,19 @@ const LeadMagnetModal = ({
   };
 
   const submitLead = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    // Replace with Formspree/custom endpoint integration.
-    return { ok: true };
+    return fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...formData,
+        source: "Novara Lead Modal",
+        subject: "Novara Lead Magnet Request",
+        _subject: "New Novara Lead Magnet Request"
+      })
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -276,14 +287,14 @@ const LeadMagnetModal = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[300] bg-black/80 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-[300] overflow-y-auto bg-black/80 p-4 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            className="mx-auto mt-8 md:mt-20 w-full max-w-2xl rounded-3xl border border-white/10 bg-[#0f1018] p-6 md:p-8 shadow-2xl"
+            className="mx-auto my-4 w-full max-w-2xl rounded-3xl border border-white/10 bg-[#0f1018] p-6 shadow-2xl md:my-8 md:p-8"
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -308,13 +319,13 @@ const LeadMagnetModal = ({
                   Check your email/WhatsApp for the guide. You can now view the Novara Courts Brochure and Price List.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-3">
-                  <a href={LEAD_MAGNET_GUIDE_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">Download Guide</a>
-                  <a href={NOVARA_BROCHURE_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Brochure</a>
-                  <a href={NOVARA_PRICE_LIST_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Price List</a>
+                  <a href={LEAD_MAGNET_GUIDE_URL} download className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">Download Guide</a>
+                  <a href={NOVARA_BROCHURE_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Brochure</a>
+                  <a href={NOVARA_PRICE_LIST_URL} target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Price List</a>
                 </div>
               </div>
             ) : (
-              <div className="space-y-6">
+              <div className="max-h-[80vh] space-y-6 overflow-y-auto pr-1 md:max-h-none md:overflow-visible md:pr-0">
                 <div>
                   <h3 className="text-3xl font-black leading-tight md:text-4xl">
                     Before You Buy Any Property in Lagos, Read This First

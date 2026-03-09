@@ -287,7 +287,7 @@ const NovaraCourts = () => {
         </Link>
         <div className="flex gap-4">
            <a 
-            href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+            href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
             className="flex items-center gap-2 bg-[#25D366] px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform"
            >
               <MessageCircle className="w-4 h-4 fill-current" />
@@ -314,7 +314,7 @@ const NovaraCourts = () => {
               Book Inspection
             </Button>
             <a 
-              href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+              href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
               className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-xl shadow-lg hover:scale-105 transition-transform"
             >
               <MessageCircle className="w-6 h-6 fill-current" />
@@ -366,7 +366,7 @@ const NovaraCourts = () => {
                       VIEW PLOT SIZES
                     </Button>
                     <a 
-                      href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+                      href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
                       className="flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all"
                     >
                       CHAT ON WHATSAPP
@@ -874,7 +874,7 @@ const NovaraCourts = () => {
           <div className="mt-16 text-center">
              <p className="text-white/40 mb-6 italic">Still have questions?</p>
              <a 
-               href="https://wa.me/2348038034077?text=Hello Light Way Homes, I have some questions about Novara Courts."
+               href="https://wa.me/2348075161213?text=Hello Light Way Homes, I have some questions about Novara Courts."
                className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-10 py-5 rounded-2xl font-bold hover:bg-white/10 transition-all text-lg"
              >
                <MessageCircle className="text-[#25D366] w-6 h-6" />
@@ -903,7 +903,7 @@ const NovaraCourts = () => {
                   SECURE MY PLOT NOW
                </Button>
                <a 
-                 href="https://wa.me/2348038034077?text=Hello Light Way Homes, I want to book an inspection for Novara Courts."
+                 href="https://wa.me/2348075161213?text=Hello Light Way Homes, I want to book an inspection for Novara Courts."
                  className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-12 py-6 rounded-2xl font-black text-xl hover:bg-white/10 transition-all"
                >
                   <Calendar className="w-6 h-6 text-secondary" />

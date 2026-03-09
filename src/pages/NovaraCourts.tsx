@@ -16,7 +16,8 @@ import {
   Zap,
   Layout,
   User,
-  Mail
+  Mail,
+  X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,6 +33,12 @@ import novara2 from "@/assets/projects/novara-2.jpg";
 import novara3 from "@/assets/projects/novara-3.jpg";
 import novara300 from "@/assets/properties/novara-300sqm.jpg";
 import novara500 from "@/assets/properties/novara-500sqm.jpg";
+
+const LEAD_MODAL_SESSION_KEY = "novara_lead_modal_shown";
+const SHOW_LEAD_MODAL_ONCE_PER_SESSION = true;
+const LEAD_MAGNET_GUIDE_URL = "/downloads/7-documents-property-lagos.pdf";
+const NOVARA_BROCHURE_URL = "/downloads/novara-courts-brochure.pdf";
+const NOVARA_PRICE_LIST_URL = "/downloads/novara-courts-price-list.pdf";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -187,10 +194,199 @@ const BookingForm = () => {
   );
 };
 
+const LeadMagnetModal = ({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) => {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<{ fullName?: string; phone?: string; email?: string }>({});
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+  });
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen, onClose]);
+
+  const validate = () => {
+    const nextErrors: { fullName?: string; phone?: string; email?: string } = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^(\+?234|0)?[789][01]\d{8}$/;
+
+    if (!formData.fullName.trim()) nextErrors.fullName = "Please enter your full name.";
+    if (!formData.phone.trim()) {
+      nextErrors.phone = "Please enter your phone number.";
+    } else if (!phoneRegex.test(formData.phone.replace(/\s+/g, ""))) {
+      nextErrors.phone = "Please enter a valid Nigerian phone number.";
+    }
+
+    if (!formData.email.trim()) nextErrors.email = "Please enter your email address.";
+    else if (!emailRegex.test(formData.email)) nextErrors.email = "Please enter a valid email address.";
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  };
+
+  const submitLead = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    // Replace with Formspree/custom endpoint integration.
+    return { ok: true };
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    setStatus("loading");
+    try {
+      const response = await submitLead();
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 z-[300] bg-black/80 backdrop-blur-sm p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+        >
+          <motion.div
+            className="mx-auto mt-8 md:mt-20 w-full max-w-2xl rounded-3xl border border-white/10 bg-[#0f1018] p-6 md:p-8 shadow-2xl"
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ duration: 0.25 }}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              onClick={onClose}
+              className="ml-auto flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/70 hover:text-white"
+              aria-label="Close lead magnet"
+            >
+              <X className="h-4 w-4" />
+            </button>
+
+            {status === "success" ? (
+              <div className="space-y-5 text-center">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-500/20 text-green-400">
+                  <CheckCircle2 className="h-8 w-8" />
+                </div>
+                <h3 className="text-3xl font-black tracking-tight">You’re In 🎉</h3>
+                <p className="text-white/70">
+                  Check your email/WhatsApp for the guide. You can now view the Novara Courts Brochure and Price List.
+                </p>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <a href={LEAD_MAGNET_GUIDE_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">Download Guide</a>
+                  <a href={NOVARA_BROCHURE_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Brochure</a>
+                  <a href={NOVARA_PRICE_LIST_URL} className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold hover:bg-white/10">View Price List</a>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-black leading-tight md:text-4xl">
+                    Before You Buy Any Property in Lagos, Read This First
+                  </h3>
+                  <p className="mt-3 text-white/75">
+                    Get the free guide that shows you the 7 key documents every smart buyer should verify before paying for land or property.
+                  </p>
+                </div>
+
+                <ul className="space-y-2 text-sm text-white/80">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" /> Avoid costly land scams</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" /> Know the documents that prove ownership</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" /> Buy with more confidence and less risk</li>
+                </ul>
+
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <Input
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    className="h-12 border-white/15 bg-white/5"
+                  />
+                  {errors.fullName && <p className="text-xs text-red-300">{errors.fullName}</p>}
+                  <Input
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="h-12 border-white/15 bg-white/5"
+                  />
+                  {errors.phone && <p className="text-xs text-red-300">{errors.phone}</p>}
+                  <Input
+                    type="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="h-12 border-white/15 bg-white/5"
+                  />
+                  {errors.email && <p className="text-xs text-red-300">{errors.email}</p>}
+
+                  <Button type="submit" className="h-12 w-full bg-gradient-to-r from-secondary to-primary text-base font-black" disabled={status === "loading"}>
+                    {status === "loading" ? "Please wait..." : "Get Free Guide"}
+                  </Button>
+                </form>
+
+                {status === "error" && (
+                  <p className="text-sm text-red-300">Submission failed. Please try again in a moment.</p>
+                )}
+
+                <p className="text-xs text-white/50">
+                  By requesting this guide, you’ll also get access to the Novara Courts brochure and current price list.
+                </p>
+              </div>
+            )}
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 const NovaraCourts = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
   const navigate = useNavigate();
+
+  const openLeadModal = () => {
+    if (SHOW_LEAD_MODAL_ONCE_PER_SESSION) {
+      sessionStorage.setItem(LEAD_MODAL_SESSION_KEY, "true");
+    }
+    setIsLeadModalOpen(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -199,6 +395,42 @@ const NovaraCourts = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const alreadyShown = SHOW_LEAD_MODAL_ONCE_PER_SESSION && sessionStorage.getItem(LEAD_MODAL_SESSION_KEY);
+    if (alreadyShown) return;
+
+    const inactivityMs = 4 * 60 * 1000;
+    const activityEvents: (keyof WindowEventMap)[] = ["mousemove", "keydown", "scroll", "touchstart"];
+
+    let inactivityTimer = window.setTimeout(() => {
+      openLeadModal();
+    }, inactivityMs);
+
+    const resetInactivityTimer = () => {
+      if (isLeadModalOpen) return;
+      window.clearTimeout(inactivityTimer);
+      inactivityTimer = window.setTimeout(() => {
+        openLeadModal();
+      }, inactivityMs);
+    };
+
+    const handleMouseExitIntent = (event: MouseEvent) => {
+      if (window.innerWidth < 1024) return;
+      if (event.clientY <= 20) {
+        openLeadModal();
+      }
+    };
+
+    activityEvents.forEach((evt) => window.addEventListener(evt, resetInactivityTimer, { passive: true }));
+    window.addEventListener("mousemove", handleMouseExitIntent);
+
+    return () => {
+      window.clearTimeout(inactivityTimer);
+      activityEvents.forEach((evt) => window.removeEventListener(evt, resetInactivityTimer));
+      window.removeEventListener("mousemove", handleMouseExitIntent);
+    };
+  }, [isLeadModalOpen]);
 
   const faqs = [
     {
@@ -287,7 +519,7 @@ const NovaraCourts = () => {
         </Link>
         <div className="flex gap-4">
            <a 
-            href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+            href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
             className="flex items-center gap-2 bg-[#25D366] px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform"
            >
               <MessageCircle className="w-4 h-4 fill-current" />
@@ -314,7 +546,7 @@ const NovaraCourts = () => {
               Book Inspection
             </Button>
             <a 
-              href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+              href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
               className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-xl shadow-lg hover:scale-105 transition-transform"
             >
               <MessageCircle className="w-6 h-6 fill-current" />
@@ -366,7 +598,7 @@ const NovaraCourts = () => {
                       VIEW PLOT SIZES
                     </Button>
                     <a 
-                      href="https://wa.me/2348038034077?text=Hello Light Way Homes, I'm interested in Novara Courts."
+                      href="https://wa.me/2348075161213?text=Hello Light Way Homes, I'm interested in Novara Courts."
                       className="flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all"
                     >
                       CHAT ON WHATSAPP
@@ -874,12 +1106,35 @@ const NovaraCourts = () => {
           <div className="mt-16 text-center">
              <p className="text-white/40 mb-6 italic">Still have questions?</p>
              <a 
-               href="https://wa.me/2348038034077?text=Hello Light Way Homes, I have some questions about Novara Courts."
+               href="https://wa.me/2348075161213?text=Hello Light Way Homes, I have some questions about Novara Courts."
                className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-10 py-5 rounded-2xl font-bold hover:bg-white/10 transition-all text-lg"
              >
                <MessageCircle className="text-[#25D366] w-6 h-6" />
                CHAT WITH OUR SUPPORT TEAM
              </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CLOSE */}
+      <section className="pb-10">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-[#151722] to-[#0d0f18] p-8 md:p-12 text-center shadow-2xl">
+            <Badge className="mb-6 border-secondary/40 bg-secondary/20 px-4 py-2 text-secondary">FREE BUYER SAFETY GUIDE</Badge>
+            <h3 className="text-3xl md:text-5xl font-black italic leading-tight">
+              Don’t Buy Blindly in Lagos Property Market
+            </h3>
+            <p className="mx-auto mt-5 max-w-2xl text-white/70 text-lg">
+              Get “7 Documents You Must Verify Before Buying Property In Lagos” and instantly access the Novara Courts brochure and current price list.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={openLeadModal} className="h-12 px-8 bg-gradient-to-r from-secondary to-primary font-black">
+                GET FREE GUIDE
+              </Button>
+              <a href={NOVARA_BROCHURE_URL} className="inline-flex items-center justify-center rounded-xl border border-white/20 px-8 h-12 font-bold hover:bg-white/10">
+                View Brochure
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -903,7 +1158,7 @@ const NovaraCourts = () => {
                   SECURE MY PLOT NOW
                </Button>
                <a 
-                 href="https://wa.me/2348038034077?text=Hello Light Way Homes, I want to book an inspection for Novara Courts."
+                 href="https://wa.me/2348075161213?text=Hello Light Way Homes, I want to book an inspection for Novara Courts."
                  className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-12 py-6 rounded-2xl font-black text-xl hover:bg-white/10 transition-all"
                >
                   <Calendar className="w-6 h-6 text-secondary" />
@@ -923,6 +1178,8 @@ const NovaraCourts = () => {
             </div>
          </div>
       </section>
+
+      <LeadMagnetModal isOpen={isLeadModalOpen} onClose={() => setIsLeadModalOpen(false)} />
     </div>
   );
 };
